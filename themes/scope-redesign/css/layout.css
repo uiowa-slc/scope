@@ -1,0 +1,15 @@
+/*
+
+
+header:after,
+.main:after,
+#Root:after,
+.search-bar:after,
+header .inner:after,
+footer:after {
+    height: 0;
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
