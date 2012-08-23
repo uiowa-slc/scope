@@ -89,6 +89,8 @@ class Page_Controller extends ContentController {
 	    return $pages;
 			
 	}
+	
+
 	/*  
 	public function returnTwitterFeed(){
 	 

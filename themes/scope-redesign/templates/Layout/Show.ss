@@ -75,7 +75,7 @@
 
 	<div class="clear"></div>
 	
-
+<% include Footer %>
 
 
 

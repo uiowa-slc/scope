@@ -17,9 +17,9 @@
 		<div id="foot-right">
 			<ul class="links">
 				<a href="#"><li>Home</li></a>
-				<a href="shows"><li>Shows</li></a>
-				<a href="venues"><li>Venues</li></a>
-				<a href="about"><li>About</li></a>
+				<a href="#shows"><li>Shows</li></a>
+				<a href="#venues"><li>Venues</li></a>
+				<a href="#about"><li>About</li></a>
 				<a href="about/#contact"><li>Contact</li></a>
 			</ul>
 			<div class="clear"></div>

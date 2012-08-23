@@ -144,8 +144,20 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
     });		
 		
     //jQuery("h5.toggle").click(function ($) {
-    jQuery("h5.toggle").click(function () {
-      $("div.photo_gallery").slideToggle("fast");
+    jQuery("#toggle1").click(function () {
+      $("#photo_gallery1").slideToggle("fast");
+    });
+    
+    jQuery("#toggle2").click(function () {
+      $("#photo_gallery2").slideToggle("fast");
+    });
+    
+    jQuery("#toggle3").click(function () {
+      $("#photo_gallery3").slideToggle("fast");
+    });
+    
+    jQuery("#toggle4").click(function () {
+      $("#photo_gallery4").slideToggle("fast");
     });
     
 		
@@ -154,7 +166,8 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
       $(".description p.hidden").slideToggle("slow");
     });
 
-	jQuery("a.single_image").fancybox([{topRatio : 0}]);
+	//jQuery("a.single_image").fancybox([{topRatio : 0}]);
+	jQuery("a.single_image").fancybox();
 	
 (function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];

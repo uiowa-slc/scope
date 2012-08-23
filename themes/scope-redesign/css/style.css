@@ -433,7 +433,7 @@ ul.links li:hover{
 	border: none;
 	font-family: 'Noticia Text', serif;
 	font-size: 18px;
-	margin-left: 15px;
+	margin-left: 0px;
 	font-style: italic;
 	font-weight: normal;
 }

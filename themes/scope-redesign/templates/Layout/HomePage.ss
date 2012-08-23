@@ -98,7 +98,7 @@
 			
 		<img id="venue_section" src="$Picture.URL"/>
 		
-		<a href="{$Link}"><h2>$Title</h2></a>
+		<a href="{$Link}"><h2>$Artist</h2></a>
 		<h5 class="date">$Venue $Time <br> $Date.NiceUS</h5>
             	<p>$Content.Summary(100)<p>
 				<div class="button"><a href="$Link">See More</a></div>
@@ -148,9 +148,9 @@
 		
 		<div class="clear"></div>
 		
-		<li><h5 class="toggle">Click to Show/Hide Photo Gallery<h5>
+		<li><h5 class="toggle" id="toggle{$Pos}">Click to Show/Hide Photo Gallery<h5>
 
-			<div class="photo_gallery">
+			<div class="photo_gallery" id="photo_gallery{$Pos}">
 				<ul>
 				   <% if PhotoGallery1 %>
 						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery"><img src="$PhotoGallery1.Link"/></a></li>
