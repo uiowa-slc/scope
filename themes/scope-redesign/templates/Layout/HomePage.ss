@@ -1,18 +1,6 @@
 
 
 <% include Header %>
-
-
-
-<!-- 04 SHOWS SECTION-->
-
-
-
-
-
-<!-- 02 FEATURED SHOW SECTION -->
-
-
 	
 	<div class="main">
 		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div><% with FeaturedPage %>$Picture	
@@ -88,10 +76,12 @@
 			<% end_if %>
 			<li><div class="date">
 				<ul>
+
 					<% if $Pos==1 %>
 						Countdown to 
 					<% end_if %>
 					<li><strong>$Artist</strong></li>
+
 					<li>$Venue $Time</li>
 					<li>$Date.NiceUS</li>
 					<li><div id="countdown"></div></li>
