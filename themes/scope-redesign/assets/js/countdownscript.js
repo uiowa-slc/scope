@@ -1,4 +1,4 @@
-function drew(ts){
+function startCountdown(ts){
 	
 	var note = $('#note'),
 	//ts = new Date(2012, 10, 14),

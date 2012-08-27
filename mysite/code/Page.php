@@ -69,7 +69,7 @@ class Page_Controller extends ContentController {
     'Show.SiteTree.ParentID:ExactMatch' => $showparentID));
     
     	$pages = new PaginatedList($shows, $this->request);    	
-	    $pages->setPageLength(3);
+	    $pages->setPageLength(10);
 	    
 	    return $pages;
 	  }
@@ -89,6 +89,8 @@ class Page_Controller extends ContentController {
 	    return $pages;
 			
 	}
+	
+	
 	
 
 	/*  

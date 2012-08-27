@@ -66,34 +66,10 @@
 	<h1>Shows</h1>
 	<h4><a href="{$BaseHref}show-archive" id="showarchive" >To Show Archive >></a></h4><br> 		
 	
-<div id="paginate">	
 
-<% if PaginatedPages.MoreThanOnePage %>
-    <% if PaginatedPages.NotFirstPage %>
-        <a class="prev" href="$PaginatedPages.PrevLink">Prev</a>
-    <% end_if %>	
-
-	<% loop PaginatedPages.Pages %>	
-		<% if CurrentBool %>
-	         $PageNum
-	    <% else %>
-	     	<% if Link %>
-	            <a href="$Link">$PageNum</a>
-	        <% else %>
-	            
-	        <% end_if %>
-	    <% end_if %>
-    
-	 <% end_loop %>  
-	 <% if PaginatedPages.NotLastPage %>
-	 	<a class="next" href="$PaginatedPages.NextLink">Next</a>
-	 <% end_if %>
-<% end_if %> 
-
-</div>
 
 <% loop PaginatedPages %>   
- 
+
 <div class="details" >
 	<div class="description">
 			
@@ -112,7 +88,9 @@
 			<% end_if %>
 			<li><div class="date">
 				<ul>
-					Countdown to 
+					<% if $Pos==1 %>
+						Countdown to 
+					<% end_if %>
 					<li><strong>$Artist</strong></li>
 					<li>$Venue $Time</li>
 					<li>$Date.NiceUS</li>
@@ -194,6 +172,8 @@
 <div class="section" id="venues">
 	<h1>Venues</h1>
 <% loop ChildrenOf(venues) %>
+
+
 <div class="details"  id={$URLSegment}>
 	<div class="description venue">
 		
@@ -270,6 +250,8 @@
 	 </div></li>
 	</ul>
 </div>
+
+
 <% end_loop %>
 
 
@@ -324,7 +306,8 @@
 	</div> <!-- end content wrapper div -->
 	
 
-
+FeaturedTime1 = $FeaturedPage.getFeaturedTimestamp
+FeaturedTime2 = $FeaturedPage.getTimestamp 
 
 
 
@@ -333,60 +316,24 @@
 <script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uiscope&include_rts=true&count=1&callback=twitterCallback2"></script>
     
 <script>	
-   //ts = new Date(2012, 10, 14);
-    var stringDate = "";
-   	var stringDate = "{$FeaturedPage.Date}";
-   	
-	var myArray = stringDate.split('-');
+   	var timestamp = {$FeaturedPage.getTimestamp};
+	ts = new Date(timestamp * 1000);
 	
-	var year = myArray[0];
+	/*
 	
-	var month = myArray[1];
-	month = month - 1; //JavaScript months go from 0-11 for some reason
+	var year = timestamp.getYear();
+	var month = timestamp.getMonth();
+	var day = timestamp.getDay();
+	var hour = timestamp.getHours();
+	var minutes = timestamp.getMinutes();
 	
-	var day = myArray[2];
+	*/
 	
-	var stringTime = "{$FeaturedPage.Time}";
+	//ts = new Date(year, month, day, hour, minutes);
 	
-	//var n=str.search("W3Schools");
-	var searchResult = stringTime.search(":");
-	
-	//Format 8:00 PM
-	if (searchResult != -1){
-		var timeArray = stringTime.split(':');
-		var hour = timeArray[0];
-		hour = parseInt(hour);
-		//alert(hour);
-		
-		var stringTimeMinutes = timeArray[1];
-		var minutesArray = stringTimeMinutes.split(' ');
-		
-		var minutes = minutesArray[0];
-		minutes = parseInt(minutes);
-	}
-	//Format 8 PM
-	else {
-		var minutesArray = stringTime.split(' ');
-		
-		var hour = minutesArray[0];
-		hour = parseInt(hour);
-		
-		var minutes = 0;
-	}
-	
-	var AMorPM = minutesArray[1];
-	if (AMorPM == "PM"){
-		hour = hour + 12;
-	}
-	
-	//test = new Date()
-	//alert(test);
-	
-	ts = new Date(year, month, day, hour, minutes);
 	//alert(ts);
-		
-	
-	drew(ts);
+
+	startCountdown(ts);
 	
 </script>
 

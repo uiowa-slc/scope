@@ -54,6 +54,14 @@ class Show extends Page {
                
         return $fields;
     }
+    
+     public function getTimestamp(){
+		
+		$date = $this->Date . $this->Time;
+		$timestamp = strtotime($date);
+		return $timestamp;
+	}
+	
 }
   
 class Show_Controller extends Page_Controller {
