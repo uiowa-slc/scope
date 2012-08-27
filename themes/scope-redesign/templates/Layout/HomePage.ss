@@ -15,8 +15,8 @@
 
 	
 	<div class="main">
-		<div class="overlay"><img src="/scope/themes/scope-redesign/images/main.png"/></div><% with FeaturedPage %>$Picture	
-		<h2><a href="$FeaturedPage.Link" id="FeaturedArtist">$Artist</a></h2>
+		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div><% with FeaturedPage %>$Picture	
+		<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
 		<h4>Featured Show</h4>
 		
 		<div class="main_info">
@@ -32,31 +32,32 @@
 			</ul>
 			
 			<div class="clear"></div>
-			<a href="$BuyTicketsLink"><h3>Buy Tickets</h3></a>
+			
+			<% if $BuyTicketsOnlineLink %>
+
+				<a href="$BuyTicketsOnlineLink"><h3>Buy Tickets</h3></a>
+			
+			<% end_if %>
 			<% end_with %>
 			
 		</div> <!-- end main_info div -->
 	</div> <!-- end main div --> 
-	<!--
+
 	<div class="twitter">
-		<img src="/scope/themes/scope-redesign/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
-		<a href="$TwitterLink"<h3>SCOPE artist, Chasing Shade is playing @IowaCityGabes tonight! Don't miss out!</h3></a>
-		<h5>about 18 hours ago</h5>		
-	</div>
-	-->
-	<div class="twitter">
-		<img src="/scope/themes/scope-redesign/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
+		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
 		<div id="twitter_update_list"></div>
 	</div>
 
 <!-- PARALLAX STUFF--> 
-	 <div class="bk bk_0"></div>
+<div id="parallax-stuff">
+	<div class="bk bk_0"></div>
 	<div class="bk bk_1"></div>
 	<div class="bk bk_2"></div>
 	
 	
 	<div class="img_1"></div>
 	<div class="img_2"></div> 	
+</div>
 	
 <!-- 03 SHOWS SECTION -->
 
@@ -93,10 +94,10 @@
 
 <% loop PaginatedPages %>   
  
-<div class="details"  id="imu-main-lounge">
-	<div class="description venue">
+<div class="details" >
+	<div class="description">
 			
-		<img id="venue_section" src="$Picture.URL"/>
+		<a href="{$Link}"><img id="show_image" src="$Picture.URL"/></a>
 		
 		<a href="{$Link}"><h2>$Artist</h2></a>
 		<h5 class="date">$Venue $Time <br> $Date.NiceUS</h5>
@@ -119,15 +120,20 @@
 					<li id="note"></li>
 				</ul>
 			</div></li> <!-- end date -->
-			
+			<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
 			<li class="get_tix"><h5>Get Tickets now:</h5><div>
 				<ul>
+					<% if $BuyTicketsOnlineLink %>
 					<a href="{$BuyTicketsOnlineLink}" class="tix"><li><strong>Buy Tickets</strong><br>Online</li></a>
+					<% end_if %>
+					
+					<% if $BuyTicketsInPersonLink %>
 					<a href="{$BuyTicketsInPersonLink}"class="tix"><li><strong>Buy Tickets</strong><br>In Person</li></a>
+					<% end_if %>
 				</ul>
 			
 			</div></li> <!-- end buy tix -->
-			
+			<% end_if %>
 			<div class="clear"></div>
 			
 			<li><div class="get_tix"><h5>Share this event:</h5>
@@ -148,24 +154,28 @@
 		
 		<div class="clear"></div>
 		
-		<li><h5 class="toggle" id="toggle{$Pos}">Click to Show/Hide Photo Gallery<h5>
-
+		<li>
+		
+		
+		<% if PhotoGallery1 %>
+		<h5><a href="$PhotoGallery1.Link" class="single_image">Photo Gallery</a></h5>
 			<div class="photo_gallery" id="photo_gallery{$Pos}">
 				<ul>
 				   <% if PhotoGallery1 %>
-						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery"><img src="$PhotoGallery1.Link"/></a></li>
+						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery-{$ID}"><img src="$PhotoGallery1.Link"/></a></li>
 					<% end_if %>
 					<% if PhotoGallery2 %>
-						<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery">$PhotoGallery2</a></li>
+						<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery2</a></li>
 					<% end_if %>
 					<% if PhotoGallery3 %>
-						<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_gallery">$PhotoGallery3</a></li>
+						<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_galler-{$ID}">$PhotoGallery3</a></li>
 					<% end_if %>
 					<% if PhotoGallery4 %>
-						<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery">$PhotoGallery4</a></li>		
+						<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery4</a></li>		
 					<% end_if %>
 				</ul>
 	  </div> <!-- end photo_gallery -->
+	  <% end_if %>
 	  	</li> <!-- end toggle li -->
 	 
 		</ul> <!-- end ul in div class extras -->
@@ -187,7 +197,7 @@
 <div class="details"  id={$URLSegment}>
 	<div class="description venue">
 		
-		<img id="venue_section" src="$Picture.URL"/>
+		<a href="{$Link}"><img id="venue_section" src="$Picture.URL"/></a>
 		<a href="{$Link}"><h2>$Title</h2></a>
             	<p>$Content<p>
 	</div>

@@ -1,6 +1,3 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 <% include Header %>
 
 <div class="section" id="venues">
@@ -17,7 +14,9 @@
 </div>
 	<div class="extras">
 		<ul>
+			<% if $SpotifyLink %>
 			<li class="iframe"><iframe src="$SpotifyLink" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></li>
+			<% end_if %>
 			
 			<li><div class="date">
 				<ul>
@@ -30,13 +29,20 @@
 				</ul>
 			</div></li> <!-- end date -->
 			
+			<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
 			<li class="get_tix"><h5>Get Tickets now:</h5><div>
 				<ul>
-					<a href="#" class="tix"><li><strong>Buy Tickets</strong><br>Online</li></a>
-					<a href="#"class="tix"><li><strong>Buy Tickets</strong><br>In Person</li></a>
+					<% if $BuyTicketsOnlineLink %>
+					<a href="{$BuyTicketsOnlineLink}" class="tix"><li><strong>Buy Tickets</strong><br>Online</li></a>
+					<% end_if %>
+					
+					<% if $BuyTicketsInPersonLink %>
+					<a href="{$BuyTicketsInPersonLink}"class="tix"><li><strong>Buy Tickets</strong><br>In Person</li></a>
+					<% end_if %>
 				</ul>
 			
 			</div></li> <!-- end buy tix -->
+			<% end_if %> <!-- end buy tix -->
 			
 			<div class="clear"></div>
 			
@@ -55,7 +61,8 @@
 		
 		<div class="clear"></div>
 		
-		<li><h5 class="toggle">Click to Show/Hide Photo Gallery<h5>
+		<% if $PhotoGallery1 %>
+		<li>
 
 			<div class="photo_gallery">
 				<ul>
@@ -66,7 +73,7 @@
 				</ul>
 	  </div> <!-- end photo_gallery -->
 	  	</li> <!-- end toggle li -->
-	 
+	  	<% end_if %>
 		</ul> <!-- end ul in div class extras -->
 		
 	</div> <!-- end extras  -->
