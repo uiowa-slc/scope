@@ -20,6 +20,8 @@
 #showarchive{
 	float: right;
 	font-style: italic;
+	background-color: rgba(0,0,0,.6);
+	
 	/*
 	height: 20px;
 	width: 150px;
@@ -74,7 +76,7 @@ p strong
 body{
 	background: black;
 	color: white;
-	font-family:"TrebuchetMS";
+	font-family:"Oswald";
 	margin: 0;
 	padding: 0;
 	background-image: url("/scope/themes/scope-redesign/images/header2.png");
@@ -82,6 +84,10 @@ body{
 	background-position: center top;
 	
 	
+}
+
+a img {
+	border: none;
 }
 
 .clear{
@@ -95,7 +101,11 @@ a:hover{
 
 a{
 	text-decoration: none;
-	color: white;
+	color: #9ee9e4;
+}
+
+h2 a {
+	text-decoration: none;
 }
 
 #header{
@@ -106,7 +116,7 @@ a{
 	text-align: center;
 	text-shadow: 3px 3px 0px black, 5px 5px 0px #436361; 
 	color: white;
-	font-family: 'Trebuchet MS'; sans-serif;
+	font-family: 'Oswald'; sans-serif;
 	font-size: 45px;
 	text-transform: uppercase;
 }
@@ -371,7 +381,7 @@ ul.links li:hover{
 	text-align: right;
 	text-shadow: 3px 3px 0px black, 5px 5px 0px #436361; 
 	color: white;
-	font-family: 'Trebuchet MS', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-size: 90px;
 	text-transform: uppercase;
 	background-image: url("/scope/themes/scope-redesign/images/soundwave.png");
@@ -384,7 +394,8 @@ ul.links li:hover{
 
 .section h4{
 	text-align: right;
-	margin-top: -45px;
+	/*margin-top: -45px;*/
+	margin: 5px 0;
 	font-family: 'Noticia Text';
 	font-style: italic;
 	font-weight: 100;
@@ -415,7 +426,7 @@ ul.links li:hover{
 .description h2{
 	text-transform: uppercase;
 	color: #F89444;
-	font-size: 36px;
+	font-size: 62px;
 	margin: 15px 0 15px 0px;
 	text-align: center;
 	text-shadow: 2px 2px 0px #313131, 3px 3px 0px #436361;
@@ -426,6 +437,8 @@ ul.links li:hover{
 	font-size: 15px;
 	line-height: 20px;
 	margin: 0;
+	font-family: 'Noticia Text', serif;
+
 }
 
 .description h5.date{
@@ -468,7 +481,7 @@ p.hidden{
 .extras{
 	float: right;
 	/*border: solid 1px gray;*/
-	margin: -12px 0 0 0px;
+	/*margin: -12px 0 0 0px;*/
 	padding: 0px 0px 15px 15px;
 	width: 345px;
 	float: right;
@@ -515,8 +528,12 @@ p.hidden{
 
 }
 
+.date li a {
+	color: #aaa;
+}
+
 .date li strong{
-	font-family: 'Trebuchet MS', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-style: normal;
 	text-transform: uppercase;
 	font-size: 28px;
@@ -577,7 +594,7 @@ p.hidden{
 }
 
 .tix strong{
-	font-family: 'Trebuchet MS', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-style: normal;
 	text-transform: uppercase;
 	font-size: 1.17em;
@@ -774,7 +791,7 @@ a#back_to_top:hover{
 	margin: 10px 0 10px 0;
 	height: 10px;
 	font-size: 14px;
-	font-family: 'Trebuchet MS', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	padding: 10px;
 }
 
@@ -800,7 +817,7 @@ background-color: #436361;
 	border-radius: 2px;
 	margin: 30px 0 0 0;
 	text-align: center;
-	font-family: 'Trebuchet MS', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-style: normal;
 	text-transform: uppercase;
 	font-size: 1.17em;

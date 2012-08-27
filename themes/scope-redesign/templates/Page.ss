@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <head>
 	<% base_tag %>
 	
@@ -12,7 +12,8 @@
 	<[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css'>
 	<% require themedCSS(style) %>
 
 	<% require themedCSS(reset) %>

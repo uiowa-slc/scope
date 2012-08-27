@@ -5,7 +5,7 @@
 	<div class="main">
 		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div><% with FeaturedPage %>$Picture	
 		<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
-		<h4>Featured Show</h4>
+		<!--<h4>Featured Show</h4>-->
 		
 		<div class="main_info">
 			<ul>
@@ -80,7 +80,7 @@
 					<% if $Pos==1 %>
 						Countdown to 
 					<% end_if %>
-					<li><strong>$Artist</strong></li>
+					<li><strong><a href="$Link">$Artist</a></strong></li>
 
 					<li>$Venue $Time</li>
 					<li>$Date.NiceUS</li>
@@ -238,6 +238,7 @@
 			<% end_if %>	
 		</ul>
 	 </div></li>
+	 <div class="clear"></div>
 	</ul>
 </div>
 
@@ -294,10 +295,6 @@
 
 
 	</div> <!-- end content wrapper div -->
-	
-
-FeaturedTime1 = $FeaturedPage.getFeaturedTimestamp
-FeaturedTime2 = $FeaturedPage.getTimestamp 
 
 
 
