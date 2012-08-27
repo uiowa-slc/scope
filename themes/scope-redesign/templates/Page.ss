@@ -42,7 +42,7 @@ $(document).ready(function () {
 });
 
 
-/*jQuery(document).ready(function($) {
+jQuery(document).ready(function($) {
     a=parseFloat(400);// Initial value for the first background (bk 0)
     b=parseFloat(0);// Initial value for the first background (bk 0)
     c=parseFloat(400);// Initial value for the second background (bk 1)
@@ -58,14 +58,14 @@ $(document).ready(function () {
                     a=a+35;// Position for the first background, it decreases in 35 pixels
                     b=b+10;// Position for the first background, it decreases in 10 pixels
                     $('.img_1').css('backgroundPosition', '50% '+a+'px');
-                    $('.bk_0').css('backgroundPosition', '300px '+b+'px');
+                   // $('.bk_0').css('backgroundPosition', '300px '+b+'px');
             }
             if (getScrollTop()>=2050 && getScrollTop()<=3650)
             {
                     c=c+35;// Position for the second background, it decreases in 35 pixels
                     d=d+10;// Position for the second background, it decreases in 10 pixels
                     $('.img_2').css('backgroundPosition', '50% '+c+'px');
-                    $('.bk_1').css('backgroundPosition', '0 '+d+'px');
+                   // $('.bk_1').css('backgroundPosition', '0 '+d+'px');
             }
         }
         else
@@ -75,14 +75,14 @@ $(document).ready(function () {
                   a=a-35;// Position for the first background, it decreases in 35 pixels
                   b=b-10;// Position for the first background, it decreases in 10 pixels
                   $('.img_1').css('backgroundPosition', '50% '+a+'px');
-                  $('.bk_0').css('backgroundPosition', '300px '+b+'px');
+                  //$('.bk_0').css('backgroundPosition', '300px '+b+'px');
             }
                 if (getScrollTop()>=2050 && getScrollTop()<=3650)
             {
                   c=c-35;// Position for the second background, it decreases in 35 pixels
                   d=d-10;// Position for the second background, it decreases in 10 pixels
                   $('.img_2').css('backgroundPosition', '50% '+c+'px');
-                  $('.bk_1').css('backgroundPosition', '0 '+d+'px');
+                 // $('.bk_1').css('backgroundPosition', '0 '+d+'px');
             }
         }
         if (getScrollTop()==0)// Adjusts the positions values and resets them to zero during a scroll up event
@@ -91,13 +91,13 @@ $(document).ready(function () {
             b=parseFloat(0);
             c=parseFloat(400);
             d=parseFloat(0);
-            $('.bk_0').css('backgroundPosition', '0 0');
-            $('.bk_1').css('backgroundPosition', '0 0');
+           // $('.bk_0').css('backgroundPosition', '0 0');
+           // $('.bk_1').css('backgroundPosition', '0 0');
             $('.img_2').css('backgroundPosition', '50% '+400+'px');
             $('.img_1').css('backgroundPosition', '50% '+400+'px');
         }
       scrollTop = $(this).scrollTop();
-    });*/
+    });
 });
 function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
  
@@ -133,7 +133,9 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
 </script>
 <link rel="stylesheet" href="themes/scope-redesign/assets/countdown/jquery.countdown.css" />
 <link href='http://fonts.googleapis.com/css?family=Kotta+One|Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
+<!--[if IE 8]>
+<link rel="stylesheet" href="{$ThemeDir}/css/ie8.css" />
+<![endif]-->
        
        
 

@@ -1,18 +1,6 @@
 
 
 <% include Header %>
-
-
-
-<!-- 04 SHOWS SECTION-->
-
-
-
-
-
-<!-- 02 FEATURED SHOW SECTION -->
-
-
 	
 	<div class="main">
 		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div><% with FeaturedPage %>$Picture	
@@ -113,7 +101,7 @@
 			<li><div class="date">
 				<ul>
 					Countdown to 
-					<li><strong>$Artist</strong></li>
+					<li><strong><a href="$Link">$Artist</a></strong></li>
 					<li>$Venue $Time</li>
 					<li>$Date.NiceUS</li>
 					<li><div id="countdown"></div></li>

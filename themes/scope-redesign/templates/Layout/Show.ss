@@ -1,7 +1,7 @@
 <% include Header %>
 
 <div class="section" id="venues">
-	<h1 style="float: left">$Artist</h1>
+	<h1>$Artist</h1>
 
 <div class="details"  id="imu-main-lounge">
 	<div class="description venue">

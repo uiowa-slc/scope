@@ -414,7 +414,7 @@ ul.links li:hover{
 
 .description h2{
 	text-transform: uppercase;
-	color: white;
+	color: #F89444;
 	font-size: 36px;
 	margin: 15px 0 15px 0px;
 	text-align: center;
@@ -483,6 +483,9 @@ p.hidden{
 	
 }
 
+.extras>ul {
+	border: 1px solid #436361;
+}
 
 .extras ul li.iframe{
 	height: 78px;
@@ -499,8 +502,8 @@ p.hidden{
 }
 
 .date{
-	border-right: 1px solid #436361;
-	border-left: 1px solid #436361;
+	/*border-right: 1px solid #436361;
+	border-left: 1px solid #436361;*/
 	padding: 10px 0px 20px 10px;
 	margin:0;
 	border-bottom: 1px solid #436361;
@@ -528,6 +531,7 @@ p.hidden{
 	font-family: 'Noticia Text', serif;
 	font-size: 15px;
 	font-style: italic;
+	
 }
 
 
@@ -538,8 +542,6 @@ p.hidden{
 	font-size: 15px;
 	color: white;
 	font-weight: 100;
-	border-right: 1px solid #436361;
-	border-left: 1px solid #436361;
 }
 
 .get_tix ul{
@@ -623,8 +625,8 @@ li h5.toggle{
 	color: white;
 	background-color: none;
 	font-weight: normal;
-	border-right: 1px solid #436361;
-	border-left: 1px solid #436361;
+	/*border-right: 1px solid #436361;
+	border-left: 1px solid #436361;*/
 	border-bottom: 1px solid #436361;
 	margin: -10px 0 0 0;
 	padding: 0 0 10px 10px;
@@ -638,8 +640,8 @@ h5.toggle:hover{
 
 .photo_gallery{
 	background-color: #313131;
-	border-right: 1px solid #436361;
-	border-left: 1px solid #436361;
+	/*border-right: 1px solid #436361;
+	border-left: 1px solid #436361;*/
 	border-bottom: 1px solid #436361;
 	margin: -25px 0 0 0;
 	height: 88px;
@@ -796,7 +798,7 @@ background-color: #436361;
 	padding: 5px 18px 5px 18px;
 	color: white;
 	border-radius: 2px;
-	margin: 0px 0 30px 0;
+	margin: 30px 0 0 0;
 	text-align: center;
 	font-family: 'Trebuchet MS', sans-serif;
 	font-style: normal;
