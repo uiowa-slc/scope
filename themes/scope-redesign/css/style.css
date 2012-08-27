@@ -216,7 +216,8 @@ ul.links li:hover{
 .main{
 	width: 970px;
 	height: 530px;
-	margin: -25px auto auto auto;
+	/*margin: -25px auto auto auto;*/
+	margin-left: 15px;
 }
 
 .main img{
@@ -374,7 +375,7 @@ ul.links li:hover{
 	font-size: 90px;
 	text-transform: uppercase;
 	background-image: url("/scope/themes/scope-redesign/images/soundwave.png");
-	height: 145px;
+	min-height: 145px;
 	background-repeat: no-repeat;
 	margin: 40px auto 0 auto;
 	padding-top: 20px;
@@ -1007,7 +1008,11 @@ footer img{
 	width:100%;
 	position: absolute;
 	z-index: -100;
-	
+	overflow-x: hidden;
+}
+
+#parallax-stuff {
+	overflow: hidden;
 }
 
 .title_2{

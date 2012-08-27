@@ -4,7 +4,7 @@
 
 <footer>
 	<div id="foot-container">
-		<img src="/scope/themes/scope-redesign/images/logo.png"/>
+		<img src="{$ThemeDir}/images/logo.png"/>
 		<div id="foot-left">
 			<p>SCOPE Productions</br>
 					154 Iowa Memorial Union</br>

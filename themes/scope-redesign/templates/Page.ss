@@ -3,7 +3,7 @@
 	<% base_tag %>
 	
 	<!--<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>-->
-	<title>$Title</title>
+	<title>$Title - Scope Productions - The University of Iowa</title>
 	<meta charset="utf-8">
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">-->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -21,53 +21,35 @@
 	<% require themedCSS(layout) %>
 	<link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" />
 
-
-<link rel="stylesheet" href="themes/scope-redesign/assets/countdown/jquery.countdown.css" />
-<link href='http://fonts.googleapis.com/css?family=Kotta+One|Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="themes/scope-redesign/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-        
-       
-<div id="fb-root"></div>
-
-</head>
-
-<body class="$ClassName<% if Menu(2) %><% else %> no-sidebar<% end_if %>">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-
-
-<!-- JavaScript includes -->		
+		<script src="http://code.jquery.com/jquery-latest.js"></script>	
 		<script src="themes/scope-redesign/assets/countdown/jquery.countdown.js"></script>
 	    <script src="themes/scope-redesign/assets/js/countdownscript.js"></script>
 	    <script src="themes/scope-redesign/assets/js/test.js"></script>
-		<script src="themes/scope-redesign/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	    
+		<link rel="stylesheet" href="{$ThemeDir}/js/fancybox/source/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+		<script type="text/javascript" src="{$ThemeDir}/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.0"></script>
+		
+		
 		<script src="themes/scope-redesign/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 		<script src="http://twitter.com/javascripts/blogger.js"></script>
 		<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
-		
-$Layout
-
-	
-
-<!-- slider javaScript -->
-		
+				
 
 <script>
+$(document).ready(function () {
+<!-- fancy box JavaScript -->
+	$("a.single_image").fancybox();
+});
 
 
-jQuery(document).ready(function($) {
-    
+/*jQuery(document).ready(function($) {
     a=parseFloat(400);// Initial value for the first background (bk 0)
-    
-    
     b=parseFloat(0);// Initial value for the first background (bk 0)
-    
-    $('.bk_0').css('backgroundPosition', '100% 0px');
-     
     c=parseFloat(400);// Initial value for the second background (bk 1)
     d=parseFloat(0);// Initial value for the second background (bk 1)
     var scrollTop = $(window).scrollTop();
     var scroll_actually= new Array();// Identifies the X and Y values for the background
-    //alert("Hello world!");
+ 
     $(window).scroll(function(){//This is not the cleanest way to do this, I'm just keeping it short.
         if(scrollTop>$(this).scrollTop()) // Scroll up
         {
@@ -76,7 +58,7 @@ jQuery(document).ready(function($) {
                     a=a+35;// Position for the first background, it decreases in 35 pixels
                     b=b+10;// Position for the first background, it decreases in 10 pixels
                     $('.img_1').css('backgroundPosition', '50% '+a+'px');
-                    //$('.bk_0').css('backgroundPosition', 'auto '+b+'px');
+                    $('.bk_0').css('backgroundPosition', '300px '+b+'px');
             }
             if (getScrollTop()>=2050 && getScrollTop()<=3650)
             {
@@ -93,7 +75,7 @@ jQuery(document).ready(function($) {
                   a=a-35;// Position for the first background, it decreases in 35 pixels
                   b=b-10;// Position for the first background, it decreases in 10 pixels
                   $('.img_1').css('backgroundPosition', '50% '+a+'px');
-                  //$('.bk_0').css('backgroundPosition', 'auto '+b+'px');
+                  $('.bk_0').css('backgroundPosition', '300px '+b+'px');
             }
                 if (getScrollTop()>=2050 && getScrollTop()<=3650)
             {
@@ -109,14 +91,13 @@ jQuery(document).ready(function($) {
             b=parseFloat(0);
             c=parseFloat(400);
             d=parseFloat(0);
-            //$('.bk_0').css('backgroundPosition', '0 0');
+            $('.bk_0').css('backgroundPosition', '0 0');
             $('.bk_1').css('backgroundPosition', '0 0');
             $('.img_2').css('backgroundPosition', '50% '+400+'px');
             $('.img_1').css('backgroundPosition', '50% '+400+'px');
         }
       scrollTop = $(this).scrollTop();
-      
-    });
+    });*/
 });
 function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
  
@@ -133,43 +114,15 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
 }
 
 
+
+
 </script>
 
 
 <script>
-	  //$(document).ready(function ()
-   $(document).ready(function () {
-      $("div.photo_gallery").hide();
-      $(".description p.hidden").hide();
-    });		
-		
-    //jQuery("h5.toggle").click(function ($) {
-    jQuery("#toggle1").click(function () {
-      $("#photo_gallery1").slideToggle("fast");
-    });
-    
-    jQuery("#toggle2").click(function () {
-      $("#photo_gallery2").slideToggle("fast");
-    });
-    
-    jQuery("#toggle3").click(function () {
-      $("#photo_gallery3").slideToggle("fast");
-    });
-    
-    jQuery("#toggle4").click(function () {
-      $("#photo_gallery4").slideToggle("fast");
-    });
-    
-		
-    //jQuery("h5.toggle_p").click(function ($) {
-    jQuery("h5.toggle_p").click(function () {
-      $(".description p.hidden").slideToggle("slow");
-    });
 
 	//jQuery("a.single_image").fancybox([{topRatio : 0}]);
-	jQuery("a.single_image").fancybox();
-	
-(function(d, s, id) {
+	jQuery(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
@@ -178,6 +131,23 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
 }(document, 'script', 'facebook-jssdk'));
 	
 </script>
+<link rel="stylesheet" href="themes/scope-redesign/assets/countdown/jquery.countdown.css" />
+<link href='http://fonts.googleapis.com/css?family=Kotta+One|Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+       
+       
+
+</head>
+
+<body class="$ClassName<% if Menu(2) %><% else %> no-sidebar<% end_if %>">
+<div id="fb-root"></div>
+
+
+$Layout
+
+	
+
+
 </body>
 
 </html>
