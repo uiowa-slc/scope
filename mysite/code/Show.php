@@ -38,7 +38,7 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextAreaField('Time'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 
           
-        $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 516X970'));
+        $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 970X516'));
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery1')); 
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery2')); 
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery3')); 

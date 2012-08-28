@@ -4,7 +4,7 @@
 	<div class="extras">
 	<ul id="staff" class="description">
 		<h5>Meet the Staff</h5>
-	<% loop ChildrenOf(StaffHolder) %>		
+	<% loop getRandomStaff %>		
 			<li> 
 			<div class="staff">
 					$ProfilePic
@@ -12,7 +12,7 @@
 					<li>$FirstName $LastName</li>
 					<li>$Title</li>
 					<li>$Class</li>
-					<li><a href="mailto:email@uiowa.edu">$Email</a></li>
+					<li><a href="{$Email}">$Email</a></li>
 					
 				</ul> 
 			</div> 

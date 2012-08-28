@@ -177,11 +177,12 @@
 	<h5>Technical Information</h5>
 	<li><div class="specs">
 		<ul>
+			<% if Capacity %>
 				<li class="left">Capacity</li>
 				<li>$Capacity</li>
 				<div class="clear"></div>
-				
-		  </ul>
+			<% end_if %>				
+		</ul>
 	 </div></li>
 	<li><div class="specs">
 		<ul>
@@ -201,44 +202,7 @@
 			<% end_if %>	
 		  </ul>
 	 </div></li>
-	<li><div class="specs">
-		<ul>
-			<% if Power %>
-				<li class="left">Power</li>
-				<li>$Power</li>
-				<div class="clear"></div>
-			<% end_if %>		
-		</ul>
-	 </div></li>
-	<li><div class="specs">
-		<ul>
-			<% if Risers %>
-				<li class="left">Risers</li>
-				<li>$Risers</li>
-				<div class="clear"></div>
-			<% end_if %>	
-		  </ul>
-	 </div></li>
-	<li><div class="specs">
-		<ul>
-			<% if Loading %>
-				<li class="left">Loading</li>
-				<li>$Loading</li>
-				<div class="clear"></div>
-			<% end_if %>	
-		</ul>
-	 </div></li>
-	
-	<li><div class="specs">
-		<ul>
-			<% if Other %>
-				<li class="left">Other</li>
-				<li>$Other</li>
-				<div class="clear"></div>
-			<% end_if %>	
-		</ul>
-	 </div></li>
-	 <div class="clear"></div>
+		 <div class="clear"></div>
 	</ul>
 </div>
 

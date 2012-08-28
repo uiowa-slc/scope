@@ -90,7 +90,33 @@ class Page_Controller extends ContentController {
 			
 	}
 	
-	
+	public function getRandomStaff(){
+		$staff = StaffPage::get();
+		
+		$homepageStaff = new DataList('StaffPage');
+				
+		$IDArray = $staff->getIDList();
+		
+		$staffIndex1 = array_rand($IDArray);	
+		unset($IDArray[$staffIndex1]);
+		
+		$staffIndex2 = array_rand($IDArray);		
+		unset($IDArray[$staffIndex2]);
+		
+		$staffIndex3 = array_rand($IDArray);		
+		unset($IDArray[$staffIndex3]);
+		
+		$staff1 = $staff->byID($staffIndex1);				
+		$staff2 = $staff->byID($staffIndex2);					
+		$staff3 = $staff->byID($staffIndex3);
+				
+		//$homepageStaff->add($staff1);
+	    //$homepageStaff->add($staff2);
+		//$homepageStaff->add($staff3);
+		
+		return $homepageStaff;
+		
+	}
 	
 
 	/*  
