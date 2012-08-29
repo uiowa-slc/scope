@@ -4,6 +4,7 @@ class Show extends Page {
     'Artist' => 'Text',
     'Date' => 'Date',
     'Time' => 'Text',
+    'DoorsOpenTime' => 'Text',
     'Venue' => 'Text',
     'SpotifyLink' => 'Text',     
     'BuyTicketsOnlineLink' => 'Text',
@@ -36,6 +37,7 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('Artist'));
         $fields->addFieldToTab('Root.Main', new TextField('Date'));   
         $fields->addFieldToTab('Root.Main', new TextAreaField('Time'));
+        $fields->addFieldToTab('Root.Main', new TextField('DoorsOpenTime'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 
           
         $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 970X516'));
@@ -47,10 +49,10 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
-        $fields->addFieldToTab('Root.Main', new TextField('FacebookLink')); 
-        $fields->addFieldToTab('Root.Main', new TextField('TwitterLink')); 
-        $fields->addFieldToTab('Root.Main', new TextField('TumblrLink')); 
-        $fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));                               
+        //$fields->addFieldToTab('Root.Main', new TextField('FacebookLink')); 
+        //$fields->addFieldToTab('Root.Main', new TextField('TwitterLink')); 
+        //$fields->addFieldToTab('Root.Main', new TextField('TumblrLink')); 
+        //$fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));                               
                
         return $fields;
     }
@@ -60,6 +62,14 @@ class Show extends Page {
 		$date = $this->Date . $this->Time;
 		$timestamp = strtotime($date);
 		return $timestamp;
+	}
+	
+	public function getFormattedDate(){
+		
+		$date = $this->Date . $this->Time;
+		$timestamp = strtotime($date);
+		$formattedDate = date("F j, Y", $timestamp);
+		return $formattedDate;
 	}
 	
 }

@@ -71,7 +71,11 @@ class Page_Controller extends ContentController {
     	$pages = new PaginatedList($shows, $this->request);    	
 	    $pages->setPageLength(10);
 	    
+	    $pages->sort('Date');
+	    
 	    return $pages;
+	    
+	    
 	  }
 	  
 	public function ArchivePaginatedPages(){
@@ -86,6 +90,8 @@ class Page_Controller extends ContentController {
     	$pages = new PaginatedList($shows, $this->request);    	
 	    $pages->setPageLength(5);
 	    
+	    $pages->sort('Date');
+	    
 	    return $pages;
 			
 	}
@@ -93,7 +99,7 @@ class Page_Controller extends ContentController {
 	public function getRandomStaff(){
 		$staff = StaffPage::get();
 		
-		$homepageStaff = new DataList('StaffPage');
+		$homepageStaff = new ArrayList();
 				
 		$IDArray = $staff->getIDList();
 		
@@ -110,9 +116,9 @@ class Page_Controller extends ContentController {
 		$staff2 = $staff->byID($staffIndex2);					
 		$staff3 = $staff->byID($staffIndex3);
 				
-		//$homepageStaff->add($staff1);
-	    //$homepageStaff->add($staff2);
-		//$homepageStaff->add($staff3);
+		$homepageStaff->add($staff1);
+	    $homepageStaff->add($staff2);
+		$homepageStaff->add($staff3);
 		
 		return $homepageStaff;
 		

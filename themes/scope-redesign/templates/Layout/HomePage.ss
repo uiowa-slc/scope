@@ -3,7 +3,11 @@
 <% include Header %>
 	
 	<div class="main">
-		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div><% with FeaturedPage %>$Picture	
+		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div>
+		<% with FeaturedPage %>
+		
+		$Picture	
+		
 		<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
 		<!--<h4>Featured Show</h4>-->
 		
@@ -26,6 +30,7 @@
 				<a href="$BuyTicketsOnlineLink"><h3>Buy Tickets</h3></a>
 			
 			<% end_if %>
+			
 			<% end_with %>
 			
 		</div> <!-- end main_info div -->
@@ -64,7 +69,7 @@
 		<a href="{$Link}"><img id="show_image" src="$Picture.URL"/></a>
 		
 		<a href="{$Link}"><h2>$Artist</h2></a>
-		<h5 class="date">$Venue $Time <br> $Date.NiceUS</h5>
+		<h5 class="date">$Venue $Time <br>$getFormattedDate</h5>
             	<p>$Content.Summary(100)<p>
 				<div class="button"><a href="$Link">See More</a></div>
 	</div>
@@ -82,10 +87,31 @@
 					<% end_if %>
 					<li><strong><a href="$Link">$Artist</a></strong></li>
 
-					<li>$Venue $Time</li>
+					<li>$Venue</li>
 					<li>$Date.NiceUS</li>
-					<li><div id="countdown"></div></li>
-					<li id="note"></li>
+					<% if DoorsOpenTime %>
+						<li>Doors open at: $DoorsOpenTime</li>						
+					<% end_if %>
+					<li>Show starts at: $Time</li>
+					
+					<li><div id="countdown{$Pos}"></div></li>
+										
+					<li id="note{$Pos}"></li>
+										
+					<script>
+					
+					var timestamp = {$getTimestamp};
+					ts = new Date(timestamp * 1000);
+				    cd = '#countdown{$Pos}';
+				    no = '#note{$Pos}';
+					temp = startCountdown(ts,cd,no);
+	
+					if (ts < new Date()){					    
+						var removeDiv = $('#countdown{$Pos}');
+						removeDiv.hide();
+					}
+
+					</script>
 				</ul>
 			</div></li> <!-- end date -->
 			<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
@@ -109,7 +135,7 @@
 		
 		<li><div class="fb-like" data-href="{$BaseHref}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 		
-		<li><a href="{$TwitterLink}" class="twitter-share-button" data-lang="en">Tweet</a></li>
+		<li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a></li>
 
 		<li><a class="pin" href="http://pinterest.com/pin/create/button/?url={$BaseHref}{$URLSegment}&media={$BaseHref}{$Picture.Filename}&description={$Content.Summary(100)}" title="Pin It"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 		
@@ -265,33 +291,19 @@
 <script src="http://twitter.com/javascripts/blogger.js"></script>
 
 <script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uiscope&include_rts=true&count=1&callback=twitterCallback2"></script>
-    
-<script>	
-   	var timestamp = {$FeaturedPage.getTimestamp};
+<!--	
+<script>
+					
+	var timestamp = {$FeaturedPage.getTimestamp};
 	ts = new Date(timestamp * 1000);
-	
-	/*
-	
-	var year = timestamp.getYear();
-	var month = timestamp.getMonth();
-	var day = timestamp.getDay();
-	var hour = timestamp.getHours();
-	var minutes = timestamp.getMinutes();
-	
-	*/
-	
-	//ts = new Date(year, month, day, hour, minutes);
-	
-	//alert(ts);
+    cd = '#countdown2';
+    no = '#note2';
+	startCountdown(ts,cd,no);
 
-	startCountdown(ts);
-	
 </script>
-
-	
-	
-		
+-->		
 <% include Footer %>	
+
 
 
 	

@@ -7,7 +7,7 @@ class HomePage extends Page {
    );
    
   static $has_one = array(
-   'FeaturedShow' => 'Show',
+   'FeaturedShow' => 'Show', //IGNORE, USE FEATUREDPAGE
    'FeaturedPage' => 'SiteTree'
    );
   

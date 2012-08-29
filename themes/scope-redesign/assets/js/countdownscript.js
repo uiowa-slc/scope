@@ -1,6 +1,6 @@
-function startCountdown(ts){
+function startCountdown(ts,cd,no){
 	
-	var note = $('#note'),
+	var note = $(no),
 	//ts = new Date(2012, 10, 14),
 	newYear = true;
 	/*
@@ -17,7 +17,7 @@ function startCountdown(ts){
 		newYear = false;
 	}
 		
-	$('#countdown').countdown({
+	$(cd).countdown({
 		timestamp	: ts,
 		callback	: function(days, hours, minutes, seconds){
 			var message = "";
@@ -50,13 +50,16 @@ function startCountdown(ts){
 				currentDate = new Date(testYear, testMonth, testDay, testHours);
 			*/	
 				//if (currentDate > ts){
-					message += "The show has started!";
+					//message += "The show has started!";
+
+					
 				//}			
 				//else {
 					//message += "The show is over!";
 				//}
 			}
 			note.html(message);
+			return message;
 		}
 	});
 	

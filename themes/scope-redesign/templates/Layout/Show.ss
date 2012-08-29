@@ -84,6 +84,30 @@
 	
 <% include Footer %>
 
+<script>	
+   	var timestamp = {$getTimestamp};
+	ts = new Date(timestamp * 1000);
+	
+	/*
+	
+	var year = timestamp.getYear();
+	var month = timestamp.getMonth();
+	var day = timestamp.getDay();
+	var hour = timestamp.getHours();
+	var minutes = timestamp.getMinutes();
+	
+	*/
+	
+	//ts = new Date(year, month, day, hour, minutes);
+	
+	//alert(ts);
+
+	startCountdown(ts);
+	
+</script>
+
+
+
 
 
 
