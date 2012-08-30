@@ -57,7 +57,7 @@
 
 <div class="section" id="shows">
 	<h1>Shows</h1>
-	<h4><a href="{$BaseHref}show-archive" id="showarchive" >To Show Archive >></a></h4><br> 		
+	<h4><a href="{$AbsoluteBaseURL}show-archive" id="showarchive" >To Show Archive >></a></h4><br> 		
 	
 
 
@@ -133,11 +133,11 @@
 			<li><div class="get_tix"><h5>Share this event:</h5>
 					<ul class="social-small">
 		
-		<li><div class="fb-like" data-href="{$BaseHref}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
+		<li><div class="fb-like" data-href="{$AbsoluteBaseURL}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 		
 		<li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a></li>
 
-		<li><a class="pin" href="http://pinterest.com/pin/create/button/?url={$BaseHref}{$URLSegment}&media={$BaseHref}{$Picture.Filename}&description={$Content.Summary(100)}" title="Pin It"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
+		<li><a class="pin" href="http://pinterest.com/pin/create/button/?url={$AbsoluteBaseURL}{$URLSegment}&media={$AbsoluteBaseURL}{$Picture.Filename}&description={$Content.Summary(100)}" title="Pin It"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 		
 		<!--<li><a href="{$TumblrLink}" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>-->
 		
@@ -264,16 +264,34 @@
 		
 		
 		<div class="extras tech-info">
+							
+					<ul class="social-small">
+			
+					<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
+					
+					<li><a href="https://twitter.com/uiSCOPE" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @uiSCOPE</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+		
+					<!--<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
+			
+			<li><a href="http://scopeproductions.tumblr.com/" class="tumblr"><img src="{$ThemeDir}/images/tumblr.png" id="tumblr"/></a></li>
+			
+					</ul>
+			
+			
+					
 				<div class="description">
 				<h5>Stay updated with emails from SCOPE:</h5>
+				
 				<form action="http://uiowa.us2.list-manage2.com/subscribe/post?u=ecb2f1db3370a699762596aba&amp;id=9f325218d4" method="post" id="subscribe-form" name="subscribe-form" class="validate" target="_blank">
 				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
 				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" class="button"></div>
 				</form>
-				<h5>Check out the SCOPE Radio Show!</h5>
-				<p>Be sure to tune in to 89.7 KRUI FM or stream live Fridays from 3:00 to 5:00 pm for RadioSCOPE. Listen to SCOPE members play some great tunes, featuring music from upcoming shows, and have opportunities to win tickets and other giveaways! 
-				</p>
+				
 				</div> <!-- end description div -->
+				
+		</div>					
+			
 		</div> <!-- end extras div -->
 		
 		<% end_with %>	

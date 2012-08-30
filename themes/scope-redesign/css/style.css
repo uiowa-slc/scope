@@ -8,6 +8,8 @@
 	font-size: 20pt;
 }
 
+
+
 #paginate{
 	
 	padding: 25px 0px 25px 10px;
@@ -15,6 +17,10 @@
 	height: 35px;
 	background: transparent;
 	
+}
+
+#stafflink {
+	padding: 10px 10px 10px 10px;
 }
 
 #showarchive{
@@ -32,6 +38,8 @@
 #FeaturedArtist{
 	text-transform: uppercase;
 }
+
+
 /*
 #twitter_update_list {
 color: green;
@@ -437,7 +445,7 @@ ul.links li:hover{
 	font-size: 15px;
 	line-height: 20px;
 	margin: 0;
-	font-family: 'Noticia Text', serif;
+	font-family: 'Karla', sans-serif;;
 
 }
 
@@ -475,6 +483,10 @@ ul.links li:hover{
 	width: 595px;
 }
 
+.description #tumblr{
+	width: auto;
+	border-bottom: 1px solid #436361;
+}
 p.hidden{
 	margin-top: 15px;
 }
@@ -495,6 +507,42 @@ p.hidden{
 	background-color: #313131;
 	
 }
+
+.profileextras{
+	/*border: solid 1px gray;*/
+	/*margin: -12px 0 0 0px;*/
+	padding: 0px 0px 15px 15px;
+	width: 345px;
+
+}
+
+.profileextras ul{
+	
+	list-style: none;
+	text-align: left;
+	margin:0;
+	padding: 0px 0px 10px 10px;
+	background-color: #313131;
+	margin-bottom: 0px;
+	
+}
+
+/*
+.profileextras img {
+	float: left;
+}
+
+.profileextras ul .even{
+	display: inline;
+	list-style: none;
+	text-align: left;
+	float: right;
+	margin:0;
+	padding: 0px 0px 10px 10px;
+	background-color: #313131;
+	
+}
+*/
 
 .extras>ul {
 	border: 1px solid #436361;

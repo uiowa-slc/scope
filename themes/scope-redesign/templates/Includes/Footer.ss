@@ -16,11 +16,11 @@
 		
 		<div id="foot-right">
 			<ul class="links">
-				<a href="#"><li>Home</li></a>
-				<a href="#shows"><li>Shows</li></a>
-				<a href="#venues"><li>Venues</li></a>
-				<a href="#about"><li>About</li></a>
-				<a href="about/#contact"><li>Contact</li></a>
+				<a href="{$AbsoluteBaseURL}#"><li>Home</li></a>
+				<a href="{$AbsoluteBaseURL}#shows"><li>Shows</li></a>
+				<a href="{$AbsoluteBaseURL}#venues"><li>Venues</li></a>
+				<a href="{$AbsoluteBaseURL}#about"><li>About</li></a>
+				<a href="{$AbsoluteBaseURL}about/#contact"><li>Contact</li></a>
 			</ul>
 			<div class="clear"></div>
 			<p>&#169 SCOPE Productions 2012. All Rights Reserved.</p>

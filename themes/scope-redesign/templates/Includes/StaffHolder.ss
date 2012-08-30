@@ -24,5 +24,7 @@
 			
 		
 	<% end_loop %>	
+	<h4><a href="{$BaseHref}staff-profiles" id="stafflink" >See All Staff >></a></h4>
 	</ul> <!-- end ul staff -->
 	</div> <!-- end extras 2nd div -->
+	

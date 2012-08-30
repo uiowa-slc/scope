@@ -21,6 +21,7 @@
 	<% require themedCSS(form) %>	
 	<% require themedCSS(layout) %>
 	<link rel="shortcut icon" href="$ThemeDir/images/favicon.ico" />
+	<link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 		<script src="http://code.jquery.com/jquery-latest.js"></script>	
 		<script src="themes/scope-redesign/assets/countdown/jquery.countdown.js"></script>

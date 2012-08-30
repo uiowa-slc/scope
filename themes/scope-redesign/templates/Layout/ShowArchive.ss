@@ -96,6 +96,8 @@
 
 </div> <!-- end section shows div-->
 
+<% include Footer %>	
+
 
 
 
