@@ -3,7 +3,7 @@
 
 	<div class="extras">
 	<ul id="staff" class="description">
-		<h5>Meet the Staff</h5>
+		<h5 class="meet-the-staff">Meet the Staff</h5>
 	<% loop getRandomStaff %>		
 			<li> 
 			<div class="staff">
