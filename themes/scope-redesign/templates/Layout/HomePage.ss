@@ -152,7 +152,7 @@
 		
 		
 		<% if PhotoGallery1 %>
-		<h5><a href="$PhotoGallery1.Link" class="single_image">Photo Gallery</a></h5>
+		<h5 class="photo-gallery-link"><a href="$PhotoGallery1.Link" class="single_image">Photo Gallery</a></h5>
 			<div class="photo_gallery" id="photo_gallery{$Pos}">
 				<ul>
 				   <% if PhotoGallery1 %>
@@ -275,7 +275,7 @@
 					<!--<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
 			
 			<li><a href="http://scopeproductions.tumblr.com/" class="tumblr"><img src="{$ThemeDir}/images/tumblr.png" id="tumblr"/></a></li>
-			
+					<div class="clear"></div>
 					</ul>
 			
 			
