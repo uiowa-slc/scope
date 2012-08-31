@@ -81,10 +81,8 @@
 			<% end_if %>
 			<li><div class="date">
 				<ul>
-
-					<% if $Pos==1 %>
-						Countdown to 
-					<% end_if %>
+					Countdown to 
+				
 					<li><strong><a href="$Link">$Artist</a></strong></li>
 
 					<li>$Venue</li>
@@ -143,7 +141,9 @@
 		
 		<li><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
 		
+		
 		</ul> <!-- end ul class social small -->
+		
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
 		
 		<div class="clear"></div>
@@ -264,8 +264,12 @@
 		
 		
 		<div class="extras tech-info">
+		
+		<div id="sas">
 							
 					<ul class="social-small">
+					
+					
 			
 					<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 					
@@ -276,9 +280,11 @@
 			
 			<li><a href="http://scopeproductions.tumblr.com/" class="tumblr"><img src="{$ThemeDir}/images/tumblr.png" id="tumblr"/></a></li>
 			
+
+			
 					</ul>
 			
-			
+		</div>	
 					
 				<div class="description">
 				<h5>Stay updated with emails from SCOPE:</h5>
