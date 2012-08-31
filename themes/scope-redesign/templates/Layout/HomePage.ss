@@ -38,7 +38,7 @@
 
 	<div class="twitter">
 		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
-		<div id="twitter_update_list"></div>
+		<a href="http://twitter.com/uiscope" id="twitterlink"><div id="twitter_update_list"></div></a>
 	</div>
 
 <!-- PARALLAX STUFF--> 

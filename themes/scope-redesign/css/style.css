@@ -8,7 +8,13 @@
 	font-size: 20pt;
 }
 
+.btn {
+	margin-left: 10px;
+}
 
+#twitterlink {
+	text-decoration: none;
+}
 
 #paginate{
 	
@@ -516,6 +522,10 @@ p.hidden{
 
 }
 
+.profileextras li {
+	width: 200px;
+}
+
 .profileextras ul{
 	
 	list-style: none;
@@ -525,6 +535,17 @@ p.hidden{
 	background-color: #313131;
 	margin-bottom: 0px;
 	
+}
+
+#staff_ul{
+	
+	list-style: none;
+	text-align: left;
+	margin:0;
+	padding: 0px 0px 10px 10px;
+	background-color: #313131;
+	margin-bottom: 0px;
+	width: 700px
 }
 
 /*
@@ -906,6 +927,15 @@ background-color: #436361;
 
 .staff{
 height: 80px;
+
+}
+
+.staff_right{
+	float: right;
+}
+
+.staff_left {
+	float: left;
 }
 
 .staff ul{
@@ -939,6 +969,42 @@ h5.meet-the-staff {
 	float: left;
 	margin-top: 10px;
 }
+
+
+
+
+
+
+
+.staffpage{
+width: 700px;
+height: 80px;
+}
+
+.staffpage ul{
+	float: left;
+	width: 200px;
+	padding: 0 5px 0 5px;
+	margin: 10px 15px 15px 15px;
+
+}
+
+.staffpage li{
+	float: left;
+	width: 200px;
+	font-size: 15px;
+}
+
+
+.staffpage img{
+	width: 70px;
+	height: 70px;
+	float: left;
+	margin-top: 10px;
+}
+
+
+
 
 footer{
 	background-color: #436361;

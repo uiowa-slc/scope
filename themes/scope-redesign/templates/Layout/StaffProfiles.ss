@@ -7,12 +7,21 @@
 
 <div class="profileextras">
 
-<h1>SCOPE staff</h1>
+<h1>Our staff</h1>
 
-	<ul id="staff" class="description">
-			<% loop ChildrenOf(StaffHolder) %>		
-			<li> 
-			<div class="staff">
+	<ul id="staff_ul" class="description">
+			<% loop ChildrenOf(StaffHolder) %>	
+				
+			<% if Odd %>
+				<div class="staffpage">
+			<% end_if %>
+			
+			<% if Odd %>
+				<div class="staff_left">
+			<% else_if Even %>
+				<div class="staff_right">
+			<% end_if %>
+			
 					$ProfilePic
 				
 				<ul>
@@ -21,12 +30,16 @@
 					<li>$Class</li>
 					<li><a href="mailto:email@uiowa.edu">$Email</a></li>
 					
-				</ul> 
-			</div> 
-			</li>
+				</ul>
 			
-			<div class="clear"></div>
-			
+				</div>
+	
+			<% if Even %>	 
+				</div>
+				<div class="clear"></div>
+			<% end_if %>
+						
+	
 			
 			
 		
