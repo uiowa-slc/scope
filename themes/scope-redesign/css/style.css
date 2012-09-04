@@ -33,7 +33,7 @@
 	float: right;
 	font-style: italic;
 	background-color: rgba(0,0,0,.6);
-	
+	padding: 5px;
 	/*
 	height: 20px;
 	width: 150px;
@@ -1167,6 +1167,9 @@ footer img{
 }
 
 #parallax-stuff {
+	width: 1000px;
+	height: 4000px;
+	position: absolute;
 	overflow: hidden;
 }
 
@@ -1180,6 +1183,50 @@ footer img{
 .bk_1{
 	background-image:url("/scope/themes/scope-redesign/images/secondBG.jpg") 0 0  no-repeat fixed ;	
 }
+
+
+/* Media Queries */
+
+
+@media only screen and (min-width : 1280px) and (max-width : 1439px){
+
+
+	#parallax-stuff {
+		overflow: hidden;
+		width: 1000px;
+	}
+
+
+}
+
+@media only screen and (min-width : 1440px){
+
+
+	#parallax-stuff {
+		width: 1180px;
+	}
+
+
+}
+
+
+@media only screen and (min-width : 1600px){
+
+	#parallax-stuff {
+		width: 1280px;
+	}
+
+}
+
+@media only screen and (min-width : 1900px){
+
+	#parallax-stuff {
+		width: 1480px;
+	}
+
+}
+
+
 /*
 <div class="bk bk_0">
     <!--This is the first background and the remaining objects-->
