@@ -20,7 +20,7 @@ class StaffPage extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('FirstName'));
         $fields->addFieldToTab('Root.Main', new TextField('LastName'));
         $fields->addFieldToTab('Root.Main', new TextField('Title'));
-        $fields->addFieldToTab('Root.Main', new TextField('Class')); 
+        $fields->addFieldToTab('Root.Main', new TextField('Class', 'Class (this is not in use)')); 
         $fields->addFieldToTab('Root.Main', new TextField('Email'));     
         $fields->addFieldToTab('Root.Main', new UploadField('ProfilePic', 'Profile Pic (Dimensions are 70X70)'));                  
                
