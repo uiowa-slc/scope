@@ -264,8 +264,9 @@
 		
 		
 		<div class="extras tech-info">
-							
-					<ul class="social-small">
+					<div class="social-about">
+					
+					<ul class="social">
 			
 					<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 					
@@ -278,7 +279,7 @@
 					<div class="clear"></div>
 					</ul>
 			
-			
+					</div>
 					
 				<div class="description">
 				<h5>Stay updated with emails from SCOPE:</h5>

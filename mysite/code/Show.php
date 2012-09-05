@@ -35,7 +35,11 @@ class Show extends Page {
         $fields = parent::getCMSFields();
      
         $fields->addFieldToTab('Root.Main', new TextField('Artist'));
-        $fields->addFieldToTab('Root.Main', new TextField('Date'));   
+        
+        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date')); 
+        $dateField->setConfig('showcalendar', true);
+        $dateField->setConfig('dateformat', 'MM/dd/YYYY');
+                 
         $fields->addFieldToTab('Root.Main', new TextAreaField('Time'));
         $fields->addFieldToTab('Root.Main', new TextField('DoorsOpenTime'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 

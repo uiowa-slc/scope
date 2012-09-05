@@ -191,6 +191,25 @@ ul.social{
 	margin: 10px 1px auto 1px;
 }
 
+.social-about li {
+	display: block;
+	float: left;
+	height: 25px;
+	width: 80px;
+	margin: 10px 1px auto 1px;
+}
+
+.social-about {
+	width: 282px;
+	background-color: #313131;
+	margin-top: 5px;
+	color: white;
+	border: solid 1px #436361;
+	height: 10px;
+	padding: 15px 0px 20px 60px;
+
+}
+
 
 ul.links{
 	float: right;
