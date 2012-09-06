@@ -88,9 +88,9 @@ class Page_Controller extends ContentController {
     'Show.SiteTree.ParentID:ExactMatch' => $showparentID));
     
     	$pages = new PaginatedList($shows, $this->request);    	
-	    $pages->setPageLength(5);
+	    $pages->setPageLength(10);
 	    
-	    $pages->sort('Date');
+	    $pages->sort('Date')->reverse();
 	    
 	    return $pages;
 			

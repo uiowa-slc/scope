@@ -3,7 +3,12 @@
 <% include Header %>
 	
 	<div class="main">
-		<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div>
+		<% if SoundwaveOverlay %>
+			<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div>
+		<% else %>
+			<div class="overlay"><img src="{$ThemeDir}/images/main_nodots.png"/></div>
+		<% end_if %>
+		
 		<% with FeaturedPage %>
 		
 		$Picture	

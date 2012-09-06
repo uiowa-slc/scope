@@ -8,13 +8,16 @@
 <div id="paginate">	
 
 <% if ArchivePaginatedPages.MoreThanOnePage %>
+
+	<div id="paginate">	
+	
     <% if ArchivePaginatedPages.NotFirstPage %>
         <a class="prev" href="$ArchivePaginatedPages.PrevLink">Prev</a>
     <% end_if %>	
 
 	<% loop ArchivePaginatedPages.Pages %>	
 		<% if CurrentBool %>
-	         $PageNum
+	         <span>$PageNum</span>
 	    <% else %>
 	     	<% if Link %>
 	            <a href="$Link">$PageNum</a>
@@ -27,8 +30,11 @@
 	 <% if ArchivePaginatedPages.NotLastPage %>
 	 	<a class="next" href="$ArchivePaginatedPages.NextLink">Next</a>
 	 <% end_if %>
+	 
+	 </div> <!--end paginate div -->
+	 
 <% end_if %>  
-</div>
+
 
 <% loop ArchivePaginatedPages %>   
  

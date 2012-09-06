@@ -2,7 +2,8 @@
 class HomePage extends Page {
   static $db = array(
   'BuyTicketsLink' => 'Text',
-  'TwitterLink' => 'Text'
+  'TwitterLink' => 'Text',
+  'SoundwaveOverlay' => 'Boolean'
    
    );
    
@@ -23,8 +24,8 @@ class HomePage extends Page {
 	 	   
 	   $fields->addFieldToTab('Root.Main', $temp);
 	   $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsLink'));
-	   $fields->addFieldToTab('Root.Main', new TextField('TwitterLink'));      
-
+	   $fields->addFieldToTab('Root.Main', new TextField('TwitterLink'));
+	   $fields->addFieldToTab('Root.Main', new CheckboxField('SoundwaveOverlay', 'Check if you want the soundwave graphic to overlay the featured picture on the SCOPE homepage'));
 	
 	   return $fields;
    
@@ -37,6 +38,8 @@ class HomePage extends Page {
    public function getShowHolder(){
 	   return ShowHolder::get();
    }
+   
+   
   
   
  

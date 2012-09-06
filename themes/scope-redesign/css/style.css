@@ -18,7 +18,7 @@
 
 #paginate{
 	
-	padding: 25px 0px 25px 10px;
+	padding: 25px 0px 25px 15px;
 	width: 970px;
 	height: 35px;
 	background: transparent;
@@ -41,8 +41,21 @@
 	*/
 }
 
+#paginate a {
+	margin-right: 2px;
+}
+
+#paginate span {
+	margin-right: 2px;
+}
+
+
 #FeaturedArtist{
 	text-transform: uppercase;
+}
+
+.captionImage {
+	margin-left: 20px
 }
 
 
@@ -463,6 +476,8 @@ ul.links li:hover{
 	margin: 15px 0 15px 0px;
 	text-align: center;
 	text-shadow: 2px 2px 0px #313131, 3px 3px 0px #436361;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .description p{
@@ -1190,6 +1205,7 @@ footer img{
 	height: 4000px;
 	position: absolute;
 	overflow: hidden;
+	z-index: -1;
 }
 
 .title_2{
