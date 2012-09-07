@@ -68,32 +68,61 @@
 			
 			<li><div class="get_tix"><h5>Share this event:</h5>
 					<ul class="social-small">
-		
-		<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
+					
+		<li><div class="fb-like" data-href="{$AbsoluteBaseURL}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 		
 		<li><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a></li>
 
-		<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>
+		<li><a class="pin" href="http://pinterest.com/pin/create/button/?url={$AbsoluteBaseURL}{$URLSegment}&media={$AbsoluteBaseURL}{$Picture.Filename}&description={$Content.Summary(100)}" title="Pin It"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 		
-		<li><a href="https://www.tumblr.com/register/follow/scopeproductions" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
+		<!--<li><a href="{$TumblrLink}" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>-->
+		
+		<li><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
+					
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
 		
 		<div class="clear"></div>
 		
 		<% if PhotoGallery1 %>
-		<li><h5 class="toggle">Photo Gallery<h5>
-
-			<div class="photo_gallery">
+		<h5 class="photo-gallery-link"><a href="$PhotoGallery1.Link" class="single_image">Photo Gallery</a></h5>
+			<div class="photo_gallery" id="photo_gallery{$Pos}">
 				<ul>
-					<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery"><img src="$PhotoGallery1.Link"/></a></li>
-					<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery">$PhotoGallery2</a></li>
-					<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_gallery">$PhotoGallery3</a></li>
-					<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery">$PhotoGallery4</a></li>		
+				   <% if PhotoGallery1 %>
+						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery-{$ID}"><img src="$PhotoGallery1.Link"/></a></li>
+					<% end_if %>
+					<% if PhotoGallery2 %>
+						<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery2</a></li>
+					<% end_if %>
+					<% if PhotoGallery3 %>
+						<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_galler-{$ID}">$PhotoGallery3</a></li>
+					<% end_if %>
+					<% if PhotoGallery4 %>
+						<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery4</a></li>		
+					<% end_if %>
 				</ul>
-	  </div> <!-- end photo_gallery -->
-	  	</li> <!-- end toggle li -->
-	 <% end_if %>
+			</div> <!-- end photo_gallery -->
+		<% end_if %>
+		
+		<% if PhotoGallery5 %>
+			<div class="photo_gallery" id="photo_gallery{$Pos}">
+				<ul>
+					<% if PhotoGallery5 %>
+						<li><a class="single_image" href="{$PhotoGallery5.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery5</a></li>		
+					<% end_if %>
+					<% if PhotoGallery6 %>
+						<li><a class="single_image" href="{$PhotoGallery6.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery6</a></li>		
+					<% end_if %>
+					<% if PhotoGallery7 %>
+						<li><a class="single_image" href="{$PhotoGallery7.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery7</a></li>		
+					<% end_if %>
+					<% if PhotoGallery8 %>
+						<li><a class="single_image" href="{$PhotoGallery8.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery8</a></li>		
+					<% end_if %>
+				</ul>
+			</div>	  
+	  <% end_if %>
+	  
 		</ul> <!-- end ul in div class extras -->
 		
 	</div> <!-- end extras  -->
@@ -101,6 +130,8 @@
 <% end_loop %>
 
 </div> <!-- end section shows div-->
+
+</div>
 
 <% include Footer %>	
 

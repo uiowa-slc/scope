@@ -173,8 +173,28 @@
 						<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery4</a></li>		
 					<% end_if %>
 				</ul>
-	  </div> <!-- end photo_gallery -->
+			</div> <!-- end photo_gallery -->
+		<% end_if %>
+		
+		<% if PhotoGallery5 %>
+			<div class="photo_gallery" id="photo_gallery{$Pos}">
+				<ul>
+					<% if PhotoGallery5 %>
+						<li><a class="single_image" href="{$PhotoGallery5.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery5</a></li>		
+					<% end_if %>
+					<% if PhotoGallery6 %>
+						<li><a class="single_image" href="{$PhotoGallery6.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery6</a></li>		
+					<% end_if %>
+					<% if PhotoGallery7 %>
+						<li><a class="single_image" href="{$PhotoGallery7.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery7</a></li>		
+					<% end_if %>
+					<% if PhotoGallery8 %>
+						<li><a class="single_image" href="{$PhotoGallery8.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery8</a></li>		
+					<% end_if %>
+				</ul>
+			</div>	  
 	  <% end_if %>
+	  
 	  	</li> <!-- end toggle li -->
 	 
 		</ul> <!-- end ul in div class extras -->
@@ -205,6 +225,7 @@
 </div>
 <div class="extras tech-info">
 	<ul class="tech">
+	
 	<h5>Technical Information</h5>
 	<li><div class="specs">
 		<ul>
@@ -232,6 +253,16 @@
 				<div class="clear"></div>
 			<% end_if %>	
 		  </ul>
+	 </div></li>
+	 <!--Not sure if they want this or not -- last venue looks really empty without it-->
+	 <li><div class="specs">
+	 	<ul>
+			<% if Other %>
+				<li class="left">Other</li>
+				<li>$Other</li>
+				<div class="clear"></div>
+			<% end_if %>	
+		</ul>
 	 </div></li>
 		 <div class="clear"></div>
 	</ul>

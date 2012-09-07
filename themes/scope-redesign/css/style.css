@@ -777,10 +777,10 @@ h5.toggle:hover{
 }
 
 .photo_gallery img{
-	margin: 4px;
+	margin: 5px;
 	float: left;
-	max-width: 76px;
-	max-height: 76px;
+	max-width: 73px;
+	max-height: 73px;
 	border: 1px solid gray;
 }
 

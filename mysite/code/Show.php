@@ -23,6 +23,10 @@ class Show extends Page {
     'PhotoGallery2' => 'Image',
     'PhotoGallery3' => 'Image',
     'PhotoGallery4' => 'Image',
+    'PhotoGallery5' => 'Image',
+    'PhotoGallery6' => 'Image',
+    'PhotoGallery7' => 'Image',
+    'PhotoGallery8' => 'Image',
     'HomePage' => 'HomePage'
     
     );
@@ -49,6 +53,10 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery2')); 
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery3')); 
         $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery4'));
+        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery5'));
+        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery6'));
+        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery7'));
+        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery8'));
             
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
