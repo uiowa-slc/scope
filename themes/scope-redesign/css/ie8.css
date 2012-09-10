@@ -16,7 +16,7 @@ ul.social {
 }
 
 .nav {
-	margin: 0 auto auto !important;
+	margin: -10 auto auto !important;
 	
 }
 
@@ -38,4 +38,10 @@ ul.social {
 #parallax-stuff {
 display: none;	
 	
+}
+
+footer {
+	
+background-color: #436361;
+
 }
