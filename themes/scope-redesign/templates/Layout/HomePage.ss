@@ -43,8 +43,14 @@
 
 	<div class="twitter">
 		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
-		<a href="http://twitter.com/uiscope" id="twitterlink"><div id="twitter_update_list"></div></a>
+		<a href="http://twitter.com/uiscope" id="twitterlink"><span id="twitter_update_list"></span></a>
 	</div>
+	
+	<!--[if lt IE 9]>
+<a class="twitter-timeline" href="https://twitter.com/uiSCOPE" data-widget-id="245565029536112641">Tweets by @uiSCOPE</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+	<![endif]-->
 
 <!-- PARALLAX STUFF--> 
 <div id="parallax-stuff">
@@ -345,7 +351,7 @@
 
 <script src="http://twitter.com/javascripts/blogger.js"></script>
 
-<script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uiscope&include_rts=true&count=1&callback=twitterCallback2"></script>
+<script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uiscope&amp;include_rts=true&amp;count=1&amp;callback=twitterCallback2"></script>
 <!--	
 <script>
 					
@@ -357,7 +363,13 @@
 
 </script>
 -->		
+<!--[if lt IE 9]>
+   <script>
+      document.createElement('footer');
+   </script>
+<![endif]-->
 <% include Footer %>	
+
 
 
 

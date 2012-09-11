@@ -5,7 +5,6 @@
 
 ul.social {
 	
-	width: 300px;
 	margin-top: 10px;
 	
 }
@@ -42,6 +41,25 @@ display: none;
 
 footer {
 	
-background-color: #436361;
+background-color: #436361 !important;
 
+}
+
+.countdownHolder {
+
+display: none;
+
+}
+/*
+#foot-container {
+height: 1000px !important;
+}
+*/
+
+.twitter {
+	display: none;
+}
+
+.twitter-timeline {
+	margin: auto;
 }
