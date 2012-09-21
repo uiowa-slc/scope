@@ -1,6 +1,7 @@
 
 <a href="#" id="back_to_top" onclick="Header.back_to_top(); return false;" style="display: block; ">Back to Top</a>
 	<div id="header">
+		<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" /></a>
 		<a href="{$BaseHref}"><h1><img src="{$ThemeDir}/images/scope-masthead.png" /></h1></a>	
 		
 	</div> <!-- end header div -->
