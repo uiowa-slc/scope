@@ -41,7 +41,9 @@
 <div class="details"  id="imu-main-lounge">
 	<div class="description venue">
 			
-		<img id="venue_section" src="$Picture.URL"/>
+		<% if Picture %>
+			<img id="venue_section" src="$Picture.URL"/>
+		<% end_if %>
 		
 		<a href="{$Link}"><h2>$Title</h2></a>
 		<h5 class="date">$Venue $Time <br> $Date.NiceUS</h5>

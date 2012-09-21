@@ -21,11 +21,11 @@
 		</ul>
 		
 		<ul class="links">
-			<a href="{$AbsoluteBaseURL}#home"><li>Home</li></a>
-			<a href="{$AbsoluteBaseURL}#shows"><li>Shows</li></a>
-			<a href="{$AbsoluteBaseURL}#venues"><li>Venues</li></a>
-			<a href="{$AbsoluteBaseURL}#about"><li>About</li></a>
-			<a href="{$AbsoluteBaseURL}#contact"><li>Contact</li></a>
+			<a href="{$BaseHref}#home"><li>Home</li></a>
+			<a href="{$BaseHref}#shows"><li>Shows</li></a>
+			<a href="{$BaseHref}#venues"><li>Venues</li></a>
+			<a href="{$BaseHref}#about"><li>About</li></a>
+			<a href="{$BaseHref}#contact"><li>Contact</li></a>
 		</ul>
 	</div> <!-- end nav div -->
 	<div class="clear"></div>

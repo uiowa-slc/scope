@@ -68,7 +68,7 @@
 
 <div class="section" id="shows">
 	<h1>Shows</h1>
-	<h4><a href="{$AbsoluteBaseURL}show-archive" id="showarchive" >To Show Archive >></a></h4><br> 		
+	<h4><a href="{$AbsoluteBaseURL}show-archive" id="showarchive" >View Show Archive >></a></h4><br> 		
 	
 
 

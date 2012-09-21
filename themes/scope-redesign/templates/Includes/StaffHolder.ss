@@ -7,7 +7,7 @@
 	<% loop getRandomStaff %>		
 			<li> 
 			<div class="staff">
-					$ProfilePic
+					$ProfilePic.SetRatioSize(70,70)
 				<ul>
 					<li>$FirstName $LastName</li>
 					<li>$Title</li>
