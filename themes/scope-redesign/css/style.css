@@ -1281,3 +1281,15 @@ footer img{
 
 -----REFERENCE THIS SOURCE FOR PARALLAX: http://www.webdesignshock.com/one-page-website/ ------
 */
+
+#twitter-widget-7{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 8px;
+}
+
+#twit_embed {
+	margin: auto;
+}
+

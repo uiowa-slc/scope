@@ -28,4 +28,4 @@
 			<a href="{$AbsoluteBaseURL}#contact"><li>Contact</li></a>
 		</ul>
 	</div> <!-- end nav div -->
-	<div class="clear"></div>
+	<div class="clear"></div> 
