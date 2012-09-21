@@ -1,6 +1,6 @@
 <header class="header" role="banner">
 	<div class="inner">
-		<a href="$BaseHref" class="brand" rel="home">
+		<a href="{$BaseHref}home" class="brand" rel="home">
 			<h1>$SiteConfig.Title</h1>
 			<% if SiteConfig.Tagline %>
 			<p>$SiteConfig.Tagline</p>

@@ -45,10 +45,16 @@
 		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
 		<a href="http://twitter.com/uiscope" id="twitterlink"><span id="twitter_update_list"></span></a>
 	</div>
-	
-	<!--[if lt IE 9]>
+	<!--
+	<div id="twit_embed">
+		
 <a class="twitter-timeline" href="https://twitter.com/uiSCOPE" data-widget-id="245565029536112641">Tweets by @uiSCOPE</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	
+	</div>
+	-->
+	<!--[if lt IE 9]>
+
 
 	<![endif]-->
 

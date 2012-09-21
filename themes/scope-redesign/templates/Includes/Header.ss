@@ -28,4 +28,4 @@
 			<a href="{$BaseHref}#contact"><li>Contact</li></a>
 		</ul>
 	</div> <!-- end nav div -->
-	<div class="clear"></div>
+	<div class="clear"></div> 
