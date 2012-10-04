@@ -106,7 +106,7 @@ body{
 	font-family:"Oswald";
 	margin: 0;
 	padding: 0;
-	background-image: url("/scope/themes/scope-redesign/images/header2.png");
+	background-image: url("../images/header2.png");
 	background-repeat: repeat-x;
 	background-position: center top;
 	
@@ -437,7 +437,7 @@ ul.links li:hover{
 	font-family: 'Oswald', sans-serif;
 	font-size: 90px;
 	text-transform: uppercase;
-	background-image: url("/scope/themes/scope-redesign/images/soundwave.png");
+	background-image: url("../images/soundwave.png");
 	min-height: 145px;
 	background-repeat: no-repeat;
 	margin: 40px auto 0 auto;
@@ -1109,7 +1109,7 @@ footer img{
 }
 
 #footer-bottom{
-	background-image: url("/scope/themes/scope-redesign/images/white-dot-border.png");
+	background-image: url("../images/white-dot-border.png");
 	background-repeat: repeat-x;
 	height: 50px;
 	margin-top: 100px;
@@ -1127,7 +1127,7 @@ footer img{
 }
 
 .bk_0{
-	background: transparent url("/scope/themes/scope-redesign/images/firstBG.jpg");
+	background: transparent url("../images/firstBG.jpg");
 	background-attachment: fixed;
 	background-position: right;
 	background-repeat: no-repeat;
@@ -1139,7 +1139,7 @@ footer img{
 }
 
 .bk_1{
-	background: transparent url("/scope/themes/scope-redesign/images/secondBG.jpg");
+	background: transparent url("../images/secondBG.jpg");
 	background-attachment: fixed;
 	background-position: left;
 	background-repeat: no-repeat;
@@ -1152,7 +1152,7 @@ footer img{
 }
 
 .bk_2{
-	background: transparent url("/scope/themes/scope-redesign/images/thirdBG.jpg");
+	background: transparent url("../images/thirdBG.jpg");
 	background-attachment: fixed;
 	background-position: right;
 	background-repeat: no-repeat;
@@ -1178,7 +1178,7 @@ footer img{
 
 .img_1{
 	width:100%;
-	background:transparent url("/scope/themes/scope-redesign/images/orange-dots.png");
+	background:transparent url("../images/orange-dots.png");
 	background-position: center;
 	background-repeat: repeat;
 	width: 100%;
@@ -1190,7 +1190,7 @@ footer img{
 
 .img_2{
 	width:100%;
-	background:transparent url("/scope/themes/scope-redesign/images/blue-dots.png");
+	background:transparent url("../images/blue-dots.png");
 	background-position: center;
 	background-repeat: repeat;
 	width: 100%;
@@ -1216,14 +1216,14 @@ footer img{
 }
 
 .title_2{
-	background:url("/scope/themes/scope-redesign/images/firstBG.jpg") 0 0 no-repeat  ;		
+	background:url("../images/firstBG.jpg") 0 0 no-repeat  ;		
 }
 
 .title_1{
-	background:url("/scope/themes/scope-redesign/images/secondBG.jpg") 0 0 no-repeat;
+	background:url("../images/secondBG.jpg") 0 0 no-repeat;
 } 
 .bk_1{
-	background-image:url("/scope/themes/scope-redesign/images/secondBG.jpg") 0 0  no-repeat fixed ;	
+	background-image:url("../images/secondBG.jpg") 0 0  no-repeat fixed ;	
 }
 
 

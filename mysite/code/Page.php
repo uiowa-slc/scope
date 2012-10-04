@@ -78,6 +78,16 @@ class Page_Controller extends ContentController {
 	    
 	  }
 	  
+	 public function getShows($number = 5){
+		 
+		 $shows = Show::get()->limit($number)->sort('Date', 'DESC');
+		 
+		 return $shows;
+		 
+		 
+		 
+	 }
+	  
 	public function ArchivePaginatedPages(){
 	 	$showparent = ShowArchive::get()->filter(array(
     'Show.SiteTree.Title:ExactMatch' => 'Show Archive'))->First();

@@ -3,7 +3,18 @@
 	<% base_tag %>
 	
 	<!--<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>-->
-	<title>$Title - Scope Productions - The University of Iowa</title>
+	
+	
+	<% if ClassName = HomePage %>
+	
+	<title>
+	<% control getShows(3) %> $Artist, <% end_control %>
+	
+	 happening now from Scope Productions! - The University of Iowa</title>
+	
+	<% else %>
+			<title>$Title - Scope Productions - The University of Iowa</title>
+	<% end_if %>
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -151,7 +162,17 @@ $Layout
 
 	
 
-
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." :
+"http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-426753-10");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 </body>
 
 </html>
