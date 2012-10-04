@@ -80,7 +80,17 @@ class Page_Controller extends ContentController {
 	  
 	 public function getShows($number = 5){
 		 
-		 $shows = Show::get()->limit($number)->sort('Date', 'DESC');
+		 //$shows = Show::get()->limit($number)->sort('Date', 'DESC');
+		 
+		 		$showparent = ShowHolder::get()->filter(array(
+    'Show.SiteTree.Title:ExactMatch' => 'Shows'))->First();
+    
+        $showparentID = $showparent->ID;
+        
+	    $shows = Show::get()->filter(array(
+    'Show.SiteTree.ParentID:ExactMatch' => $showparentID));
+    	$shows->limit($number);
+    	$shows->sort("Sort", "DESC");
 		 
 		 return $shows;
 		 

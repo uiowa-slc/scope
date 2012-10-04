@@ -11,7 +11,7 @@
 		
 		<% with FeaturedPage %>
 		
-		$Picture	
+		$Picture.SetWidth(1067)	
 		
 		<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
 		<!--<h4>Featured Show</h4>-->
@@ -83,7 +83,13 @@
 <div class="details" >
 	<div class="description">
 			
-		<a href="{$Link}"><img id="show_image" src="$Picture.URL"/></a>
+		<a href="{$Link}">
+		
+		<% control Picture.SetWidth(595) %>
+		<img id="show_image" src="$URL"/>
+		<% end_control %>
+		
+		</a>
 		
 		<a href="{$Link}"><h2>$Artist</h2></a>
 		<h5 class="date">$Venue $Time <br>$getFormattedDate</h5>
@@ -159,7 +165,7 @@
 		<% end_if %>
 		<!--<li><a href="{$TumblrLink}" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>-->
 		
-		<li><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
+		<li><a href="http://www.tumblr.com/share/link?url={$AbsoluteLink}&description=$Content.LimitWordCountXML(50)" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
 		
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->

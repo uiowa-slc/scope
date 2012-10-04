@@ -8,13 +8,38 @@
 	<% if ClassName = HomePage %>
 	
 	<title>
-	<% control getShows(3) %> $Artist, <% end_control %>
-	
-	 happening now from Scope Productions! - The University of Iowa</title>
+	<% control getShows(3) %> $Artist, <% end_control %> happening now from Scope Productions! - The University of Iowa</title>
+	 
+	 <meta property="og:title" content="<% control getShows(3) %> $Artist, <% end_control %> happening now from Scope Productions!"/>
+    <meta property="og:description"
+          content="SCOPE Productions is the University of Iowa's Student Commission on Programming Entertainment. Based in Iowa City, Iowa, SCOPE is charged with bringing quality concerts and entertainment to the University of Iowa campus and the Iowa City community."/>
 	
 	<% else %>
 			<title>$Title - Scope Productions - The University of Iowa</title>
+			<meta property="og:title" content="$Title from Scope Productions"/>
+		    <meta property="og:description"
+		          content="$Content.LimitWordCountXML(50)"/>
 	<% end_if %>
+	
+	
+	<% if ClassName = Show %>
+    	<meta property="og:type" content="activity"/>
+    <% end_if %>
+    
+    <% if Picture %>
+    <meta property="og:image" content="$Picture.AbsoluteURL"/>
+    <% else %>
+    
+    	<% control getShows(1) %>
+    		<meta property="og:image" content="$Picture.AbsoluteURL"/>
+    	<% end_control %>
+    
+    <% end_if %>
+    <meta property="og:site_name" content="SCOPE Productions"/>
+    <meta property="og:url" content="$AbsoluteLink"/>
+
+	
+	
 	<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
