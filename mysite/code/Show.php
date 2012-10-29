@@ -12,7 +12,8 @@ class Show extends Page {
     'TwitterLink' => 'Text',
     'TumblrLink' => 'Text',
     'FacebookLink' => 'Text',
-    'PinterestLink' => 'Text'
+    'PinterestLink' => 'Text',
+    'TwitterText' => 'Text'
     
     
     );
@@ -64,7 +65,8 @@ class Show extends Page {
         //$fields->addFieldToTab('Root.Main', new TextField('FacebookLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TwitterLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TumblrLink')); 
-        //$fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));                               
+        //$fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));
+         $fields->addFieldToTab('Root.Main', new TextField('TwitterText'));                               
                
         return $fields;
     }

@@ -102,7 +102,18 @@
 	
 	//alert(ts);
 
-	startCountdown(ts);
+
+	var timestamp = {$getTimestamp};
+	ts = new Date(timestamp * 1000);
+    cd = '#countdown';
+    no = '#note';
+    temp = startCountdown(ts,cd,no);
+	
+	if (ts < new Date()){					    
+		var removeDiv = $('#countdown');
+		removeDiv.hide();
+	}
+
 	
 </script>
 
