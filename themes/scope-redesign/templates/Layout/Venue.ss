@@ -89,7 +89,7 @@
 	 <div class="clear"></div>
 	</ul>
 </div>
-
+</div>
 <% include Footer %>
 	
 

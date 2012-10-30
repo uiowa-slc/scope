@@ -146,13 +146,16 @@ h2 a {
 	font-family: 'Oswald'; sans-serif;
 	font-size: 45px;
 	text-transform: uppercase;
+	position: relative;
+	z-index: -1;
 }
 
 .uiowa-logo {
 	display: block;
 	float: right;
 	font-size: 10px;
-
+	margin-bottom: 0px;
+	margin-top: -15px;
 }
 
 #header a{
@@ -163,6 +166,8 @@ h2 a {
 #contentwrapper{
 	width: 1000px;
 	margin: auto;
+	position: relative;
+	z-index: 999;
 }
 
 .nav{
@@ -208,12 +213,12 @@ ul.social{
 	margin: auto;
 }
 
+
 .social-small li{
-	display: block;
 	float: left;
-	height: 25px;
 	margin: 10px 1px auto 1px;
 }
+
 
 .social-small li.twitterSocial {
 	width: 80px;
@@ -1308,3 +1313,6 @@ footer img{
 	margin: auto;
 }
 
+.scope_title {
+	padding: 0px;
+}

@@ -106,7 +106,7 @@
 				<ul>
 
 					<% if $Pos==1 %>
-						Countdown to 
+						<p id="countdownText{$Pos}">Countdown to</p> 
 					<% end_if %>
 					<li><strong><a href="$Link">$Artist</a></strong></li>
 
@@ -132,6 +132,8 @@
 					if (ts < new Date()){					    
 						var removeDiv = $('#countdown{$Pos}');
 						removeDiv.hide();
+						var removeP = $('#countdownText{$Pos}');
+						removeP.hide();
 					}
 
 					</script>
@@ -155,8 +157,8 @@
 			
 			<li><div class="get_tix"><h5>Share this event:</h5>
 					<ul class="social-small">
-		
 		<li><div class="fb-like" data-href="{$AbsoluteBaseURL}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
+		<!--<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande" id="scopeFacebook"></div></li>-->
 		
 		<li class="twitterSocial"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="$AbsoluteLink" data-text="<% if TwitterText %>$TwitterText<% else %>Check out $Title by SCOPE Productions!<% end_if %>">Tweet</a></li>
 
@@ -240,6 +242,7 @@
 		<a href="{$Link}"><img id="venue_section" src="$Picture.URL"/></a>
 		<a href="{$Link}"><h2>$Title</h2></a>
             	<p>$Content<p>
+        <div class="button"><a href="$Link">View Full Technical Info</a></div>
 	</div>
 </div>
 <div class="extras tech-info">

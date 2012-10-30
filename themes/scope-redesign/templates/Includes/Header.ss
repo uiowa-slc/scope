@@ -1,9 +1,9 @@
 
 <a href="#" id="back_to_top" onclick="Header.back_to_top(); return false;" style="display: block; ">Back to Top</a>
 	<div id="header">
-		<!--<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" /></a>-->
-		<h1><a href="{$BaseHref}"><img src="{$ThemeDir}/images/scope-masthead.png" /></a></h1>	
-		
+		<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" /></a>
+		<h1 class="scope_title"><a href="{$BaseHref}"><img src="{$ThemeDir}/images/scope-masthead.png" /></a></h1>	
+				   
 	</div> <!-- end header div -->
 	
 	<div id="contentwrapper">
@@ -25,7 +25,7 @@
 			<a href="{$BaseHref}#home"><li>Home</li></a>
 			<a href="{$BaseHref}#shows"><li>Shows</li></a>
 			<a href="{$BaseHref}#venues"><li>Venues</li></a>
-			<a href="{$BaseHref}show-archive"><li>Show Archive</li></a>
+			<a href="{$BaseHref}show-archive"><li>History</li></a>
 			<a href="{$BaseHref}#about"><li>About</li></a>
 			<a href="{$BaseHref}#contact"><li>Contact</li></a>
 		</ul>

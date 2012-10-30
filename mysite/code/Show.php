@@ -50,14 +50,14 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 
           
         $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 970X516.  Width is 595 for shows below featured show (height can vary).'));
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery1')); 
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery2')); 
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery3')); 
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery4'));
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery5'));
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery6'));
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery7'));
-        $fields->addFieldToTab('Root.Main', new UploadField('PhotoGallery8'));
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery1')); 
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery2')); 
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery3')); 
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery4'));
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery5'));
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery6'));
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery7'));
+        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery8'));
             
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
