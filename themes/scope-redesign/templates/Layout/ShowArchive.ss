@@ -77,9 +77,9 @@
 
 		<li><a class="pin" href="http://pinterest.com/pin/create/button/?url={$AbsoluteBaseURL}{$URLSegment}&media={$AbsoluteBaseURL}{$Picture.Filename}&description={$Content.Summary(100)}" title="Pin It"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a></li>
 		
-		<!--<li><a href="{$TumblrLink}" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>-->
-		
-		<li><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
+		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
+				
+		<!--<li><a href="http://www.tumblr.com/share" title="Share on Tumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>-->
 					
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->

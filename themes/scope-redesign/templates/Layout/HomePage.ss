@@ -32,7 +32,7 @@
 			
 			<% if $BuyTicketsOnlineLink %>
 
-				<a href="$BuyTicketsOnlineLink"><h3>Buy Tickets</h3></a>
+				<a href="{$BuyTicketsOnlineLink}camefrom={$Title}{$CameFromCode}"><h3>Buy Tickets</h3></a>
 			
 			<% end_if %>
 			
@@ -104,10 +104,8 @@
 			<% end_if %>
 			<li><div class="date">
 				<ul>
+					<p id="countdownText{$Pos}" style="display: inline;">Countdown to</p> 
 
-					<% if $Pos==1 %>
-						<p id="countdownText{$Pos}">Countdown to</p> 
-					<% end_if %>
 					<li><strong><a href="$Link">$Artist</a></strong></li>
 
 					<li>$Venue</li>
@@ -162,12 +160,13 @@
 		
 		<li class="twitterSocial"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="$AbsoluteLink" data-text="<% if TwitterText %>$TwitterText<% else %>Check out $Title by SCOPE Productions!<% end_if %>">Tweet</a></li>
 
-		<% if Picture %>
+		<% if Picture %><!--Featured show-->
 		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png"  title="Pin It" /></a></li>
 		<% end_if %>
-		<!--<li><a href="{$TumblrLink}" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>-->
+		 
+		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
 		
-		<li><a href="http://www.tumblr.com/share/link?url={$AbsoluteLink}&description=$Content.LimitWordCountXML(50)" title="Share on Tumblr" class="scopeTumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>
+		<!--<li><a href="http://www.tumblr.com/share/link/?url={$AbsoluteLink}" title="Share on Tumblr" class="scopeTumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>-->
 		
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
@@ -328,8 +327,7 @@
 			
 					<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 					
-					<li><a href="https://twitter.com/uiSCOPE" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @uiSCOPE</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+					<li><a href="https://twitter.com/uiSCOPE" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @uiSCOPE</a></li>
 		
 					<!--<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
 			
