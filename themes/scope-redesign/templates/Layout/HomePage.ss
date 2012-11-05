@@ -33,9 +33,6 @@
 			<% if $BuyTicketsOnlineLink %>
 
 				<a href="$BuyTicketsOnlineLink?camefrom=ScopeWebsiteHomePageMainFeature"><h3>Buy Tickets</h3></a>
-=======
-				<a href="{$BuyTicketsOnlineLink}camefrom={$Title}{$CameFromCode}"><h3>Buy Tickets</h3></a>
->>>>>>> 2018903a90ceac021057429d8e0999e3c69a4218
 			
 			<% end_if %>
 			
@@ -158,12 +155,13 @@
 			
 			<li><div class="get_tix"><h5>Share this event:</h5>
 					<ul class="social-small">
+
 		<li><div class="fb-like" data-href="{$AbsoluteBaseURL}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 		<!--<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande" id="scopeFacebook"></div></li>-->
 		
 		<li class="twitterSocial"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="$AbsoluteLink" data-text="<% if TwitterText %>$TwitterText<% else %>Check out $Title by SCOPE Productions!<% end_if %>">Tweet</a></li>
 
-		<% if Picture %><!--Featured show-->
+		<% if Picture %>
 		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png"  title="Pin It" /></a></li>
 		<% end_if %>
 		 

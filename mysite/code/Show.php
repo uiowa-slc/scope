@@ -13,7 +13,6 @@ class Show extends Page {
     'TumblrLink' => 'Text',
     'FacebookLink' => 'Text',
     'PinterestLink' => 'Text',
-    'CameFromCode' => 'Text',
     'TwitterText' => 'Text'
     
     
@@ -64,7 +63,6 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
-        $fields->addFieldToTab('Root.Main', new TextField('CameFromCode', 'Came From Code')); 
         //$fields->addFieldToTab('Root.Main', new TextField('FacebookLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TwitterLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TumblrLink')); 

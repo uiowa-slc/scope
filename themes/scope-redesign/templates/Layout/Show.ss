@@ -49,10 +49,8 @@
 			<li><div class="get_tix"><h5>Share this event:</h5>
 					<ul class="social-small">
 
-		<li><div class="fb-like" data-href="{$AbsoluteLink}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 		<!--<li><div class="fb-like" data-href="https://www.facebook.com/uiscopeproductions" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande" id="scopeFacebook"></div></li>-->
-		<script>
-		console.log("{$AbsoluteBaseURL}{$URLSegment}");
+
 
 		<li><div class="fb-like" data-href="{$AbsoluteBaseURL}{$URLSegment}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="lucida grande"></div></li>
 
