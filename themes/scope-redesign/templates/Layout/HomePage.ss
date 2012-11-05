@@ -32,7 +32,7 @@
 			
 			<% if $BuyTicketsOnlineLink %>
 
-				<a href="$BuyTicketsOnlineLink"><h3>Buy Tickets</h3></a>
+				<a href="$BuyTicketsOnlineLink?camefrom=ScopeWebsiteHomePageMainFeature"><h3>Buy Tickets</h3></a>
 			
 			<% end_if %>
 			
@@ -143,7 +143,7 @@
 			<li class="get_tix"><h5>Get Tickets now:</h5><div>
 				<ul>
 					<% if $BuyTicketsOnlineLink %>
-					<a href="{$BuyTicketsOnlineLink}" class="tix"><li><strong>Buy Tickets</strong><br>Online</li></a>
+					<a href="{$BuyTicketsOnlineLink}?camefrom=ScopeWebsiteHomePage" class="tix"><li><strong>Buy Tickets</strong><br>Online</li></a>
 					<% end_if %>
 					
 					<% if $BuyTicketsInPersonLink %>

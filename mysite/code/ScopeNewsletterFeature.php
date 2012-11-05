@@ -9,7 +9,8 @@ class ScopeNewsletterFeature extends NewsletterComponent {
 	'Location' => 'Text',
 	'Time' => 'Text',
 	'LinkURL' => 'Text',
-	'InSidebar' => 'Boolean'
+	'InSidebar' => 'Boolean',
+	'BuyTicketsLink' => 'Text'
    );
    
    
@@ -29,6 +30,7 @@ function getCMSFields() {
 	$fields->addFieldToTab('Root.Main', new UploadField('Image', 'Image'));
 	$fields->addFieldToTab('Root.Main', new TextField('Date', 'Date'));
 	$fields->addFieldToTab('Root.Main', new TextField('LinkURL', 'Link URL'));
+	$fields->addFieldToTab('Root.Main', new TextField('BuyTicketsLink', 'Buy Tickets Online Link'));
 
 	$fields->addFieldToTab('Root.Main', new TextField('Location', 'Location'));
 	$fields->addFieldToTab('Root.Main', new TextField('Time', 'Time'));

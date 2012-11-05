@@ -56,7 +56,9 @@ tr {padding:0;
                     	<% else %>
                         	$Title 
                    		<% end_if %>
-                       
+                       <% if BuyTicketsLink %>
+                       <p style="font-size: 18px;"><a href="{$BuyTicketsLink}?camefrom=ScopeNewsletter">buy tickets</a></p>
+                       <% end_if %>
                    </td>
                    </tr>
 				
@@ -129,7 +131,9 @@ tr {padding:0;
 									
 									<td><h5 style="color:#333; font:normal bold 12px helvetica; margin:0; line-height:15px; padding-top:3px;">$Location</h5>
 									
-								 
+								                        <% if BuyTicketsLink %>
+                       <p style="font-size: 18px;"><a href="{$BuyTicketsLink}?camefrom=ScopeNewsletter">buy tickets</a></p>
+                       <% end_if %>
 								   </td>
 								
 								</tr>
