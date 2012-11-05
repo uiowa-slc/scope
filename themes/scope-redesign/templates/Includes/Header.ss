@@ -15,7 +15,7 @@
 			<li class="scopeTwitter"><a href="https://twitter.com/uiSCOPE" class="twitter-follow-button"  data-show-count="false" data-show-screen-name="false">Follow @uiSCOPE</a>
 </li>
 
-			<li><a class="pin scopePinterest" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>
+			<!--<li><a class="pin scopePinterest" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
 			
 			<li><a href="http://scopeproductions.tumblr.com/" class="scopeTumblr tumblrHeader"><img src="{$ThemeDir}/images/tumblr.png"/></a></li>
 			

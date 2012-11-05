@@ -169,6 +169,8 @@ function getScrollTop(){ //  Verifies the total sum in pixels of the whole page
 }(document, 'script', 'facebook-jssdk'));
 	
 </script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <link rel="stylesheet" href="themes/scope-redesign/assets/countdown/jquery.countdown.css" />
 <link href='http://fonts.googleapis.com/css?family=Kotta+One|Noticia+Text:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 <!--[if IE 8]>
