@@ -24,8 +24,8 @@
 /**** Default state (no keyboard focus) ****/
 /* slider window - top & bottom borders, default state */
 div.anythingSlider .anythingWindow {
-	border-top: 3px solid #d1e126;
-	border-bottom: 3px solid #d1e126;
+	border-top: 3px solid #D37E3A;
+	border-bottom: 3px solid #D37E3A;
 }
 /* Navigation buttons, default state */
 div.anythingSlider .anythingControls ul a.cur, div.anythingSlider .anythingControls ul a {
@@ -49,15 +49,15 @@ div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover {
 /**** Active State (slider has keyboard focus) ****/
 /* slider window - top & bottom borders, active state */
 div.anythingSlider.activeSlider .anythingWindow {
-	border-color: #d1e126;
+	border-color: #D37E3A;
 }
 /* Navigation buttons, active state */
 div.anythingSlider.activeSlider .anythingControls ul a.cur, div.anythingSlider.activeSlider .anythingControls ul a {
-	background-color: #d1e126;
+	background-color: #D37E3A;
 }
 /* start-stop button, stopped, active state */
 div.anythingSlider .start-stop {
-	background-color: #d1e126;
+	background-color: #D37E3A;
 	color: #000000;
 }
 /* start-stop button, playing, active state */

@@ -165,11 +165,19 @@ h2 a {
 	color: white;
 }
 
-#contentwrapper{
+.contentwrapper{
 	width: 1000px;
 	margin: auto;
 	position: relative;
 	z-index: 999;
+}
+
+.contentwrapper_top {
+	width: 1080px;
+	margin: auto;
+	position: relative;
+	z-index: 999;
+
 }
 
 .nav{
@@ -386,7 +394,6 @@ ul.links li:hover{
 	text-transform: uppercase;
 	color: white;
 	margin: auto;
-	margin-right: 60px;
 	border-radius: 2px;
 }
 .main_info a{
@@ -1386,6 +1393,6 @@ footer img{
 }
 
 .search-bar {
-	width: 985px;
-	margin-top: -10px;
+	width: 1025px;
+	margin-top: -5px;
 }

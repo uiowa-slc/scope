@@ -59,7 +59,8 @@
 		</div> <!-- end slider div -->
 			
 		</div> <!-- end main_info div -->
-	
+	</div>
+	<div class="contentwrapper">
 
 	<div class="twitter">
 		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
