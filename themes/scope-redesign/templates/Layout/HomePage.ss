@@ -1,45 +1,65 @@
-
+<!--test = $test-->
 
 <% include Header %>
-	
-	<div class="main">
-		<% if SoundwaveOverlay %>
-			<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div>
-		<% else %>
-			<div class="overlay"><img src="{$ThemeDir}/images/main_nodots.png"/></div>
-		<% end_if %>
-		
-		<% with FeaturedPage %>
-		
-		$Picture.SetWidth(1067)	
-		
-		<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
-		<!--<h4>Featured Show</h4>-->
-		
-		<div class="main_info">
-			<ul>
-			
-				<li>$Date.NiceUS</li>
-			
-			</ul>
-			
-			<ul>
-				<li>$Venue</li>
-				<li>$Time</li>
-			</ul>
-			
-			<div class="clear"></div>
-			
-			<% if $BuyTicketsOnlineLink %>
 
-				<a href="$BuyTicketsOnlineLink?camefrom=ScopeWebsiteHomePageMainFeature"><h3>Buy Tickets</h3></a>
-			
-			<% end_if %>
-			
-			<% end_with %>
+
+
+
+
+
+	<div class="main">
+
+		<div id="slider">
+		
+
+		
+		
+			<% loop PaginatedPages %>
+				
+				<ul><li>
+				
+				<% if SoundwaveOverlay %>
+					<div class="overlay"><img src="{$ThemeDir}/images/main.png"/></div>
+				<% else %>
+					<div class="overlay"><img src="{$ThemeDir}/images/main_nodots.png"/></div>
+				<% end_if %>
+				
+				<img src="$Picture.URL"/>
+				
+				<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
+				<!--<h4>Featured Show</h4>-->
+				
+				
+				<div class="main_info">
+				
+					<ul>
+					
+						<li>$Date.NiceUS</li>
+					
+					</ul>
+					
+					<ul>
+						<li>$Venue</li>
+						<li>$Time</li>
+					</ul>
+				
+					
+					<div class="clear"></div>
+					
+					<% if $BuyTicketsOnlineLink %>
+		
+						<a href="$BuyTicketsOnlineLink?camefrom=ScopeWebsiteHomePageMainFeature"><h3>Buy Tickets</h3></a>
+					
+					<% end_if %>
+					
+					</li></ul>	
+				
+			<% end_loop %>
+		
+		</div> <!-- end slider div -->
 			
 		</div> <!-- end main_info div -->
-	</div> <!-- end main div --> 
+	
 
 	<div class="twitter">
 		<img src="{$ThemeDir}/images/twitter-bird.png"/><h5>@uiSCOPE</h5>
@@ -172,9 +192,25 @@
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
 		
+		
+		
+		
+		
+		
+		
+		
+		<% include Tags %>
+		
 		<div class="clear"></div>
 		
 		<li>
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		<% if PhotoGallery1 %>
@@ -188,7 +224,7 @@
 						<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery2</a></li>
 					<% end_if %>
 					<% if PhotoGallery3 %>
-						<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_galler-{$ID}">$PhotoGallery3</a></li>
+						<li><a class="single_image" href="{$PhotoGallery3.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery3</a></li>
 					<% end_if %>
 					<% if PhotoGallery4 %>
 						<li><a class="single_image" href="{$PhotoGallery4.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery4</a></li>		
@@ -367,6 +403,11 @@
 <script src="http://twitter.com/javascripts/blogger.js"></script>
 
 <script src="https://api.twitter.com/1/statuses/user_timeline.json?screen_name=uiscope&amp;include_rts=true&amp;count=1&amp;callback=twitterCallback2"></script>
+<script>
+jQuery(document).ready(function() {
+	jQuery('#slider').anythingSlider();
+});
+</script>
 <!--	
 <script>
 					
@@ -385,7 +426,5 @@
 <![endif]-->
 <% include Footer %>	
 
-
-
-
+<!--$SplitKeywords-->
 	

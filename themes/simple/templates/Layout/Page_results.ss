@@ -1,8 +1,7 @@
 <div id="Content" class="searchResults typography">
     <h1>$Title</h1>
-     
     <% if Query %>
-        <p class="searchQuery"><strong>You searched for &quot;{$Query}&quot;</strong></p>
+        <p class="searchQuery"><strong>Other shows tagged with &quot;{$Query}&quot;</strong></p>
     <% end_if %>
          
     <% if Results %>

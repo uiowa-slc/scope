@@ -7,6 +7,29 @@ class Page extends SiteTree {
 	public static $has_one = array(
 	);
 	
+	 public function SplitKeywords(){
+	 	
+	    $keywords = $this->MetaKeywords;
+	    //Debug::show($this->Content);
+	    //print_r("SplitKeywords Page");
+	    
+	    if($keywords){
+		   $splitKeywords = explode(',', $keywords); 
+	    }
+	    
+	    if (isset($splitKeywords)){
+			$keywordsList = new ArrayList(); 
+			foreach($splitKeywords as $data) { 
+				$do=new DataObject(); 
+				$do->Keyword = $data; 
+				$keywordsList->push($do); 
+			} 
+			return $keywordsList;    
+		}
+		
+		
+    }
+	
 
 
 }
@@ -29,10 +52,17 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
-	);
-
+	 
+	 
+	  public function test(){
+	    $return = "<p>TEST</p>";
+	    //Debug::show("Hi");
+	    return $return;	    
+    }
+	 
+   
 	public function init() {
+	
 		parent::init();
 
 		// Note: you should use SS template require tags inside your templates 
@@ -42,6 +72,21 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout'); 
 		Requirements::themedCSS('typography'); 
 		Requirements::themedCSS('form'); 
+	}
+	
+	function results($data, $form){
+	
+	  	$form->setPageLength(99999); //Makeshift way of disabling pagination for results
+	  	$results = $form->getResults();
+	
+	  	$data = array( 
+       'Results' => $results, 
+       'Query' => $form->getSearchQuery(), 
+       'Title' => 'Search Results' 
+       );
+
+       return $this->owner->customise($data)->renderWith(array('Page_results', 'Page')); 
+
 	}
 	
 	public function getHeader(){

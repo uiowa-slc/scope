@@ -1,8 +1,11 @@
+
+<% include Header %>
+
 <div id="Content" class="searchResults typography">
-    <h1>$Title</h1>
+ 
      
     <% if Query %>
-        <p class="searchQuery"><strong>You searched for &quot;{$Query}&quot;</strong></p>
+        <h1><p class="searchQuery"><strong>Shows tagged with &quot;{$Query}&quot;</strong></p></h1>
     <% end_if %>
          
     <% if Results %>
@@ -12,6 +15,7 @@
             <a class="searchResultHeader" href="$Link">
                 <% if MenuTitle %>
                 $MenuTitle
+                <div class="searchPicture">$Picture.SetWidth(485).SetHeight(258)</div>
                 <% else %>
                 $Title
                 <% end_if %>
@@ -48,3 +52,7 @@
     </div>
     <% end_if %>
 </div>
+
+
+<% include Footer %>
+

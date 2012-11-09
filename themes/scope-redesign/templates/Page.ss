@@ -71,6 +71,10 @@
 		<script src="themes/scope-redesign/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
 		<script src="http://twitter.com/javascripts/blogger.js"></script>
 		<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
+		
+		
+		<link rel="stylesheet" href="anythingSlider/anythingslider.css">
+		<script src="anythingSlider/jquery.anythingslider.min.js"></script>
 				
 
 <script>

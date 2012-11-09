@@ -4,6 +4,8 @@
   box-shadow: h-shadow v-shadow blur spread color inset;
 */
 
+
+
 #twitter_update_list span{
 	font-size: 20pt;
 }
@@ -293,16 +295,26 @@ ul.links li:hover{
 	width: 970px;
 	height: 530px;
 	/*margin: -25px auto auto auto;*/
-	margin-left: 15px;
+	/*margin-left: 15px;*/
+	margin-bottom: 140px;
 }
 
-.main img{
+.main img {
 	position: absolute;
 	z-index: 1;
 	margin: 0px 0 20px 2px;
 	height: 516px;
 	width: 970px;
 }
+/*
+.main .overlay img {
+	position: absolute;
+	z-index: 1;
+	margin: 0px 0 20px 2px;
+	height: 516px !important;
+	width: 970px !important;
+}
+*/
 
 .main h2 a{
 	position: absolute;
@@ -1315,4 +1327,65 @@ footer img{
 
 .scope_title {
 	padding: 0px;
+}
+
+.tags {
+	margin: 10px;
+}
+
+.searchPicture {
+	margin: 5px;
+}
+
+#SearchResults li {
+	margin-bottom: 40px;
+}
+
+.searchQuery {
+	padding-left: 20px;
+}
+
+.textInput {
+	height: 20px;
+	padding-left: 5px;
+}
+
+.topButton {
+	width: 35px;
+	height: 30px;
+	background-image: url("../images/search.png");
+	border: 0;
+	float: right;
+	font-size: 18px;
+	padding: 3px 0px 5px 0px;
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 0 !important;
+	line-height: normal;
+	z-index: 100;
+
+}
+
+.topSearch
+
+{
+	width: 200px;
+	height: 20px;
+	padding: 3px 7px 3px 7px;
+	position: relative;
+	float: right;
+	outline: none;
+	font-weight: lighter;
+	z-index: 10;
+	
+}
+
+.fieldHolder {
+	height: 50px;
+}
+
+.search-bar {
+	width: 985px;
+	margin-top: -10px;
 }

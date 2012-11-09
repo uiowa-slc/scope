@@ -49,6 +49,7 @@ class Show extends Page {
         $fields->addFieldToTab('Root.Main', new TextAreaField('Time'));
         $fields->addFieldToTab('Root.Main', new TextField('DoorsOpenTime'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 
+        $fields->addFieldToTab('Root.Main', new TextAreaField('MetaKeywords', 'Tags')); 
           
         $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 970X516.  Width is 595 for shows below featured show (height can vary).'));
         $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery1')); 
@@ -90,5 +91,39 @@ class Show extends Page {
 }
   
 class Show_Controller extends Page_Controller {
+
+
+	/*
+	public function SplitKeywords(){
+	 	
+	    $keywords = $this->MetaKeywords;
+	    Debug::show($keywords);
+	    Debug::show("hi");
+	    
+	    if($keywords){
+		   $splitKeywords = explode(',', $keywords); 
+		   Debug::show($splitKeywords);
+	    }
+	    
+	    if($splitKeywords){
+			$keywordsList = new ArrayList(); 
+			foreach($splitKeywords as $data) { 
+				$do=new DataObject(); 
+				$do->Keyword = $data; 
+				$keywordsList->push($do); 
+			} 
+			return $keywordsList; 
+		}
+		
+		
+    }
+    
+     public function test(){
+	    $return = "<p>TEST</p>";
+	    Debug::show("Hi");
+	    return $return;	    
+    }
+    */
+    
      
 }
