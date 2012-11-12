@@ -173,7 +173,7 @@ h2 a {
 }
 
 .contentwrapper_top {
-	width: 1080px;
+	width: 1085px;
 	margin: auto;
 	position: relative;
 	z-index: 999;
@@ -1353,14 +1353,16 @@ footer img{
 }
 
 .textInput {
-	height: 20px;
-	padding-left: 5px;
+	height: 25px;
+	padding-left: 6px;
+	margin-right: -2px;
+	float: right;
 }
 
 .topButton {
 	width: 35px;
-	height: 30px;
-	background-image: url("../images/search.png");
+	height: 31px;
+	background: #436361 url("../images/search.png") no-repeat 0px -1px;
 	border: 0;
 	float: right;
 	font-size: 18px;
@@ -1393,6 +1395,6 @@ footer img{
 }
 
 .search-bar {
-	width: 1025px;
+	width: 1030px;
 	margin-top: -5px;
 }
