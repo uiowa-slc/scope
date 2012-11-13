@@ -1,6 +1,7 @@
 
 <% include Header %>
-
+</div>
+<div class="contentwrapper">
 <div id="Content" class="searchResults typography">
  
      
@@ -11,18 +12,28 @@
     <% if Results %>
     <ul id="SearchResults">
         <% control Results %>
+        
+        <div class="details detailsSearch">
+        <div class="description">
+        
         <li>
             <a class="searchResultHeader" href="$Link">
                 <% if MenuTitle %>
-                $MenuTitle
-                <div class="searchPicture">$Picture.SetWidth(485).SetHeight(258)</div>
+               		 <div class="searchTitle">$MenuTitle</div>
                 <% else %>
-                $Title
+                	<div class="searchTitle">$Title</div>
                 <% end_if %>
+                <% if Picture %>
+                 	<div class="searchPicture">$Picture.SetWidth(485).SetHeight(258)</div>
+                 <% end_if %>
             </a>
             <p>$Content.LimitWordCountXML</p>
-            <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
+            <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about {$Title}...</a>
         </li>
+        
+        </div>
+        </div>
+        
         <% end_control %>
     </ul>
     <% else %>

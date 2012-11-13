@@ -59,7 +59,19 @@
 		</div> <!-- end slider div -->
 			
 		</div> <!-- end main_info div -->
+	</div> <!-- end content wrapper -->
+	
+		<!-- PARALLAX STUFF--> 
+	<div id="parallax-stuff">
+		<div class="bk bk_0"></div>
+		<div class="bk bk_1"></div>
+		<div class="bk bk_2"></div>
+		
+		
+		<div class="img_1"></div>
+		<div class="img_2"></div> 	
 	</div>
+	
 	<div class="contentwrapper">
 
 	<div class="twitter">
@@ -79,17 +91,7 @@
 
 	<![endif]-->
 
-<!-- PARALLAX STUFF--> 
-<div id="parallax-stuff">
-	<div class="bk bk_0"></div>
-	<div class="bk bk_1"></div>
-	<div class="bk bk_2"></div>
-	
-	
-	<div class="img_1"></div>
-	<div class="img_2"></div> 	
-</div>
-	
+
 <!-- 03 SHOWS SECTION -->
 
 

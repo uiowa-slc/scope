@@ -149,12 +149,12 @@ h2 a {
 	font-size: 45px;
 	text-transform: uppercase;
 	position: relative;
-	z-index: -1;
+	z-index: 1;
 }
 
 .uiowa-logo {
 	display: block;
-	float: right;
+	float: left;
 	font-size: 10px;
 	margin-bottom: 0px;
 	margin-top: -15px;
@@ -305,6 +305,7 @@ ul.links li:hover{
 	/*margin: -25px auto auto auto;*/
 	/*margin-left: 15px;*/
 	margin-bottom: 140px;
+	margin-top: 10px;
 }
 
 .main img {
@@ -1240,7 +1241,7 @@ footer img{
 }
 
 #parallax-stuff {
-	width: 1000px;
+	width: 100%;
 	height: 4000px;
 	position: absolute;
 	overflow: hidden;
@@ -1267,7 +1268,7 @@ footer img{
 
 	#parallax-stuff {
 		overflow: hidden;
-		width: 1000px;
+		width: 100%;
 	}
 
 
@@ -1277,7 +1278,7 @@ footer img{
 
 
 	#parallax-stuff {
-		width: 1180px;
+		width: 100%;
 	}
 
 
@@ -1287,7 +1288,7 @@ footer img{
 @media only screen and (min-width : 1600px){
 
 	#parallax-stuff {
-		width: 1280px;
+		width: 100%;
 	}
 
 }
@@ -1295,7 +1296,7 @@ footer img{
 @media only screen and (min-width : 1900px){
 
 	#parallax-stuff {
-		width: 1480px;
+		width: 100%;
 	}
 
 }
@@ -1340,12 +1341,13 @@ footer img{
 	margin: 10px;
 }
 
-.searchPicture {
-	margin: 5px;
-}
 
 #SearchResults li {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+}
+
+#SearchResults .searchResultHeader {
+	font-size: 24pt;
 }
 
 .searchQuery {
@@ -1357,6 +1359,7 @@ footer img{
 	padding-left: 6px;
 	margin-right: -2px;
 	float: right;
+	font-size: 10pt;
 }
 
 .topButton {
@@ -1395,6 +1398,42 @@ footer img{
 }
 
 .search-bar {
-	width: 1030px;
-	margin-top: -5px;
+	margin-top: -10px;
+	margin-bottom: -5px;
+	display: inline;
+	float: right;
+}
+
+#SearchResults {
+	list-style: none;
+	padding-left: 30px;
+}
+
+.readMoreLink {
+	padding: 0 20px 5px 20px;
+	margin-top: 15px;
+}
+
+.searchPicture img{
+	width: 595px;
+	height: 316px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.searchTitle {
+	text-align: center;
+	padding: 10px 20px 5px 20px;
+}
+
+.detailsSearch {
+	padding-bottom: 0px;
+}
+
+.descriptionSearch {
+	padding-bottom: 15px;
+}
+
+.detailsSearch p {
+	padding: 0 20px 15px 20px
 }
