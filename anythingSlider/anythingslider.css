@@ -32,6 +32,10 @@ div.anythingSlider .anythingControls ul a.cur, div.anythingSlider .anythingContr
 	background: #777;
 	color: #000;
 }
+
+div.anythingSlider .anythingControls ul a.cur {
+	color: white;
+}
 /* start-stop button, stopped, default state */
 div.anythingSlider .start-stop {
 	background-color: #f117ad;
