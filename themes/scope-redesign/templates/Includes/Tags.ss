@@ -1,7 +1,7 @@
 <div class="tags">
-		<h2>Tags</h2>
+		<h5>Tags:</h5>
 		<div class="pclip"></div>
-		<p>
+		<p class="tagsBody">
 		<% loop SplitKeywords %>
 			<a href="{$BaseHref}home/SearchForm?Search={$Keyword}&action_results=Find+Tutors">$Keyword</a><% if Last %><% else %>,<% end_if %> 
 			

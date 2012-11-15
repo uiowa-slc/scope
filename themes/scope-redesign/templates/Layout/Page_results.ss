@@ -19,16 +19,33 @@
         <li>
             <a class="searchResultHeader" href="$Link">
                 <% if MenuTitle %>
-               		 <div class="searchTitle">$MenuTitle</div>
+               		 <div class="searchTitle"><h2>$MenuTitle</h2></div>
                 <% else %>
-                	<div class="searchTitle">$Title</div>
+                	<div class="searchTitle"><h2>$Title</h2></div>
                 <% end_if %>
                 <% if Picture %>
                  	<div class="searchPicture">$Picture.SetWidth(485).SetHeight(258)</div>
                  <% end_if %>
             </a>
             <p>$Content.LimitWordCountXML</p>
-            <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about {$Title}...</a>
+        <div class="descriptionSearch">              
+	        <% if MetaKeywords %>   
+	           <div class="tags tagsSearch">
+		           <h5>Tags:</h5>
+		           <div class="pclip"></div>
+		           <p class="tagsBody">
+			           <% loop SplitKeywords %>
+			           		<a href="{$BaseHref}home/SearchForm?Search={$Keyword}&action_results=Find+Tutors">$Keyword</a><% if Last %><% else %>,<% end_if %> 
+				
+			           	<% end_loop %>
+			
+			       </p>
+			       <div class="clearfix"></div>
+			   </div>
+			<% end_if %>
+		</div>              
+        <div class="clear"></div>
+        <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about {$Title}...</a>
         </li>
         
         </div>

@@ -431,6 +431,7 @@ ul.links li:hover{
 	font-weight: 100;
 	width: 970px;
 	padding-bottom: 10px;
+	background-color: black;
 }
 
 .twitter img{
@@ -520,6 +521,19 @@ ul.links li:hover{
 	margin-right: 5px;
 }
 
+.description h3{
+	text-transform: uppercase;
+	color: #F89444;
+	font-size: 48px;
+	margin: 15px 0 15px 0px;
+	text-align: center;
+	text-shadow: 2px 2px 0px #313131, 3px 3px 0px #436361;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+
+
 .description p{
 	padding: 0 20px 5px 20px;
 	font-size: 15px;
@@ -527,6 +541,10 @@ ul.links li:hover{
 	margin: 0;
 	font-family: 'Karla', sans-serif;;
 
+}
+
+.descriptionSearch p {
+	font-family: 'Oswald';
 }
 
 .description h5.date{
@@ -761,6 +779,16 @@ li.get_tix ul a:hover{
  	font-size: 18px;
 	font-weight: normal;
 	margin: 0;
+}
+
+
+.tags h5{
+ 	font-size: 18px;
+	font-weight: normal;
+	margin: 0;
+	font-family: 'Noticia Text', serif;
+	font-style: italic;
+	color: white;
 }
 
 .tix li:hover{
@@ -1341,6 +1369,10 @@ footer img{
 	margin: 10px;
 }
 
+.tagsSearch {
+	margin-left: 20px;
+}
+
 
 #SearchResults li {
 	margin-bottom: 20px;
@@ -1423,7 +1455,6 @@ footer img{
 
 .searchTitle {
 	text-align: center;
-	padding: 10px 20px 5px 20px;
 }
 
 .detailsSearch {
@@ -1436,4 +1467,9 @@ footer img{
 
 .detailsSearch p {
 	padding: 0 20px 15px 20px
+}
+
+.tags p{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }

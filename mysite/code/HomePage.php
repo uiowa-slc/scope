@@ -25,7 +25,9 @@ class HomePage extends Page {
 	   $fields->addFieldToTab('Root.Main', $temp);
 	   $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsLink'));
 	   $fields->addFieldToTab('Root.Main', new TextField('TwitterLink'));
-	   $fields->addFieldToTab('Root.Main', new CheckboxField('SoundwaveOverlay', 'Check if you want the soundwave graphic to overlay the featured picture on the SCOPE homepage'));
+	   
+	   //Soundwave graphic no longer being used
+	   //$fields->addFieldToTab('Root.Main', new CheckboxField('SoundwaveOverlay', 'Check if you want the soundwave graphic to overlay the featured picture on the SCOPE homepage'));
 	
 	   return $fields;
    
