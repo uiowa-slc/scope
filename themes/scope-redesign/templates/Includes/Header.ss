@@ -2,11 +2,18 @@
 <a href="#" id="back_to_top" onclick="Header.back_to_top(); return false;" style="display: block; ">Back to Top</a>
 	<div id="header">
 		<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" /></a>
+		<% if SearchForm %>
+	    <span class="search-dropdown-icon"></span>
+	    
+	        $SearchForm
+    
+	<% end_if %>
+	
 		<h1 class="scope_title"><a href="{$BaseHref}"><img src="{$ThemeDir}/images/scope-masthead.png" /></a></h1>	
 				   
 	</div> <!-- end header div -->
 	
-	<div id="contentwrapper">
+	<div class="contentwrapper_top">
 	<div class="nav">
 		<ul class="social">
 			
