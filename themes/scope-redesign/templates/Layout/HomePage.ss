@@ -3,10 +3,7 @@
 <% include Header %>
 
 
-
-
-
-
+	
 	<div class="main">
 
 		<div id="slider">
@@ -60,6 +57,7 @@
 			
 		</div> <!-- end main_info div -->
 	</div> <!-- end content wrapper -->
+
 	
 		<!-- PARALLAX STUFF--> 
 	<div id="parallax-stuff">
