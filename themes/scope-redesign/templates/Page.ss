@@ -73,8 +73,8 @@
 		<script type="text/javascript" src="http://platform.tumblr.com/v1/share.js"></script>
 		
 		
-		<link rel="stylesheet" href="anythingSlider/anythingslider.css">
-		<script src="anythingSlider/jquery.anythingslider.min.js"></script>
+		<link rel="stylesheet" href="{$ThemeDir}/js/anythingSlider/anythingslider.css">
+		<script src="{$ThemeDir}/js/anythingSlider/jquery.anythingslider.min.js"></script>
 				
 
 <script>
