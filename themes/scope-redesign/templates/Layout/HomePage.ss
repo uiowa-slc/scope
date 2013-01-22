@@ -1,4 +1,4 @@
-
+<!--test = $test-->
 
 <% include Header %>
 
@@ -21,9 +21,9 @@
 					<div class="overlay"><img src="{$ThemeDir}/images/main_nodots.png"/></div>
 				<% end_if %>
 				
-				<img src="$Picture.URL"/>
+				$Picture.SetWidth(970)
 				
-				<h2><a href="$Link" id="FeaturedArtist">$Artist</a></h2>
+				<h2><a href="$Link" class="FeaturedArtist">$Artist</a></h2>
 				<!--<h4>Featured Show</h4>-->
 				
 				
@@ -121,7 +121,7 @@
 	<div class="extras">
 		<ul>
 			<% if SpotifyLink %>
-				<li class="iframe"><iframe src="$SpotifyLink" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></li>
+				<!--<li class="iframe"><iframe src="$SpotifyLink" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></li>-->
 			<% end_if %>
 			<li><div class="date">
 				<ul>

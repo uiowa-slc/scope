@@ -4,7 +4,9 @@
   box-shadow: h-shadow v-shadow blur spread color inset;
 */
 
-
+#slider {
+	display: none;
+}
 
 #twitter_update_list span{
 	font-size: 20pt;
@@ -52,7 +54,7 @@
 }
 
 
-#FeaturedArtist{
+.FeaturedArtist{
 	text-transform: uppercase;
 }
 
@@ -312,7 +314,7 @@ ul.links li:hover{
 	position: absolute;
 	z-index: 1;
 	margin: 0px 0 20px 2px;
-	height: 516px;
+/*	height: 516px; */
 	width: 970px;
 }
 /*

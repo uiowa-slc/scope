@@ -80,9 +80,15 @@
 <script>
 $(document).ready(function () {
 <!-- fancy box JavaScript -->
-	$("a.single_image").fancybox();
+if ($("a.single_image").length > 0){
+ $("a.single_image").fancybox();
+}
 });
 
+jQuery(window).load(function () {
+	$('#slider').css('display','block');
+
+});
 
 jQuery(document).ready(function($) {
     a=parseFloat(400);// Initial value for the first background (bk 0)
