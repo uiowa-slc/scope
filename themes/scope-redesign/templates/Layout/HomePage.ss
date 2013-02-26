@@ -44,8 +44,13 @@
 					<div class="clear"></div>
 					
 					<% if $BuyTicketsOnlineLink %>
+					
+						<% if $SoldOut %>
+							<p class="sold-out">This show is sold out!</p>
+						<% else %>
 		
 						<a href="$BuyTicketsOnlineLink?camefrom=ScopeWebsiteHomePageMainFeature"><h3>Buy Tickets</h3></a>
+						<% end_if %>
 					
 					<% end_if %>
 					
@@ -99,7 +104,7 @@
 	
 
 
-<% loop PaginatedPages %>   
+<% loop PaginatedPages(Date) %>   
 
 <div class="details" >
 	<div class="description">
@@ -159,6 +164,9 @@
 				</ul>
 			</div></li> <!-- end date -->
 			<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
+			<% if $SoldOut %>
+				<p class="sold-out">This show is sold out!</p>
+			<% else %>
 			<li class="get_tix"><h5>Get Tickets now:</h5><div>
 				<ul>
 					<% if $BuyTicketsOnlineLink %>
@@ -170,8 +178,11 @@
 					<% end_if %>
 				</ul>
 			
-			</div></li> <!-- end buy tix -->
-			<% end_if %>
+			
+			</div></li>
+			<% end_if %> <!-- end if sold out -->
+			<% end_if %><!-- end buy tix -->
+
 			<div class="clear"></div>
 			
 			<li><div class="get_tix"><h5>Share this event:</h5>

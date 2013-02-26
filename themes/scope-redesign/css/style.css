@@ -3,7 +3,13 @@
   orange: #d37e3a; 
   box-shadow: h-shadow v-shadow blur spread color inset;
 */
-
+.extras .sold-out{
+	margin-left: 10px;
+}
+.sold-out {
+color: red;
+margin: auto;
+}
 #slider {
 	display: none;
 }

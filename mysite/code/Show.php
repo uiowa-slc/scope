@@ -13,7 +13,8 @@ class Show extends Page {
     'TumblrLink' => 'Text',
     'FacebookLink' => 'Text',
     'PinterestLink' => 'Text',
-    'TwitterText' => 'Text'
+    'TwitterText' => 'Text',
+    "SoldOut" => "Boolean"
     
     
     
@@ -39,6 +40,7 @@ class Show extends Page {
     
     public function getCMSFields() {
         $fields = parent::getCMSFields();
+        $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "Is the show sold out? (hides buy ticket links and displays a sold out note on the show)"));
      
         $fields->addFieldToTab('Root.Main', new TextField('Artist'));
         

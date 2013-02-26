@@ -30,6 +30,9 @@
 			</div></li> <!-- end date -->
 			
 			<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
+			<% if $SoldOut %>
+				<p class="sold-out">This show is sold out!</p>
+			<% else %>
 			<li class="get_tix"><h5>Get Tickets now:</h5><div>
 				<ul>
 					<% if $BuyTicketsOnlineLink %>
@@ -42,6 +45,7 @@
 				</ul>
 			
 			</div></li> <!-- end buy tix -->
+			<% end_if %>
 			<% end_if %> <!-- end buy tix -->
 			
 			<div class="clear"></div>

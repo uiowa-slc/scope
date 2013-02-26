@@ -100,7 +100,7 @@ class Page_Controller extends ContentController {
 	}
 	
 	
-	public function PaginatedPages() {
+	public function PaginatedPages($sort = "Sort") {
 	
 	    //$pages = new PaginatedList(Show::get(), $this->request);
 	    
@@ -118,7 +118,7 @@ class Page_Controller extends ContentController {
     	$pages = new PaginatedList($shows, $this->request);    	
 	    $pages->setPageLength(10);
 	    
-	    $pages->sort('Date');
+	    $pages->sort($sort);
 	    
 	    return $pages;
 	    

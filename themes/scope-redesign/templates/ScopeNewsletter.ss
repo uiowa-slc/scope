@@ -24,7 +24,7 @@ tr {padding:0;
 	padding:0;" id="main" width="600">
 	<tr id="preheader">
    	<td background="http://imu.uiowa.edu/themes/imu4/images/preheader.jpg" colspan="2" height="53">
-   	<p style="color:white;margin-top:10px; text-align:center; font-family:Arial, Helvetica, sans-serif;" class="prehead">Having trouble viewing this newsletter? View it in your <a style="color:white;"href="$URL">browser</a>.</p><!-- PREHEADER -->
+   	<p style="color:white;margin-top:10px; text-align:center; font-family:Arial, Helvetica, sans-serif;" class="prehead">Having trouble viewing this newsletter? View it in your <a style="color:white;"href="$AbsoluteLink">browser</a>.</p><!-- PREHEADER -->
 	</td>
 	</tr> 
    
