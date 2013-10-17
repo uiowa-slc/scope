@@ -433,13 +433,18 @@ ul.links li:hover{
 	margin: 30px auto;
 	border-color: #436361;
 	border-bottom-style: double;
-	text-align: center;
+	/*text-align: center;*/
 	font-family: 'Noticia Text';
-	font-style: italic;
 	font-weight: 100;
 	width: 970px;
-	padding-bottom: 10px;
-	background-color: black;
+	padding-bottom: 4px;
+	padding-top: 10px;
+	/*background-color: black;*/
+}
+
+.twitter-timeline{
+	height: 287px;
+	width: 100%;
 }
 
 .twitter img{
