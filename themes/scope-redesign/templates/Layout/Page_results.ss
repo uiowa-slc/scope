@@ -11,7 +11,7 @@
          
     <% if Results %>
     <ul id="SearchResults">
-        <% control Results %>
+        <% loop Results %>
         
         <div class="details detailsSearch">
         <div class="description">
@@ -51,7 +51,7 @@
         </div>
         </div>
         
-        <% end_control %>
+        <% end_loop %>
     </ul>
     <% else %>
     <p>Sorry, your search query did not return any results.</p>
@@ -64,13 +64,13 @@
             <a class="prev" href="$Results.PrevLink" title="View the previous page">&larr;</a>
             <% end_if %>
             <span>
-                <% control Results.Pages %>
+                <% with Results.Pages %>
                     <% if CurrentBool %>
                     $PageNum
                     <% else %>
                     <a href="$Link" title="View page number $PageNum" class="go-to-page">$PageNum</a>
                     <% end_if %>
-                <% end_control %>
+                <% end_with %>
             </span>
             <% if Results.NotLastPage %>
             <a class="next" href="$Results.NextLink" title="View the next page">&rarr;</a>

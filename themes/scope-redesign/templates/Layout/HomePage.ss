@@ -111,9 +111,9 @@
 			
 		<a href="{$Link}">
 		
-		<% control Picture.SetWidth(595) %>
+		<% with Picture.SetWidth(595) %>
 		<img id="show_image" src="$URL"/>
-		<% end_control %>
+		<% end_with %>
 		
 		</a>
 		
