@@ -439,7 +439,7 @@ ul.links li:hover{
 	width: 970px;
 	padding-bottom: 4px;
 	padding-top: 10px;
-	/*background-color: black;*/
+	background-color: rgba(0, 0, 0, 0.23)
 }
 
 .twitter-timeline{
