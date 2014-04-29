@@ -47,7 +47,7 @@ tr {padding:0;
 
 <!-- LEFT COLUMN -->
 
-	<% control Children %>
+	<% loop Children %>
      	
 <table style="width:370px; margin:14px 0 0 0; padding-left:10px;" class="featured">
 	<tr class="title">
@@ -96,7 +96,7 @@ tr {padding:0;
                </tr>
            </table>
 
-         <% end_control %>
+         <% end_loop %>
 			 
 		
        </td><!-- END LEFT COLUMN --> 
@@ -107,7 +107,7 @@ tr {padding:0;
                	<tr>
                    	<td colspan="2"><h2 style="font:italic bold 34px Georgia, 'Times New Roman', Times, serif; color:#28403f; padding:0px 4px 0px 2px; margin:0;">$SidebarMainHeadline</h2></td>
                    </tr>
-           <% control Children %>
+           <% loop Children %>
 
 			<% if InSidebar %>	
 					<tr>
@@ -144,7 +144,7 @@ tr {padding:0;
 					
                    <% end_if %>
 
-           <% end_control %>
+           <% end_loop %>
                    <tr>
                        <td colspan="2">
 
