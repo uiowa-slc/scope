@@ -8,9 +8,9 @@
 	<% if ClassName = HomePage %>
 	
 	<title>
-	<% control getShows(3) %> $Artist, <% end_control %> happening now from Scope Productions! - The University of Iowa</title>
+	<% loop getShows(3) %> $Artist, <% end_loop %> happening now from Scope Productions! - The University of Iowa</title>
 	 
-	 <meta property="og:title" content="<% control getShows(3) %> $Artist, <% end_control %> happening now from Scope Productions!"/>
+	 <meta property="og:title" content="<% loop getShows(3) %> $Artist, <% end_loop %> happening now from Scope Productions!"/>
     <meta property="og:description"
           content="SCOPE Productions is the University of Iowa's Student Commission on Programming Entertainment. Based in Iowa City, Iowa, SCOPE is charged with bringing quality concerts and entertainment to the University of Iowa campus and the Iowa City community."/>
 	
@@ -30,9 +30,9 @@
     <meta property="og:image" content="$Picture.AbsoluteURL"/>
     <% else %>
     
-    	<% control getShows(1) %>
+    	<% loop getShows(1) %>
     		<meta property="og:image" content="$Picture.AbsoluteURL"/>
-    	<% end_control %>
+    	<% end_loop %>
     
     <% end_if %>
     <meta property="og:site_name" content="SCOPE Productions"/>
