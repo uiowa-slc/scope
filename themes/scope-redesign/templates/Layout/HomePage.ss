@@ -118,7 +118,7 @@
 		</a>
 		
 		<a href="{$Link}"><h2>$Artist</h2></a>
-		<h5 class="date">$Venue $Time <br>$getFormattedDate</h5>
+		<h5 class="date">$Venue $Time <br>$Date.Format("l, F j")</h5>
             	<p>$Content.Summary(100)<p>
 				<div class="button"><a href="$Link">See More</a></div>
 	</div>
@@ -203,28 +203,12 @@
 		
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
-		
-		
-		
-		
-		
-		
-		
-		
-		<% include Tags %>
+
 		
 		<div class="clear"></div>
 		
 		<li>
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		<% if PhotoGallery1 %>
 		<h5 class="photo-gallery-link"><a href="$PhotoGallery1.Link" class="single_image">Photo Gallery</a></h5>
 			<div class="photo_gallery" id="photo_gallery{$Pos}">
