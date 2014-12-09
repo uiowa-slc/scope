@@ -78,7 +78,7 @@
 
 		<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>
 		
-		<li><a href="https://www.tumblr.com/register/follow/scopeproductions" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
+		<li><a href="https://www.tumblr.com/register/follow/scopeproductions" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png" alt="Tumblr Button"/></a></li>
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
 		
