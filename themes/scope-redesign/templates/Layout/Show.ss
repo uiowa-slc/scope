@@ -69,7 +69,7 @@
 		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png"  title="Pin It" /></a></li>
 		<% end_if %>
 		
-		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
+		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png" alt="Tumblr Button"/></a></li>
 				
 		<!--<li><a href="http://www.tumblr.com/share/link?url={$AbsoluteLink}&description=$Content.LimitWordCountXML(50)" title="Share on Tumblr" class="scopeTumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>-->
 		
