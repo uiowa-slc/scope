@@ -42,7 +42,7 @@
 	<div class="description venue">
 			
 		<% if Picture %>
-			<img id="venue_section" src="$Picture.URL"/>
+			<img id="venue_section" src="$Picture.URL" alt="photo"/>
 		<% end_if %>
 		
 		<a href="{$Link}"><h2>$Title</h2></a>
@@ -77,10 +77,10 @@
 		<li class="twitterSocial"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-url="$AbsoluteLink" data-text="<% if TwitterText %>$TwitterText<% else %>Check out $Title by SCOPE Productions!<% end_if %>">Tweet</a></li>
 
 		<% if Picture %><!--Featured show-->
-		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png"  title="Pin It" /></a></li>
+		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png" alt="Pinterest Button" title="Pin It" /></a></li>
 		<% end_if %>
 		 
-		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png"/></a></li>
+		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="/scope/themes/scope-redesign/images/tumblr.png" alt="Tumblr Button"/></a></li>
 						
 		</ul> <!-- end ul class social small -->
 		</div><!-- end get tix div --></li> <!-- end li div class get tix -->
@@ -92,7 +92,7 @@
 			<div class="photo_gallery" id="photo_gallery{$Pos}">
 				<ul>
 				   <% if PhotoGallery1 %>
-						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery-{$ID}"><img src="$PhotoGallery1.Link"/></a></li>
+						<li><a class="single_image" href="{$PhotoGallery1.Link}" rel="sidebar_gallery-{$ID}"><img src="$PhotoGallery1.Link" alt="Photo"/></a></li>
 					<% end_if %>
 					<% if PhotoGallery2 %>
 						<li><a class="single_image" href="{$PhotoGallery2.Link}" rel="sidebar_gallery-{$ID}">$PhotoGallery2</a></li>
