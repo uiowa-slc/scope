@@ -1,7 +1,7 @@
 
 <a href="#" id="back_to_top" onclick="Header.back_to_top(); return false;" style="display: block; ">Back to Top</a>
 	<div id="header">
-		<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" /></a>
+		<a href="http://www.uiowa.edu/" class="uiowa-logo"><img src="{$ThemeDir}/images/uiowa-logo.png" alt="University Of Iowa Logo"/></a>
 		<% if SearchForm %>
 	    <span class="search-dropdown-icon"></span>
 	    
@@ -9,7 +9,7 @@
     
 	<% end_if %>
 	
-		<h1 class="scope_title"><a href="{$BaseHref}"><img src="{$ThemeDir}/images/scope-masthead.png" /></a></h1>	
+		<h1 class="scope_title"><a href="{$BaseHref}"><img src="{$ThemeDir}/images/scope-masthead.png" alt="Scope Productions Header"/></a></h1>	
 				   
 	</div> <!-- end header div -->
 	
@@ -24,7 +24,7 @@
 
 			<!--<li><a class="pin scopePinterest" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
 			
-			<li><a href="http://scopeproductions.tumblr.com/" class="scopeTumblr tumblrHeader"><img src="{$ThemeDir}/images/tumblr.png"/></a></li>
+			<li><a href="http://scopeproductions.tumblr.com/" class="scopeTumblr tumblrHeader"><img src="{$ThemeDir}/images/tumblr.png" alt="Tumblur Button"/></a></li>
 			
 		</ul>
 		

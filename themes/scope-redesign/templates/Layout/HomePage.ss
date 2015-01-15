@@ -112,7 +112,7 @@
 		<a href="{$Link}">
 		
 		<% with Picture.SetWidth(595) %>
-		<img id="show_image" src="$URL"/>
+		<img id="show_image" src="$URL" alt="show image/>
 		<% end_with %>
 		
 		</a>
@@ -197,7 +197,7 @@
 		<li><a class="pin scopePinterest" href="http://pinterest.com/pin/create/button/?url={$AbsoluteLink}&media={$Picture.AbsoluteURL}&description={$Content.Summary(100)}" title="Pin It"  ><img border="0" src="//assets.pinterest.com/images/PinExt.png"  title="Pin It" /></a></li>
 		<% end_if %>
 		 
-		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="themes/scope-redesign/images/tumblr.png"/></a></li>
+		<li><a href="http://www.tumblr.com/share/" class="tumblr"><img src="themes/scope-redesign/images/tumblr.png"alt="Tumblr Button"/></a></li>
 		
 		<!--<li><a href="http://www.tumblr.com/share/link/?url={$AbsoluteLink}" title="Share on Tumblr" class="scopeTumblr" style="display:inline-block; text-indent:-9999px; overflow:hidden; width:61px; height:20px; background:url('http://platform.tumblr.com/v1/share_2.png') top left no-repeat transparent;">Share on Tumblr</a></li>-->
 		
@@ -271,7 +271,7 @@
 <div class="details"  id={$URLSegment}>
 	<div class="description venue">
 		
-		<a href="{$Link}"><img id="venue_section" src="$Picture.URL"/></a>
+		<a href="{$Link}"><img id="venue_section" src="$Picture.URL" alt="Venue Picture"/></a>
 		<a href="{$Link}"><h2>$Title</h2></a>
             	<p>$Content<p>
         <div class="button"><a href="$Link">View Full Technical Info</a></div>
@@ -362,9 +362,9 @@
 					
 					<li><a href="https://twitter.com/uiSCOPE" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @uiSCOPE</a></li>
 		
-					<!--<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
+					<!--<li><a class="pin" href="http://pinterest.com/USERNAME/"><img src="http://passets-ec.pinterest.com/images/about/buttons/pinterest-button.png" alt="Pinterest Button" width="60" height="21" alt="Follow Me on Pinterest" /></a></li>-->
 			
-			<li><a href="http://scopeproductions.tumblr.com/" class="tumblr"><img src="{$ThemeDir}/images/tumblr.png" id="tumblr"/></a></li>
+			<li><a href="http://scopeproductions.tumblr.com/" class="tumblr"><img src="{$ThemeDir}/images/tumblr.png" alt="Tumblr Button" id="tumblr"/></a></li>
 					<div class="clear"></div>
 					</ul>
 			
@@ -374,7 +374,7 @@
 				<h5>Stay updated with emails from SCOPE:</h5>
 				
 				<form action="http://uiowa.us2.list-manage2.com/subscribe/post?u=ecb2f1db3370a699762596aba&amp;id=9f325218d4" method="post" id="subscribe-form" name="subscribe-form" class="validate" target="_blank">
-				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+				<label for="mce-EMAIL" style="display:none;"</label><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
 				<div class="clear"><input type="submit" value="Subscribe" name="subscribe" class="button"></div>
 				</form>
 				
