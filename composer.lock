@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8f55496e0e69b1beec33d77b2ec26e98",
+    "hash": "ecb1793eff15f06e534e6cd3959c4e2b",
     "packages": [
         {
             "name": "composer/installers",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1273cbb768f63b6436994df1b51724f8930505eb"
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1273cbb768f63b6436994df1b51724f8930505eb",
-                "reference": "1273cbb768f63b6436994df1b51724f8930505eb",
+                "url": "https://api.github.com/repos/composer/installers/zipball/89d77bfbee79e16653f7162c86e602cc188471db",
+                "reference": "89d77bfbee79e16653f7162c86e602cc188471db",
                 "shasum": ""
             },
             "replace": {
@@ -69,6 +69,7 @@
                 "codeigniter",
                 "concrete5",
                 "croogo",
+                "dokuwiki",
                 "drupal",
                 "elgg",
                 "fuelphp",
@@ -96,7 +97,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2014-09-20 03:53:04"
+            "time": "2014-11-29 01:29:17"
         },
         {
             "name": "silverstripe-themes/simple",
@@ -136,16 +137,16 @@
         },
         {
             "name": "silverstripe/cms",
-            "version": "3.1.6",
+            "version": "3.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-cms.git",
-                "reference": "796874dae7706e7675431948c9780e18c7c74dd5"
+                "reference": "ee4639ed7447b35ec7159b39165819f11b0ccb56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/796874dae7706e7675431948c9780e18c7c74dd5",
-                "reference": "796874dae7706e7675431948c9780e18c7c74dd5",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-cms/zipball/ee4639ed7447b35ec7159b39165819f11b0ccb56",
+                "reference": "ee4639ed7447b35ec7159b39165819f11b0ccb56",
                 "shasum": ""
             },
             "require": {
@@ -179,20 +180,20 @@
                 "cms",
                 "silverstripe"
             ],
-            "time": "2014-08-12 22:52:51"
+            "time": "2015-01-12 04:52:29"
         },
         {
             "name": "silverstripe/framework",
-            "version": "3.1.6",
+            "version": "3.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-framework.git",
-                "reference": "9da3357e3a7348914a4778366efa053277097cc4"
+                "reference": "87d6250ea75f5e1c765d9004c51bd5ffd5633185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/9da3357e3a7348914a4778366efa053277097cc4",
-                "reference": "9da3357e3a7348914a4778366efa053277097cc4",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-framework/zipball/87d6250ea75f5e1c765d9004c51bd5ffd5633185",
+                "reference": "87d6250ea75f5e1c765d9004c51bd5ffd5633185",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +229,7 @@
                 "framework",
                 "silverstripe"
             ],
-            "time": "2014-08-24 23:25:01"
+            "time": "2015-01-14 22:56:46"
         }
     ],
     "packages-dev": [],
@@ -236,6 +237,7 @@
     "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.2"
     },
