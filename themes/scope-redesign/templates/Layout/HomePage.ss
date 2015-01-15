@@ -110,11 +110,7 @@
 	<div class="description">
 			
 		<a href="{$Link}">
-		
-		<% with Picture.SetWidth(595) %>
-		<img id="show_image" src="$URL" alt="show image/>
-		<% end_with %>
-		
+			<img id="show_image" src="$Picture.SetWidth(595).URL" alt="Image representing $Artist" />
 		</a>
 		
 		<a href="{$Link}"><h2>$Artist</h2></a>
