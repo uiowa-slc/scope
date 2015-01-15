@@ -23,7 +23,7 @@
 				<a href="{$AbsoluteBaseURL}about/#contact"><li>Contact</li></a>
 			</ul>
 			<div class="clear"></div>
-			<p>&#169 SCOPE Productions 2012. All Rights Reserved.</p>
+			<p>&#169 SCOPE Productions {$Now.Year}. All Rights Reserved.</p>
 		</div> <!-- end foot-right div -->
 	</div> <!-- end foot-container -->
 	<div id="footer-bottom"></div>
