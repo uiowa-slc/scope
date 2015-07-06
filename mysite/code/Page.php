@@ -7,31 +7,7 @@ class Page extends SiteTree {
 	private static $has_one = array(
 		);
 	
-	public function SplitKeywords(){
-		
-		$keywords = $this->MetaKeywords;
-	    //Debug::show($this->Content);
-	    //print_r("SplitKeywords Page");
-		
-		if($keywords){
-			$splitKeywords = explode(',', $keywords); 
-		}
-		
-		if (isset($splitKeywords)){
-			$keywordsList = new ArrayList(); 
-			foreach($splitKeywords as $data) { 
-				$do=new DataObject(); 
-				$do->Keyword = $data; 
-				$keywordsList->push($do); 
-			} 
-			return $keywordsList;    
-		}
-		
-		
-	}
-	
 
-	
 
 }
 class Page_Controller extends ContentController {
@@ -62,11 +38,9 @@ class Page_Controller extends ContentController {
 		// print_r(Object::get_extensions('StaffPage'));
 	}
 
-	public function PaginatedShows(){
-
+	public function UpcomingShows(){
+		//TODO: Make sure we only get upcoming shows
 		$shows = Show::get();
-
-		print_r("shows");
 
 		$paginatedShows =  new PaginatedList($shows, $this->request);
 		$paginatedShows->setPageLength(10);
@@ -75,43 +49,18 @@ class Page_Controller extends ContentController {
 
 	}
 
+	public function PreviousShows(){
+		//TODO: Make sure we only get previous shows
+		$shows = Show::get();
+		return $shows;
+	}
+
+	function paginatedPreviousShows() {
+		$curDate = date("Y-m-d");
+		$previousShows = $this->PreviousShows();		
+		$paginatedItems = new PaginatedList($previousShows, $this->request);
+		$paginatedItems->setPageLength(20);
+		return $paginatedItems;
+	}
+
 }
-	  
-// 	  public function PaginatedPages($sort = "Sort") {
-
-// 		$showparent = ShowHolder::get()->filter(array(
-// 			'Show.SiteTree.Title:ExactMatch' => 'Shows'))->First();
-
-// 		$showparentID = $showparent->ID;
-
-// 		$shows = Show::get()->filter(array(
-// 			'Show.SiteTree.ParentID:ExactMatch' => $showparentID));
-
-// 		$pages = new PaginatedList($shows, $this->request);    	
-// 		$pages->setPageLength(10);
-
-// 		$pages->sort($sort);
-
-// 		return $pages;
-
-// 	}
-
-// public function getShows($number = 5){
-	
-
-	
-// 	$showparent = ShowHolder::get()->filter(array(
-// 		'Show.SiteTree.Title:ExactMatch' => 'Shows'))->First();
-	
-// 	$showparentID = $showparent->ID;
-	
-// 	$shows = Show::get()->filter(array(
-// 		'Show.SiteTree.ParentID:ExactMatch' => $showparentID));
-// 	$shows->limit($number);
-// 	$shows->sort("Sort", "DESC");
-	
-// 	return $shows;
-	
-	
-	
-// }
