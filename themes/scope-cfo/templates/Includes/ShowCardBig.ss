@@ -1,13 +1,13 @@
 <% if $First %><h1 class="section-title">Next Up:</h1> <hr /><% end_if %>
-	<article class="lecture-card row">
+	<article class="show-card row">
 
-		<div class="lecture-details large-7 columns">
-			<% if $LectureTitle %>
-				<h1><a href="$Link">$LectureTitle</a></h1>
+		<div class="show-details large-7 columns">
+			<% if $Artist %>
+				<h1><a href="$Link">$Artist</a></h1>
 			<% else %>
 				<h1><a href="$Link">$Title</a></h1>
 			<% end_if %>
-			<% include LectureDetails %>
+			<% include ShowDetails %>
 			<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
 		</div>
 		<div class="lecture-image large-5 columns">

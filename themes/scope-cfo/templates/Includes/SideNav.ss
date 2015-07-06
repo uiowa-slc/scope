@@ -11,27 +11,30 @@
 		<% include SideNavMenuItems %>
 	<% end_if %>
 </ul>
-<section class="upcoming-lectures">
-	<% if UpcomingLectures %>
+<section class="upcoming-shows">
+	<% if UpcomingShows %>
 		<h2>Next: </h2>
-		<% loop UpcomingLectures %>
+		<% loop UpcomingShows %>
 			<a href="$Link">$picture.CroppedFocusedImage(250,250)</a>
 			<h3><a href="$Link">$Title.LimitWordCount(5)</a></h3>
-			<p> $EventDate.format(F) $EventDate.format(j), $EventDate.format(Y) $Time</p>
+			<p> $Date.format(F) $Date.format(j), $Date.format(Y) $Time</p>
 		<% end_loop %>
 
 	<% else %>
-		<h3>No upcoming lectures scheduled.</h3>
+		<h3>No upcoming shows scheduled.</h3>
 	<% end_if %>
 </section>
 <hr />
 <ul class="side-nav">
-		<h4>Previous Lectures:</h4>
+		<h4>Previous Shows:</h4>
 		
-		 	<% loop PreviousLectures.Limit(10) %>
+		 	<% loop PreviousShows.Limit(10) %>
 		 		<% include SideNavMenuItem %>
 		 	<% end_loop %>
 		
-		 <li><a href="{$BaseHref}lectures">See all previous lectures</a></li>
+		 <li><a href="{$BaseHref}shows">See all previous shows</a></li>
 </ul>
+
+<!-- FIX -->
+
 <p><a href="{$BaseHref}contact">To request a lecture, contact the UI Lecture Committee.</a></p>
