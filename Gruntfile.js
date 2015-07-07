@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   var globalConfig = {
-    themeDir: 'themes/lecture-cfo'
+    themeDir: 'themes/scope-cfo'
   };
 
   // Project configuration.
