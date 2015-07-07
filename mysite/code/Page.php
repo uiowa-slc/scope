@@ -40,18 +40,27 @@ class Page_Controller extends ContentController {
 
 	public function UpcomingShows(){
 		//TODO: Make sure we only get upcoming shows
-		$shows = Show::get();
+		
+		$now = date('Y-m-d');
+		$shows = Show::get()->filter(array(
+			'Date:GreaterThan' => $now
+			));
 
 		$paginatedShows =  new PaginatedList($shows, $this->request);
 		$paginatedShows->setPageLength(10);
 
 		return $shows;
 
+
 	}
 
 	public function PreviousShows(){
-		//TODO: Make sure we only get previous shows
-		$shows = Show::get();
+		//TODO: Make sure we only get previous shows 
+		$now = date('Y-m-d');
+		$shows = Show::get()->filter(array(
+			'Date:LessThan' => $now
+			));
+
 		return $shows;
 	}
 
@@ -60,6 +69,7 @@ class Page_Controller extends ContentController {
 		$previousShows = $this->PreviousShows();		
 		$paginatedItems = new PaginatedList($previousShows, $this->request);
 		$paginatedItems->setPageLength(20);
+
 		return $paginatedItems;
 	}
 
