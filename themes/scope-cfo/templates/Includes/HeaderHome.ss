@@ -41,27 +41,27 @@
 				navigation_arrows:true;
 				bullets:false;
 				timer:false;">
-				<% if UpcomingLectures %>
-					<% loop UpcomingLectures.Limit(3) %>
+				<% if UpcomingShows %>
+					<% loop UpcomingShows.Limit(3) %>
 					<li>
 					<a href="$Link">
 								<img src="$Picture.CroppedFocusedImage(644,390).URL" alt="$Title">
 							</a>
 						<div class="orbit-caption">
 	
-								<a href="$Link">$Title, $EventDate.Format("M j")</a>
+								<a href="$Link">$Title, $Date.Format("M j")</a>
 						</div>
 					</li>
 					<% end_loop %>
 				<% else %>
-					<% loop PreviousLectures.Limit(3) %>
+					<% loop PreviousShows.Limit(3) %>
 					<li>
 					<a href="$Link">
 								<img src="$Picture.CroppedFocusedImage(644,390).URL" alt="$Title">
 							</a>
 						<div class="orbit-caption">
 	
-								<a href="$Link">Previously presented: $Title, $EventDate.Format("M j")</a>
+								<a href="$Link">Previously presented: $Title, $Date.Format("M j")</a>
 						</div>
 					</li>
 					<% end_loop %>
