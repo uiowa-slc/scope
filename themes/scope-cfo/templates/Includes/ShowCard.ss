@@ -1,4 +1,4 @@
-<a href="$Link" class="show-card-link">
+<%-- <a href="$Link" class="show-card-link"> --%>
 	<article class="show-card">
 		<% if $Picture %>
 			<img src="$Picture.CroppedFocusedImage(500, 600).URL" alt="Photo representing $Title" />
@@ -11,6 +11,6 @@
 				<h1>$Title.LimitWordCount(10)</h1>
 			<% end_if %>
 			<% include ShowDetails %>
-			$Content.LimitWordCount(40) <strong>Continue Reading</strong>
+			$Content.LimitWordCount(40) <strong><a href="$Link" class="show-card-link">Continue Reading</a></strong><a href="$Link" class="show-card-link"></a>
 	</article>
-</a>
+<%-- </a> --%>

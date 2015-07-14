@@ -11,9 +11,17 @@
 	<% if $Artist %><li><h3>$Venue</h3></li><% end_if %>
 	<li><strong>Date:</strong> $Date.format(F) $Date.format(j), $Date.format(Y) $Time</li>
 	<li><strong>Location:</strong> $Venue</li>
-	<li><strong>Cost:</strong> $Price</li>
-</ul>
+	
+	<% if $BuyTicketsOnlineLink %>
+	<li> <a href="$BuyTicketsOnlineLink"> Buy Ticket Online</a> </li>
+	<% end_if %>
 
+	<% if $BuyTicketsInPersonLink %>
+	<li> <a href="$BuyTicketsInPersonLink"> Buy Ticket In Person</a> </li>
+	<% end_if %>
+	
+	<%-- <li><strong>Cost:</strong> $Price</li> --%>
+</ul>
 
 
 
@@ -24,7 +32,7 @@
  		<div class="description venue">
 
  			<img id="venue_section" src="$Picture.URL"/>
- 			<a href="{$Link}"><h2>$Title</h2></a>
+ 			<a href="{$Link}" ><h2>$Title</h2></a>
  			<h5 class="date">$Venue $Time <br> $Date.NiceUS</h5>
  			<p>$Content</p>
  			</div>
