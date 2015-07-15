@@ -54,25 +54,29 @@
 		</li> <!-- end date -->
 
 		<%-- Tickets  --%>
+
 		<% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
 		<% if $SoldOut %>
 		<p>This show is sold out!</p>
 
 		<% else %>
-		<li><h5>Get Tickets now:</h5><div>
-			<ul>
-				<% if $BuyTicketsOnlineLink %>
-				<a href="{$BuyTicketsOnlineLink}?camefrom=ScopeWebsiteShowPage"><li><strong>Buy Tickets</strong><br>Online</li></a>
-				<% end_if %>
+		
+		<% if Date.inPast != true %>
+			<li><h5>Get Tickets now:</h5><div>
+				<ul>
+					<% if $BuyTicketsOnlineLink %>
+					<a href="{$BuyTicketsOnlineLink}?camefrom=ScopeWebsiteShowPage"><li><strong>Buy Tickets</strong><br>Online</li></a>
+					<% end_if %>
 
-				<% if $BuyTicketsInPersonLink %>
-				<a href="{$BuyTicketsInPersonLink}"><li><strong>Buy Tickets</strong><br>In Person</li></a>
-				<% end_if %>
-			</ul>
-			
-		</div></li> <!-- end buy tix -->
+					<% if $BuyTicketsInPersonLink %>
+					<a href="{$BuyTicketsInPersonLink}"><li><strong>Buy Tickets</strong><br>In Person</li></a>
+					<% end_if %>
+				</ul>
+				
+			</div></li> <!-- end buy tix -->
+			<% end_if %>
+			<% end_if %> <!-- end buy tix -->
 		<% end_if %>
-		<% end_if %> <!-- end buy tix -->
 
 
 		<li><h5>Share this event:</h5>

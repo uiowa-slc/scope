@@ -12,12 +12,17 @@
 	<li><strong>Date:</strong> $Date.format(F) $Date.format(j), $Date.format(Y) $Time</li>
 	<li><strong>Location:</strong> $Venue</li>
 	
-	<% if $BuyTicketsOnlineLink %>
-	<li> <a href="$BuyTicketsOnlineLink"> Buy Ticket Online</a> </li>
-	<% end_if %>
+	<% if Date.inPast != true %>
+		<p> well hello! </p>
+		
+		<% if $BuyTicketsOnlineLink %>
+		<li> <a href="$BuyTicketsOnlineLink"> Buy Tickets Online</a> </li>
+		<% end_if %>
 
-	<% if $BuyTicketsInPersonLink %>
-	<li> <a href="$BuyTicketsInPersonLink"> Buy Ticket In Person</a> </li>
+		<% if $BuyTicketsInPersonLink %>
+		<li> <a href="$BuyTicketsInPersonLink"> Buy Tickets In Person</a> </li>
+		<% end_if %>
+		
 	<% end_if %>
 	
 	<%-- <li><strong>Cost:</strong> $Price</li> --%>
