@@ -1,14 +1,14 @@
 <%-- <a href="$Link" class="show-card-link"> --%>
 	<article class="show-card">
 		<% if $Picture %>
-			<img src="$Picture.CroppedFocusedImage(500, 600).URL" alt="Photo representing $Title" />
+			<a href="$Link"><img src="$Picture.CroppedFocusedImage(500, 600).URL" alt="Photo representing $Title" /></a>
 		<% else %>
-			<img src="{$ThemeDir}/images/lecture-placeholder.jpg" alt="Placeholder photo representing $Title" />
+			<a href="$Link"><img src="{$ThemeDir}/images/lecture-placeholder.jpg" alt="Placeholder photo representing $Title" /></a>
 		<% end_if %>
 			<% if $Artist %>
-				<h1>$Title.LimitWordCount(10)</h1>
+				<h1><a href="$Link">$Title.LimitWordCount(10)</a></h1>
 			<% else %>
-				<h1>$Title.LimitWordCount(10)</h1>
+				<h1><a href="$Link">$Title.LimitWordCount(10)</a></h1>
 			<% end_if %>
 			<% include ShowDetails %>
 			$Content.LimitWordCount(40) <strong><a href="$Link" class="show-card-link">Continue Reading</a></strong><a href="$Link" class="show-card-link"></a>

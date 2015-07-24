@@ -12,7 +12,7 @@
 			<% end_if %>
 		<% end_loop %>
 		<% if $paginatedPreviousShows.NotLastPage %>
-		<li class=""><a class="prev" href="$paginatedPreviousShos.NextLink()#previous-shows">Earlier</a></li>
+		<li class=""><a class="prev" href="$paginatedPreviousShows.NextLink#previous-shows">Earlier</a></li>
 	<% end_if %>
 	</ul>
 </div>

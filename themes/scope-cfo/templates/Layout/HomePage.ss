@@ -22,13 +22,13 @@
 	</div>
 </div>
 
-<div class="row collapse">
+<!--<div class="row collapse">
 	<div class="large-12 columns">
 		<div class="mission-statement">
 			$Content
 		</div>
 	</div>
-</div>
+</div>-->
 
 <div class="row board-list">
 	<div class="large-12 columns">
