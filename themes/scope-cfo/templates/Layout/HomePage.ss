@@ -7,14 +7,14 @@
 				<div class="row">
 					<% with Page(sponsorships) %>
 						<div class="medium-6 large-6 columns">
-							<h5><a href="{$Link}">$Title</a> </h5>
-							<p>$Content.Summary(50) <a href="$Link">Continue Reading</a></p>
+							<div class="fb-page" data-href="$SiteConfig.FacebookLink"
+							 data-height="400" data-width="600" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-show-posts="true" data-adapt="_container_width"></div>							
 						</div>
 					<% end_with %>
 					<% with Page(about) %>
 						<div class="medium-6 large-6 columns">
 							<h5><a href="{$Link}">$Title</a> </h5>
-							<p>$Content.Summary(50) <a href="$Link">Continue Reading</a></p>
+							<p>$Content.Summary(100) <a href="$Link">Continue Reading</a></p>
 						</div>
 					<% end_with %>
 				</div>
