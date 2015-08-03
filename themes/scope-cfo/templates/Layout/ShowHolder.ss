@@ -1,13 +1,13 @@
  <% if $UpcomingShows %>
  <div class="large-12 columns">
  	<section id="upcoming-shows" class="row">
-
+ 	<p id="upcoming-shows">
  		<% loop UpcomingShows %>
  			<% include ShowCardBig %>
 
 
  		<% end_loop %>
-
+ 		</p>
  		</section>
  	</div>
  	<% end_if %>

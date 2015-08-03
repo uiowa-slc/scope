@@ -59,7 +59,7 @@ class Page_Controller extends ContentController {
 		$now = date('Y-m-d');
 		$shows = Show::get()->filter(array(
 			'Date:LessThan' => $now
-			));
+			))->sort('Date DESC');
 
 		return $shows;
 	}
@@ -73,4 +73,23 @@ class Page_Controller extends ContentController {
 		return $paginatedItems;
 	}
 
+
+
+
+
+
+	public function getShows($number = 5){
+		 
+
+		 
+		$shows = Show::get()->sort("Date DESC")->limit($number);
+
+		return $shows;
+
+	 }
+
 }
+
+
+
+
