@@ -22,3 +22,7 @@ SiteTree::enable_nested_urls();
 /* Paste as Plain Text By Default */
 HtmlEditorConfig::get('cms')->setOption('paste_text_sticky',true);
 HtmlEditorConfig::get('cms')->setOption('paste_text_sticky_default',true);
+
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
