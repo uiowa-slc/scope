@@ -1,6 +1,6 @@
 body{
-    background-image: url('../images/bg.png');
-    background-size: cover;
+    background-image: url('../images/bg.jpg');
+    background-size: 100%;
     background-attachment: fixed;
 }
 
@@ -70,7 +70,7 @@ body{
         //margin: 3em 0 .5em;
         float: right;
         width: 75%;
-        margin-top: 1.5em;
+        margin-top: 4em;
     }
     @media #{$xlarge-up} {
         
@@ -91,7 +91,7 @@ body{
             background-color: rgba(255, 255, 255, 0.2);
         }
         @media #{$large-up} {
-            font-size: rem-calc(17);
+            font-size: rem-calc(25);
             font-weight: 600;
             letter-spacing: 1px;
             padding: 5px 9px;
@@ -100,7 +100,7 @@ body{
             text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
         }
         @media #{$xlarge-up} {
-            font-size: rem-calc(21);
+            font-size: rem-calc(28);
             padding: 5px 22px;
         }
     }
