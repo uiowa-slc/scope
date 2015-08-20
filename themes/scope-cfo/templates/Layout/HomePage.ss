@@ -33,7 +33,7 @@
 <div class="row board-list">
 	<div class="large-12 columns">
 		<h4 class="subtitle">Some of our directors</h4>
-		<a href="{$baseUrl}about/directors" class="text-center"><small>View all directors</small></a>
+		<a href="{$baseUrl}directors/" class="text-center"><small>View all directors</small></a>
 		<br>
 		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
 			<% loop RandomStaffMembers(5) %>
