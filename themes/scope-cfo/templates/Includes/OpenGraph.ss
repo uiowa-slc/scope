@@ -6,8 +6,13 @@
 	<meta property="og:image:height" content="630" />
 
 <% else %>
-	<meta property="og:title" content="$Title" />
 
+	<% if $ClassName == "Show" %>
+		<meta property="og:title" content="$Title - From SCOPE productions" />
+	<% else %>
+		<meta property="og:title" content="$Title" />
+	<% end_if %>
+		
 	<% if $Image %>
 		<meta property="og:image" content="$Image.SetWidth(600).AbsoluteURL" />
 		<meta property="og:image:width" content="$Image.SetWidth(600).Width" />
