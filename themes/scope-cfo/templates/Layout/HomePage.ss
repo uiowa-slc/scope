@@ -14,7 +14,9 @@
 					<% with Page(about) %>
 						<div class="medium-6 large-6 columns">
 							<h5><a href="{$Link}">$Title</a> </h5>
-							<p>$Content.Summary(100) <a href="$Link">Continue Reading</a></p>
+							<p>$Content.Summary(100) <a href="$Link">Continue reading...</a></p>
+							
+							<p><a class="button" href="shows/">See our shows &rarr;</a></p>
 						</div>
 					<% end_with %>
 				</div>

@@ -40,37 +40,30 @@ class Show extends Page {
     
     public function getCMSFields() {
         $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "Is the show sold out? (hides buy ticket links and displays a sold out note on the show)"));
+
+        $fields->removeByName("Content");
+        $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured image (4:3 or skinnier works)'));
+
+        $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "<strong>Is the show sold out? (hides buy ticket links and displays a sold out note on the show)</strong>"));
         
-        $fields->addFieldToTab('Root.Main', new TextField('Artist'));
+        $fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
         
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date')); 
         $dateField->setConfig('showcalendar', true);
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         
-        $fields->addFieldToTab('Root.Main', new TextAreaField('Time'));
-        $fields->addFieldToTab('Root.Main', new TextField('DoorsOpenTime'));
-        $fields->addFieldToTab('Root.Main', new TextAreaField('Venue')); 
-        $fields->addFieldToTab('Root.Main', new TextAreaField('MetaKeywords', 'Tags')); 
-        
-        $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured picture.  For the currently featured show, the dimensions are 970X516.  Width is 595 for shows below featured show (height can vary).'));
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery1')); 
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery2')); 
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery3')); 
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery4'));
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery5'));
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery6'));
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery7'));
-        $fields->addFieldToTab('Root.PhotoGallery', new UploadField('PhotoGallery8'));
+        $fields->addFieldToTab('Root.Main', new TextField('Time (Doors open and show time)'));
+        $fields->addFieldToTab('Root.Main', new TextAreaField('Venue'));         
         
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
+
+        $fields->addFieldToTab('Root.Main', new HTMLEditorField('Content')); 
         //$fields->addFieldToTab('Root.Main', new TextField('FacebookLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TwitterLink')); 
         //$fields->addFieldToTab('Root.Main', new TextField('TumblrLink')); 
-        //$fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));
-        $fields->addFieldToTab('Root.Main', new TextField('TwitterText', 'Customize Tweet text'));                               
+        //$fields->addFieldToTab('Root.Main', new TextField('PinterestLink'));                       
         
         return $fields;
     }
