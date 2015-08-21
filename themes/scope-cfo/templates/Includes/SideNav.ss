@@ -18,7 +18,7 @@
 			<a href="$Link">$picture.CroppedFocusedImage(250,250)</a>
 			<h3><a href="$Link">$Title.LimitWordCount(5)</a></h3>
 			<% include ShowDetails %>
-			
+
 		<% end_loop %>
 
 	<% else %>
@@ -29,7 +29,7 @@
 <ul class="side-nav">
 		<h4>Previous Shows:</h4>
 		
-		 	<% loop PreviousShows.Limit(10) %>
+		 	<% loop PreviousShows.Limit(5) %>
 		 		<% include SideNavMenuItem %>
 		 	<% end_loop %>
 		
