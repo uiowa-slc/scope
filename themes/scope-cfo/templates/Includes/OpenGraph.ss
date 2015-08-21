@@ -7,11 +7,7 @@
 
 <% else %>
 
-	<% if $ClassName == "Show" %>
-		<meta property="og:title" content="$Title - From SCOPE productions" />
-	<% else %>
-		<meta property="og:title" content="$Title" />
-	<% end_if %>
+	<meta property="og:title" content="$Title - $SiteConfig.Title" />
 		
 	<% if $Image %>
 		<meta property="og:image" content="$Image.SetWidth(600).AbsoluteURL" />
