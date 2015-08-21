@@ -16,10 +16,10 @@
 		<meta property="og:image" content="$Photo.SetWidth(600).AbsoluteURL" />
 		<meta property="og:image:width" content="$Photo.SetWidth(600).Width" />
 		<meta property="og:image:height" content="$Photo.SetWidth(600).Height" />
-	<% else_if $BackgroundImage %>
-		<meta property="og:image" content="$BackgroundImage.SetWidth(600).AbsoluteURL" />
-		<meta property="og:image:width" content="$BackgroundImage.SetWidth(600).Width" />
-		<meta property="og:image:height" content="$BackgroundImage.SetWidth(600).Height" />
+	<% else_if $Picture %>
+		<meta property="og:image" content="$Picture.SetWidth(600).AbsoluteURL" />
+		<meta property="og:image:width" content="$Picture.SetWidth(600).Width" />
+		<meta property="og:image:height" content="$Picture.SetWidth(600).Height" />
 	<% else %>
 		<meta property="og:image" content="{$BaseHref}{$ThemeDir}/images/og-image.jpg" />
 		<meta property="og:image:width" content="1200" />
