@@ -260,12 +260,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StudentLifeMarketingAndDesign/cfo-project.git",
-                "reference": "4acbb4a540a9848954bddb846147c96b7e4c1d0c"
+                "reference": "71dcdf9fc5c4f77e634e8a9bff1b807a0b082978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/4acbb4a540a9848954bddb846147c96b7e4c1d0c",
-                "reference": "4acbb4a540a9848954bddb846147c96b7e4c1d0c",
+                "url": "https://api.github.com/repos/StudentLifeMarketingAndDesign/cfo-project/zipball/71dcdf9fc5c4f77e634e8a9bff1b807a0b082978",
+                "reference": "71dcdf9fc5c4f77e634e8a9bff1b807a0b082978",
                 "shasum": ""
             },
             "require": {
@@ -302,7 +302,7 @@
                 "source": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/tree/master",
                 "issues": "https://github.com/StudentLifeMarketingAndDesign/cfo-project/issues"
             },
-            "time": "2015-08-21 18:47:57"
+            "time": "2015-08-21 19:05:52"
         },
         {
             "name": "md/division-bar",
