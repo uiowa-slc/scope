@@ -2,7 +2,7 @@
 	<li><strong>Date:</strong> $Date.format(F) $Date.format(j), $Date.format(Y) $Time</li>
 	<% if $Venue %><li><strong>Location:</strong> $Venue</li><% end_if %>
 	<% if $SoldOut %>
-		<p>This show is sold out!</p>
+		<p class="alert"><strong>This show is sold out!</strong></p>
 	<% else %>
 		<% if not $Date.inPast %>
 			<% if $BuyTicketsOnlineLink %>

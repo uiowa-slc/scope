@@ -2,7 +2,7 @@
 
 <div class="row gray collapse <% with Page("blog") %><% if $Entries %>social-blog<% end_if %><% end_with %>">
 
-	<div class="large-6 large-push-6 columns">
+	<div class="large-7 columns">
 		<div class="row">
 			<% with Page("blog") %>
 				<% if $Entries %>
@@ -25,7 +25,7 @@
 			<% end_with %>
 		</div>
 	</div>
-	<div class="large-6 large-pull-6 columns white">
+	<div class="large-5 columns white">
 		<% include FBPage %>
 	</div>
 

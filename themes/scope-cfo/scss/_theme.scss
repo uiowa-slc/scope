@@ -144,6 +144,10 @@ body{
     }
 }
 
+p.alert{
+    color: $alert-color;
+}
+
 .show-card {
   	h1{
   		margin-top: 0em;
