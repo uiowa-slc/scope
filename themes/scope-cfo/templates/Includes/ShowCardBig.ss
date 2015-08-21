@@ -11,9 +11,7 @@
 			<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
 					<h2>Share this event:</h2>
 		<%-- Social  --%>
-
-
-		<p><a class="button facebook" href="https://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}">Facebook</a> <a href="https://twitter.com/share" class="button twitter" data-lang="en" data-url="$AbsoluteLink" data-text="Check out $Title by SCOPE Productions!">Twitter</a>
+		<% include ShareButtons %>
 		</div>
 		<div class="lecture-image large-5 columns">
 			<% if $Picture %>

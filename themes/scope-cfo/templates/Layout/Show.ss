@@ -20,7 +20,7 @@
 		<%-- Social  --%>
 
 
-		<p><a class="button facebook" href="https://www.facebook.com/sharer/sharer.php?u={$AbsoluteLink}">Facebook</a> <a href="https://twitter.com/share" class="button twitter" data-lang="en" data-url="$AbsoluteLink" data-text="Check out $Title by SCOPE Productions!">Twitter</a>
+		<% include ShareButtons %>
 
 		</div>
 	</article>	
