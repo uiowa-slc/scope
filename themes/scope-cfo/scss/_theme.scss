@@ -179,7 +179,7 @@ ul.show-details {
         padding-bottom: 10px;
         margin-top: $column-gutter/2;
      }
-    article.show-card {
+    article {
         background: transparent;
         color: white;
         padding-left: 1em;
@@ -272,6 +272,11 @@ ul.show-details {
 
 /* Single Show Page ======================================================== */
 
+
+.Show{
+    @extend .ShowHolder;
+    @extend #upcoming-shows;
+}
 .show-single img {
     @media #{$large-up} {
         max-width: 400px;
