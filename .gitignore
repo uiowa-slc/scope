@@ -35,3 +35,6 @@ foundation-forms/
 node_modules/
 foundationforms/
 gridfieldextensions
+tagfield/
+lumberjack/
+segment-field/
