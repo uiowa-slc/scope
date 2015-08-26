@@ -24,5 +24,4 @@ HtmlEditorConfig::get('cms')->setOption('paste_text_sticky',true);
 HtmlEditorConfig::get('cms')->setOption('paste_text_sticky_default',true);
 
 HomePage::add_extension('HomePageExtension');
-StaffPage::add_extension('StaffPageExtension');
 StaffHolderPage::add_extension('StaffHolderPageExtension');

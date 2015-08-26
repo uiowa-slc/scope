@@ -9,6 +9,9 @@
 			<% end_if %>
 			<% include ShowDetails %>
 			<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
+					<h2>Share this event:</h2>
+		<%-- Social  --%>
+		<% include ShareButtons %>
 		</div>
 		<div class="lecture-image large-5 columns">
 			<% if $Picture %>

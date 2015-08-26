@@ -45,7 +45,7 @@
 					<% loop UpcomingShows.Limit(3) %>
 					<li>
 					<a href="$Link">
-								<img src="$Picture.CroppedFocusedImage(644,390).URL" alt="$Title">
+								<img src="$Picture.CroppedFocusedImage(700,525).URL" alt="$Title">
 							</a>
 						<div class="orbit-caption">
 	

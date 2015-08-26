@@ -14,7 +14,9 @@
 					<% with Page(about) %>
 						<div class="medium-6 large-6 columns">
 							<h5><a href="{$Link}">$Title</a> </h5>
-							<p>$Content.Summary(100) <a href="$Link">Continue Reading</a></p>
+							<p>$Content.Summary(100) <a href="$Link">Continue reading...</a></p>
+							
+							<p><a class="button" href="shows/">See our shows &rarr;</a></p>
 						</div>
 					<% end_with %>
 				</div>
@@ -33,14 +35,14 @@
 <div class="row board-list">
 	<div class="large-12 columns">
 		<h4 class="subtitle">Some of our directors</h4>
-		<a href="{$baseUrl}about/" class="text-center"><small>View all members</small></a>
+		<a href="{$baseUrl}directors/" class="text-center"><small>View all directors</small></a>
 		<br>
 		<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
 			<% loop RandomStaffMembers(5) %>
 				<li>
 					<% if $Photo %>
 						<a href="$Link" class="staff-link">
-							<img src="$Photo.CroppedImage(230,230).URL" alt="$FirstName $LastName" class="staff-img">
+							<img src="$Photo.CroppedFocusedImage(230,230).URL" alt="$FirstName $LastName" class="staff-img">
 						</a>
 					<% else %>
 						<a href="$Link" class="staff-link">
