@@ -24,6 +24,7 @@
 							<% else %>
 								<li>
 									<h4 class="quicklinks-title">$Title <span>$SubTitle</span></h4>
+
 								</li>
 							<% end_if %>
 						<% end_loop %>
@@ -50,6 +51,7 @@
 						<div class="orbit-caption">
 	
 								<a href="$Link">$Title, $Date.Format("M j")</a>
+								in $Date.TimeDiffIn(days)
 						</div>
 					</li>
 					<% end_loop %>
