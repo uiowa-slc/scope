@@ -52,8 +52,9 @@
 							<% if $Date.isToday %>
 							<a href="$Link">Today: $Title</a>
 							<% else %>
-								<a href="$Link" data-countdown="$Date $Time"></a><br />
-								<a href="$Link">{$Title}, $Date.Format("F j")</a>
+								<a href="$Link">{$Title}, $Date.Format("F j")</a><br />
+								<a href="$Link" data-countdown="$Date $Time"></a>
+								
 							<% end_if %>
 						</div>
 					</li>
