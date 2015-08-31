@@ -68,7 +68,7 @@ class Page_Controller extends ContentController {
 		$curDate = date("Y-m-d");
 		$previousShows = $this->PreviousShows();		
 		$paginatedItems = new PaginatedList($previousShows, $this->request);
-		$paginatedItems->setPageLength(20);
+		$paginatedItems->setPageLength(21);
 
 		return $paginatedItems;
 	}
