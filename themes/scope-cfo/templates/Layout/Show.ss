@@ -5,7 +5,9 @@
 			<h1>$Title </h1>
 			<% include ShowDetails %>
 			<p>$Content</p>
-
+			<% if $SpotifyEmbed %>
+				$SpotifyEmbed
+			<% end_if %>
 		</div>
 		<div class="lecture-image medium-4 large-5 columns">
 			<% if $Picture %>
@@ -13,9 +15,7 @@
 			<% end_if %>
 			<% include ShowCountdown %>
 <%-- spotify --%>
-		<% if $SpotifyLink %>
-			<li><iframe src="$SpotifyLink" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></li>
-		<% end_if %>
+
 		<h2>Share this event:</h2>
 		<%-- Social  --%>
 
@@ -26,7 +26,3 @@
 	</article>	
 
 </div>
-
-
-
-

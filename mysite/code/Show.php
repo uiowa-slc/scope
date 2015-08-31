@@ -3,10 +3,11 @@ class Show extends Page {
     private static $db = array(
         'Artist' => 'Text',
         'Date' => 'Date',
-        'Time' => 'Text',
+        'Time' => 'Time',
         'DoorsOpenTime' => 'Text',
         'Venue' => 'Text',
-        'SpotifyLink' => 'Text',     
+        'SpotifyLink' => 'Text',   
+        'SpotifyEmbed' => 'HTMLText',  
         'BuyTicketsOnlineLink' => 'Text',
         'BuyTicketsInPersonLink' => 'Text',
         'TwitterLink' => 'Text',
@@ -52,10 +53,10 @@ class Show extends Page {
         $dateField->setConfig('showcalendar', true);
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         
-       // $fields->addFieldToTab('Root.Main', new TextField('Time (Doors open and show time)'));
+        $fields->addFieldToTab('Root.Main', new TimeField('Time', 'Show start time (put door open time in the description)'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue'));         
         
-        $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 
+        $fields->addFieldToTab('Root.Main', new TextField('SpotifyEmbed', 'Spotify embed code - See <a href="https://developer.spotify.com/technologies/widgets/spotify-play-button/">these instructions for creating a Spotify embed code.</a>')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
 
@@ -82,6 +83,7 @@ class Show extends Page {
       $formattedDate = date("F j, Y", $timestamp);
       return $formattedDate;
   }
+
   
 }
 

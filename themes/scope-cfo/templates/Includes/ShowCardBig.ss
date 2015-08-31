@@ -17,6 +17,9 @@
 			<% include ShowDetails %>
 			
 			<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
+			<% if $SpotifyEmbed %>
+				$SpotifyEmbed
+			<% end_if %>
 					<h2>Share this event:</h2>
 		<%-- Social  --%>
 		<% include ShareButtons %>
