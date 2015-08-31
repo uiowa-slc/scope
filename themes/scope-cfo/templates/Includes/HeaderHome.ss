@@ -48,12 +48,12 @@
 					<a href="$Link">
 								<img src="$Picture.CroppedFocusedImage(700,525).URL" alt="$Title">
 							</a>
-						<div class="orbit-caption">
+						<div class="orbit-caption countdown">
 							<% if $Date.isToday %>
 							<a href="$Link">Today: $Title</a>
 							<% else %>
-								<a href="$Link">{$Date.Ago}: $Title, $Date.Format("F j")</a>
-								
+								<a href="$Link" data-countdown="$Date"></a><br />
+								<a href="$Link">{$Title}</a>
 							<% end_if %>
 						</div>
 					</li>
