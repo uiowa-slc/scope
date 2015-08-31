@@ -47,7 +47,7 @@ class Show extends Page {
 
         $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "<strong>Is the show sold out? (hides buy ticket links and displays a sold out note on the show)</strong>"));
         
-        $fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
+        //$fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
         
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date')); 
         $dateField->setConfig('showcalendar', true);
