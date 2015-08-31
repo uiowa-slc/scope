@@ -43,7 +43,7 @@ class Page_Controller extends ContentController {
 		
 		$now = date('Y-m-d');
 		$shows = Show::get()->filter(array(
-			'Date:GreaterThan' => $now
+			'Date:GreaterThanOrEqual' => $now
 			));
 
 		$paginatedShows =  new PaginatedList($shows, $this->request);

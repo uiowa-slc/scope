@@ -13,9 +13,11 @@
 </ul>
 <section class="upcoming-shows">
 	<% if UpcomingShows %>
-		<h2>Next: </h2>
+		
 		<% loop UpcomingShows %>
+			<h2>$Date.Ago :</h2>
 			<a href="$Link">$picture.CroppedFocusedImage(250,250)</a>
+			<% include ShowCountdown %>
 			<h3><a href="$Link">$Title.LimitWordCount(5)</a></h3>
 			<% include ShowDetails %>
 

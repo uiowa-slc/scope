@@ -3,7 +3,6 @@
 		<div class="show-details medium-8 large-7 columns">
 
 			<h1>$Title </h1>
-
 			<% include ShowDetails %>
 			<p>$Content</p>
 
@@ -12,6 +11,7 @@
 			<% if $Picture %>
 			<img src="$Picture.CroppedFocusedImage(600,700).URL" alt="Image for $Title" />
 			<% end_if %>
+			<% include ShowCountdown %>
 <%-- spotify --%>
 		<% if $SpotifyLink %>
 			<li><iframe src="$SpotifyLink" width="300" height="80" frameborder="0" allowtransparency="true"></iframe></li>

@@ -52,7 +52,7 @@ class Show extends Page {
         $dateField->setConfig('showcalendar', true);
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         
-        $fields->addFieldToTab('Root.Main', new TextField('Time (Doors open and show time)'));
+       // $fields->addFieldToTab('Root.Main', new TextField('Time (Doors open and show time)'));
         $fields->addFieldToTab('Root.Main', new TextAreaField('Venue'));         
         
         $fields->addFieldToTab('Root.Main', new TextField('SpotifyLink')); 

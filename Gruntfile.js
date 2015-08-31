@@ -29,6 +29,8 @@ module.exports = function(grunt) {
       js:{
         src: [
           'cfo-project/build/build.src.js',
+          '<%=globalConfig.themeDir %>/bower_components/jquery.countdown/dist/jquery.countdown.js',
+          '<%=globalConfig.themeDir %>/bower_components/underscore/underscore.js',
           '<%=globalConfig.themeDir %>/javascript/*.js'
         ],
         dest: '<%=globalConfig.themeDir %>/build/build.src.js'

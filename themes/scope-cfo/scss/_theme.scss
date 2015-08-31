@@ -280,6 +280,7 @@ ul.show-details {
 .Show{
     @extend .ShowHolder;
     @extend #upcoming-shows;
+    margin-top: 0;
 }
 .show-single img {
     @media #{$large-up} {
@@ -319,4 +320,19 @@ span.pluginShareButtonLink{
 
 .board-list{
     background-color: rgba(233, 242, 255, 0.62);
+}
+
+/* Countdown */
+
+.countdown{
+    font-size: rem-calc(28);
+    font-family: 'Monaco', monospace;
+    text-transform: uppercase;
+    text-align: center;
+    background: #222;
+    color: lighten(#C74954, 40);
+}
+
+.content-right .countdown{
+    font-size: rem-calc(22);
 }

@@ -49,9 +49,12 @@
 								<img src="$Picture.CroppedFocusedImage(700,525).URL" alt="$Title">
 							</a>
 						<div class="orbit-caption">
-	
-								<a href="$Link">$Title, $Date.Format("M j")</a>
-								in $Date.TimeDiffIn(days)
+							<% if $Date.isToday %>
+							<a href="$Link">Today: $Title</a>
+							<% else %>
+								<a href="$Link">{$Date.Ago}: $Title, $Date.Format("F j")</a>
+								
+							<% end_if %>
 						</div>
 					</li>
 					<% end_loop %>

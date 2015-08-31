@@ -8,7 +8,6 @@
 				<% include StaffPageListItem %>
 			<% end_loop %>
 			</ul>
-		<% end_if %>
 
 	</article>
 </div>

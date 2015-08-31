@@ -1,5 +1,6 @@
 <%-- <a href="$Link" class="show-card-link"> --%>
 	<article class="show-card">
+		 
 		<% if $Picture %>
 			<a href="$Link"><img src="$Picture.CroppedFocusedImage(700, 600).URL" alt="Photo representing $Title" /></a>
 		<% else %>
