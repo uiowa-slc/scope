@@ -52,7 +52,7 @@
 							<% if $Date.isToday %>
 							<a href="$Link">Today: $Title</a>
 							<% else %>
-								<a href="$Link" data-countdown="$Date"></a><br />
+								<a href="$Link" data-countdown="$Date $Time"></a><br />
 								<a href="$Link">{$Title}</a>
 							<% end_if %>
 						</div>
