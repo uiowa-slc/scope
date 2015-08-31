@@ -53,7 +53,7 @@
 							<a href="$Link">Today: $Title</a>
 							<% else %>
 								<a href="$Link" data-countdown="$Date $Time"></a><br />
-								<a href="$Link">{$Title}</a>
+								<a href="$Link">{$Title}, $Date.Format("F j")</a>
 							<% end_if %>
 						</div>
 					</li>
@@ -66,7 +66,7 @@
 							</a>
 						<div class="orbit-caption">
 	
-								<a href="$Link">Previously presented: $Title, $Date.Format("M j")</a>
+								<a href="$Link">Previously presented: $Title, $Date.Format("F j")</a>
 						</div>
 					</li>
 					<% end_loop %>
