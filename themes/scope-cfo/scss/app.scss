@@ -1,0 +1,10 @@
+/* theme's settings import
+-------------------------------------------*/
+@import "settings";
+@import "../../../cfo-project/scss/app";
+
+/* Theme Styles
+-------------------------------------------*/
+@import "mixins/gradient";
+@import "imports/buttons";
+@import "_theme";
