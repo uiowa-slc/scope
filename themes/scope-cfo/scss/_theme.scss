@@ -106,6 +106,10 @@ body{
     }
 }
 
+.nav-toggle{
+      margin-top: 40px;
+}
+
 .HomePage .main-nav {
     margin: 0;
 }
@@ -309,4 +313,10 @@ span.pluginShareButtonLink{
     .facebook-container{
         background-color: #e4e4e4;
     }
+}
+
+/* Staff page */
+
+.board-list{
+    background-color: rgba(233, 242, 255, 0.62);
 }
