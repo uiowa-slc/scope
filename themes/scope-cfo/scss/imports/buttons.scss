@@ -36,3 +36,7 @@
   @include buttonGradient(#666, #333);
   color: white;
 }
+
+input[type="submit"]{
+  @extend .button;
+}

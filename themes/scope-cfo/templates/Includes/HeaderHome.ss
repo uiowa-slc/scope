@@ -35,6 +35,9 @@
 		<div class="large-8 columns">
 			<% include Nav %>
 
+
+			<% if UpcomingShows %>
+			<div class="slider <% if $UpcomingShows.Count < 2 %>single<% end_if %>">
 			<ul class="home-orbit" data-orbit data-options="
 				animation:slide;
 				animation_speed:1000;
@@ -42,7 +45,7 @@
 				navigation_arrows:true;
 				bullets:false;
 				timer:false;">
-				<% if UpcomingShows %>
+				
 					<% loop UpcomingShows.Limit(3) %>
 					<li>
 					<a href="$Link">
@@ -60,19 +63,28 @@
 					</li>
 					<% end_loop %>
 				<% else %>
-					<% loop PreviousShows.Limit(3) %>
-					<li>
-					<a href="$Link">
-								<img src="$Picture.CroppedFocusedImage(644,390).URL" alt="$Title">
-							</a>
-						<div class="orbit-caption">
-	
-								<a href="$Link">Previously presented: $Title, $Date.Format("F j")</a>
-						</div>
-					</li>
-					<% end_loop %>
-				<% end_if %>
-			</ul>
+				<div class="slider <% if $Previous.Count < 2 %>single<% end_if %>">
+					<ul class="home-orbit" data-orbit data-options="
+						animation:slide;
+						animation_speed:1000;
+						pause_on_hover:true;
+						navigation_arrows:true;
+						bullets:false;
+						timer:false;">
+						<% loop PreviousShows.Limit(3) %>
+						<li>
+						<a href="$Link">
+									<img src="$Picture.CroppedFocusedImage(644,390).URL" alt="$Title">
+								</a>
+							<div class="orbit-caption">
+		
+									<a href="$Link">Previously presented: $Title, $Date.Format("F j")</a>
+							</div>
+						</li>
+						<% end_loop %>
+					<% end_if %>
+				</ul>
+			</div>
 		</div>
 	</div>
 </header>
