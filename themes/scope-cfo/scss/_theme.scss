@@ -153,9 +153,7 @@ p.alert{
 }
 
 .show-card {
-  	h1{
-  		margin-top: 0em;
-  	}
+
 
 
     background: white;
@@ -180,6 +178,11 @@ ul.show-details {
 
 #upcoming-shows {
      @media #{$large-up} {
+        h1{
+            font-size: rem-calc(62);
+            margin-top: 0em;
+
+        }
         padding-bottom: 10px;
         margin-top: $column-gutter/2;
      }
@@ -281,6 +284,7 @@ ul.show-details {
     @extend .ShowHolder;
     @extend #upcoming-shows;
     margin-top: 0;
+
 }
 .show-single img {
     @media #{$large-up} {

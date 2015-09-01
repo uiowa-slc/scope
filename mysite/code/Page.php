@@ -44,7 +44,7 @@ class Page_Controller extends ContentController {
 		$now = date('Y-m-d');
 		$shows = Show::get()->filter(array(
 			'Date:GreaterThanOrEqual' => $now
-			));
+			))->sort('Date');
 
 		$paginatedShows =  new PaginatedList($shows, $this->request);
 		$paginatedShows->setPageLength(10);
