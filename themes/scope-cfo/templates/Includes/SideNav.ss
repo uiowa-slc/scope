@@ -19,6 +19,7 @@
 			<% include ShowCountdown %>
 			<h3><a href="$Link">$Title.LimitWordCount(5)</a></h3>
 			<% include ShowDetails %>
+			<% if not $Last %><hr /><% end_if %>
 		<% end_loop %>
 
 	<% else %>
