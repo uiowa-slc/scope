@@ -70,21 +70,31 @@ class Show extends Page {
     }
     
     public function getTimestamp(){
-      
+
       $date = $this->Date . $this->Time;
       $timestamp = strtotime($date);
       return $timestamp;
-  }
+    }
   
-  public function getFormattedDate(){
-      
+    public function getFormattedDate(){
+
       $date = $this->Date . $this->Time;
       $timestamp = strtotime($date);
       $formattedDate = date("F j, Y", $timestamp);
       return $formattedDate;
-  }
+    }
 
-  
+    public function getDateTime(){
+
+        if(isset($this->Date)){
+            $dateTime = new SS_Datetime;
+            $dateTime->setValue($this->getTimestamp());
+            return $dateTime;
+        }
+
+    }
+
+
 }
 
 class Show_Controller extends Page_Controller {
