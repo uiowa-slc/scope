@@ -5,7 +5,7 @@
 	<div class="large-7 columns">
 		<div class="row">
 			<% with Page("blog") %>
-				<% if $Entries %>
+				<% if $BlogPosts %>
 					<% loop $BlogPosts.Limit(2) %>
 						<div class="large-6 columns">
 							<div class="blogsnippit">
