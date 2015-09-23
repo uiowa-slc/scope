@@ -1,7 +1,8 @@
 <% if $Date.isToday %>
 	<h1 class="section-title">Today:</h1> 
 <% else %>
-	<h1 class="section-title">{$Date.Ago}:</h1> 
+	<h1 class="section-title">{$dateTime.Ago}:</h1> 
+	
 <% end_if %>
 
 <hr />
