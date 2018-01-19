@@ -26,5 +26,5 @@ HtmlEditorConfig::get('cms')->setOption('paste_text_sticky_default',true);
 if(Director::isLive()) {
 	Director::forceSSL();
 } 
-
+Authenticator::unregister('MemberAuthenticator');
 Authenticator::set_default_authenticator('SAMLAuthenticator');
