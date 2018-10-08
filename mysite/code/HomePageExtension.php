@@ -1,4 +1,10 @@
 <?php
+
+use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\TreeDropdownField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\ORM\DataExtension;
 class HomePageExtension extends DataExtension {
 	private static $db = array(
 		'BuyTicketsLink' => 'Text',
@@ -8,8 +14,8 @@ class HomePageExtension extends DataExtension {
 		);
 	
 	private static $has_one = array(
-   'FeaturedShow' => 'Show', //IGNORE, USE FEATUREDPAGE
-   'FeaturedPage' => 'SiteTree'
+	   'FeaturedShow' => 'Show', //IGNORE, USE FEATUREDPAGE
+	   'FeaturedPage' => SiteTree::class
    );
 	
 	public function updateCMSFields(FieldList $fields) {
@@ -40,9 +46,6 @@ class HomePageExtension extends DataExtension {
 	public function getShowHolder(){
 		return ShowHolder::get();
 	}
-	
-	
-	
 	
 
 }

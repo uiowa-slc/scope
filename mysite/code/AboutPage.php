@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+
 class AboutPage extends Page {
 
 
@@ -18,8 +21,4 @@ class AboutPage extends Page {
 		return $fields;
 	}
 
-}
-
-class AboutPage_Controller extends Page_Controller {
-	
 }

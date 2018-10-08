@@ -1,4 +1,15 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Forms\CheckboxField;
+use SilverStripe\ORM\FieldType\DBDate;
+use SilverStripe\Forms\DateField;
+use SilverStripe\Forms\TimeField;
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\ORM\FieldType\DBDatetime;
+
 class Show extends Page {
     private static $db = array(
         'Artist' => 'Text',
@@ -22,15 +33,15 @@ class Show extends Page {
         );
     
     private static $has_one = array(
-        'Picture' => 'Image',
-        'PhotoGallery1' => 'Image',
-        'PhotoGallery2' => 'Image',
-        'PhotoGallery3' => 'Image',
-        'PhotoGallery4' => 'Image',
-        'PhotoGallery5' => 'Image',
-        'PhotoGallery6' => 'Image',
-        'PhotoGallery7' => 'Image',
-        'PhotoGallery8' => 'Image',
+        'Picture' => Image::class,
+        'PhotoGallery1' => Image::class,
+        'PhotoGallery2' => Image::class,
+        'PhotoGallery3' => Image::class,
+        'PhotoGallery4' => Image::class,
+        'PhotoGallery5' => Image::class,
+        'PhotoGallery6' => Image::class,
+        'PhotoGallery7' => Image::class,
+        'PhotoGallery8' => Image::class,
         'HomePage' => 'HomePage'
         
         );
@@ -49,7 +60,7 @@ class Show extends Page {
         
         //$fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
         
-        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date')); 
+        $fields->addFieldToTab('Root.Main', $dateField = new DateField(DBDate::class)); 
         $dateField->setConfig('showcalendar', true);
         $dateField->setConfig('dateformat', 'MM/dd/YYYY');
         
@@ -87,7 +98,7 @@ class Show extends Page {
     public function getDateTime(){
 
         if(isset($this->Date)){
-            $dateTime = new SS_Datetime;
+            $dateTime = new DBDatetime;
             $dateTime->setValue($this->getTimestamp());
             return $dateTime;
         }
@@ -95,42 +106,4 @@ class Show extends Page {
     }
 
 
-}
-
-class Show_Controller extends Page_Controller {
-
-
-	/*
-	public function SplitKeywords(){
-	 	
-	    $keywords = $this->MetaKeywords;
-	    Debug::show($keywords);
-	    Debug::show("hi");
-	    
-	    if($keywords){
-		   $splitKeywords = explode(',', $keywords); 
-		   Debug::show($splitKeywords);
-	    }
-	    
-	    if($splitKeywords){
-			$keywordsList = new ArrayList(); 
-			foreach($splitKeywords as $data) { 
-				$do=new DataObject(); 
-				$do->Keyword = $data; 
-				$keywordsList->push($do); 
-			} 
-			return $keywordsList; 
-		}
-		
-		
-    }
-    
-     public function test(){
-	    $return = "<p>TEST</p>";
-	    Debug::show("Hi");
-	    return $return;	    
-    }
-    */
-    
-    
 }

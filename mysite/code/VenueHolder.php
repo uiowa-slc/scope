@@ -1,4 +1,6 @@
 <?php
+
+
 class VenueHolder extends Page {
 	private static $db = array(
 		);
@@ -8,11 +10,6 @@ class VenueHolder extends Page {
 
 	
 
-
-	
-}
-
-class VenueHolder_Controller extends Page_Controller {
 
 	
 }

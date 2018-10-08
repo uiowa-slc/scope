@@ -1,4 +1,5 @@
 <?php
+
 class ShowArchive extends Page {
 	private static $db = array(
 		
@@ -13,8 +14,4 @@ class ShowArchive extends Page {
 		
 		return $fields;
 	}
-}
-
-class ShowArchive_Controller extends Page_Controller {
-	
 }

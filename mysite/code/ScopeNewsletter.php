@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\TextField;
+use SilverStripe\CMS\Controllers\ContentController;
 /**
  * Defines the HomePage page type
  */

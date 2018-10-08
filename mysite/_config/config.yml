@@ -1,9 +1,0 @@
-HomePage:
-  extensions:
-  - HomePageExtension
-StaffHolder:
-  extensions:
-  - StaffHolderExtension
-StaffPage:
-  extensions:
-  - StaffPageExtension

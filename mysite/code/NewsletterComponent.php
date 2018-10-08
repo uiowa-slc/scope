@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
+use SilverStripe\CMS\Controllers\ContentController;
 /**
  * Defines the Minisite page type
  */

@@ -1,5 +1,7 @@
 <?php
 
+use SilverStripe\Dev\BuildTask;
+
 class CfoProjectMigrationTask extends BuildTask {
 
 	protected $title = 'Fix photo and position fields';

@@ -1,4 +1,9 @@
 <?php
+
+use SilverStripe\Assets\Image;
+use SilverStripe\Forms\TextField;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+
 class Venue extends Page {
     private static $db = array(
         'Capacity' => 'Text',
@@ -11,7 +16,7 @@ class Venue extends Page {
         
         );
     private static $has_one = array(
-        'Picture' => 'Image'
+        'Picture' => Image::class
         );
     
     
@@ -31,8 +36,4 @@ class Venue extends Page {
         
         return $fields;
     }
-}
-
-class Venue_Controller extends Page_Controller {
-   
 }

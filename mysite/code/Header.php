@@ -1,4 +1,7 @@
 <?php
+
+use SilverStripe\Forms\TextField;
+
 class Header extends Page {
   private static $db = array(
     'FacebookLink' => 'Text',
@@ -25,11 +28,6 @@ class Header extends Page {
   }
   
 
-
-  
-}
-
-class Header_Controller extends Page_Controller {
 
   
 }
