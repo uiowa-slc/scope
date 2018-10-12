@@ -1,5 +1,5 @@
 <ul class="show-details">
-	<li><strong>Date:</strong> $Date.format(F) $Date.format(j), $Date.format(Y) <% if not $Date.inPast %> $Time.Nice <% end_if %></li>
+	<li><strong>Date:</strong> $Date.format(MMM) $Date.format(j), $Date.format(Y) <% if not $Date.inPast %> $Time.Nice <% end_if %></li>
  	<% if $Venue %><li><strong>Location:</strong> $Venue</li><% end_if %>
 	<% if $SoldOut %>
 		<p class="alert"><strong>This show is sold out!</strong></p>

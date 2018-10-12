@@ -1,0 +1,95 @@
+$Header
+<main class="main-content__container" id="main-content__container">
+
+	<!-- Background Image Feature -->
+	<% if $BackgroundImage %>
+		<% include FeaturedImage %>
+	<% end_if %>
+	$Breadcrumbs
+	<% if not $BackgroundImage %>
+	<div class="column row">
+		<div class="main-content__header">
+									
+			<hr>
+		</div>
+	</div>
+<% end_if %>
+
+$BeforeContent
+
+<div class="row">
+  <div class="columns large-6">
+  						<% if $Date.isToday %>
+							<h1 class="section-title">Today:</h1> 
+						<% else %>
+							<h1 class="section-title">{$dateTime.Ago}:</h1> 
+							
+						<% end_if %>
+
+					
+							<article class="show-card row">
+								 
+								<div class="show-details large-7 columns">
+
+									<% if $Artist %>
+										<h1><a href="$Link">$Artist</a></h1>
+									<% else %>
+										<h1><a href="$Link">$Title</a></h1>
+									<% end_if %>
+									<% include ShowDetails %>
+									
+									<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
+  	
+  </div>
+  <div class="columns large-6"> space
+  	  		
+  	</div>
+</div>
+
+<div class="row">
+  <div class="columns small-2 large-4">space</div>
+  <div class="columns small-4 large-4">
+		  	<button type="button">Buy Tickets Online</button>
+		  	<button type="button">Buy Tickets In Person</button>
+		  </div>
+  <div class="columns small-6 large-4">space</div>
+</div>
+
+<div class="row">
+  <div class="columns large-3">space</div>
+  <div class="columns large-6">Share this event: 
+  								<div class="container">
+								  <img src="$ThemeDir/dist/images/icon_facebook.png" >
+								  <button class="btn"></button>
+								</div>
+  								<div class="container">
+								  <img src="$ThemeDir/dist/images/icon_twitter.png" >
+								  <button class="btn"></button>
+								</div>
+  </div>
+  <div class="columns large-3">space</div>
+</div>
+	
+		
+		<div class="row">
+  <div class="columns small-2 large-4"><!-- ... --></div>
+  <div class="columns small-4 large-4">
+  	<h2 class="section-title">Previously presented:</h2>
+			
+		</div>
+  <div class="columns small-4 large-4"><!-- ... --></div>
+</div>
+		<hr/>
+	<div class="row">
+  <div class="columns small-2 large-4">
+		<% loop paginatedPreviousShows %>
+				<li><% include ShowCard %></li>
+			<% end_loop %>
+			</div>
+			<%-- <% include ShowPagination %> --%>
+		
+	
+
+$AfterContent
+
+</main>

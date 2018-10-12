@@ -1,7 +1,7 @@
 <% if $ClassName != "HomePage" %>
 	<% include UiowaBar %>
 <% end_if %>
-<div class="header__container header__container--{$HeaderType}" id="header__container">
+<div class="header__container header__container--{$HeaderType}" id="header__container" >
 	<% if $ClassName == "HomePage" %>
 		<% include DivisionBar %>
 	<% end_if %>

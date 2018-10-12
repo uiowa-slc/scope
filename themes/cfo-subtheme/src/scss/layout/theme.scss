@@ -1,12 +1,15 @@
 body{
-	background-size: cover;
-	background-color: $highlight;
+	//background-size: cover;
+	background-image: url(../images/bg.jpg);
 	background-position-y: 170px;
+	color:#663052;
 }
 .main-content__container{
 	background: white;
 	box-shadow: inset 0px 10px 13px -7px rgba(0,0,0,0.31);
 }
+
+
 
 .sidenav__section-title{
 	border-color: darken($highlight,10);
@@ -30,3 +33,13 @@ body{
 .background-image{
 	box-shadow: inset -2px 12px 26px -10px rgba(0,0,0,0.63);
 }
+
+.breadcrumb__anchor{
+	color: #f07259;
+}
+
+.childpages__link{
+	color: #ec6456;
+	border-bottom: 4px solid #ec6456;
+}
+
