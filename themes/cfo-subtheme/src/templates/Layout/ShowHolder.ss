@@ -27,24 +27,29 @@ $BeforeContent
 						<% end_if %>
 
 					
-							<article class="show-card row">
-								 
-								<div class="show-details large-7 columns">
+						<article class="show-card row">
+							 
+							<div class="show-details large-7 columns">
 
-									<% if $Artist %>
-										<h1><a href="$Link">$Artist</a></h1>
-									<% else %>
-										<h1><a href="$Link">$Title</a></h1>
-									<% end_if %>
-									<% include ShowDetails %>
-									
-									<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
-  	
+								<% if $Artist %>
+									<h1><a href="$Link">$Artist</a></h1>
+								<% else %>
+									<h1><a href="$Link">$Title</a></h1>
+								<% end_if %>
+								<% include ShowDetails %>
+								
+								<p>$Content.Summary(75) <a href="$Link">Continue Reading</a></p>
+
+							</div>
+						</article>
+	
+  </div>
+
   </div>
   <div class="columns large-6"> space
   	  		
   	</div>
-</div>
+
 
 <div class="row">
   <div class="columns small-2 large-4">space</div>
@@ -52,41 +57,43 @@ $BeforeContent
 		  	<button type="button">Buy Tickets Online</button>
 		  	<button type="button">Buy Tickets In Person</button>
 		  </div>
-  <div class="columns small-6 large-4">space</div>
-</div>
+			  <div class="columns small-6 large-4">space</div>
+			</div>
 
-<div class="row">
-  <div class="columns large-3">space</div>
-  <div class="columns large-6">Share this event: 
-  								<div class="container">
-								  <img src="$ThemeDir/dist/images/icon_facebook.png" >
-								  <button class="btn"></button>
-								</div>
-  								<div class="container">
-								  <img src="$ThemeDir/dist/images/icon_twitter.png" >
-								  <button class="btn"></button>
-								</div>
-  </div>
-  <div class="columns large-3">space</div>
-</div>
+			<div class="row">
+			  <div class="columns large-3">space</div>
+		  <div class="columns large-6">Share this event: 
+					
+
+					<div class="container">
+				  <img src="$ThemeDir/dist/images/icon_facebook.png" >
+				  <button class="btn"></button>
+				</div>
+					<div class="container">
+				  <img src="$ThemeDir/dist/images/icon_twitter.png" >
+				  <button class="btn"></button>
+				</div>
+				</div>
+  
 	
 		
-		<div class="row">
-  <div class="columns small-2 large-4"><!-- ... --></div>
-  <div class="columns small-4 large-4">
-  	<h2 class="section-title">Previously presented:</h2>
-			
-		</div>
-  <div class="columns small-4 large-4"><!-- ... --></div>
-</div>
+					<div class="grid-x grid-margin-x">
+			  <div class="cell small-5"></div>
+			  <div class="cell auto"><h2>Previously Presented</h2></div>
+			  <div class="cell auto"></div>
+			</div>
+		
+
 		<hr/>
-	<div class="row">
-  <div class="columns small-2 large-4">
+	<div class="grid-container fluid">
+			<div class="grid-x grid-margin-x grid-margin-y align-center-middle text-center small-up-2 medium-up-3 large-up-4">
 		<% loop paginatedPreviousShows %>
-				<li><% include ShowCard %></li>
+				<div class= "column">
+				<% include ShowCard %>
+			</div>
 			<% end_loop %>
 			</div>
-			<%-- <% include ShowPagination %> --%>
+		</div>	<%-- <% include ShowPagination %> --%>
 		
 	
 

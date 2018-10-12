@@ -7,9 +7,9 @@
 			<a href="$Link"><img src="{$ThemeDir}/images/lecture-placeholder.jpg" alt="Placeholder photo representing $Title" /></a>
 		<% end_if %>
 			<% if $Artist %>
-				<h1><a href="$Link">$Title.LimitWordCount(10)</a></h1>
+				<h1><a class="artist_title" href="$Link">$Title.LimitWordCount(10)</a></h1>
 			<% else %>
-				<h1><a href="$Link">$Title.LimitWordCount(10)</a></h1>
+				<h1><a class="artist_title" href="$Link">$Title.LimitWordCount(10)</a></h1>
 			<% end_if %>
 			<% include ShowDetails %>
 			$Content.LimitWordCount(40) <strong><a href="$Link" class="show-card-link">Continue Reading</a></strong><a href="$Link" class="show-card-link"></a>
