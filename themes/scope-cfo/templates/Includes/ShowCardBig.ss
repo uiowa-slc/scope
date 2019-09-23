@@ -10,7 +10,7 @@
 		<div class="large-12 columns large-centered">			
 
 			<% if $Picture %>
-			<img src="$Picture.ScaleWidth(1200).URL" alt="" role="presentation" />
+			<img src="$Picture.ScaleWidth(1200).URL" alt="Poster for {$Title}. Please follow the link for more information." />
 			<% end_if %>>
 		</div>
 

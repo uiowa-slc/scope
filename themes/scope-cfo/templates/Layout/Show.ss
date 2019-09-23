@@ -4,7 +4,7 @@
 		<div class="large-12 columns large-centered">			
 
 			<% if $Picture %>
-			<img src="$Picture.ScaleWidth(1200).URL" alt="" role="presentation" />
+			<img src="$Picture.ScaleWidth(1200).URL" alt="Poster for {$Title}, please continue reading for specific event information." />
 			<% end_if %>
 			<% include ShowCountdown %>
 
