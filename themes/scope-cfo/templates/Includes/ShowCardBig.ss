@@ -6,9 +6,17 @@
 <% end_if %>
 
 <hr />
+	<div class="row">
+		<div class="large-12 columns large-centered">			
+
+			<% if $Picture %>
+			<img src="$Picture.ScaleWidth(1200).URL" alt="" role="presentation" />
+			<% end_if %>>
+		</div>
+
+	</div>
 	<article class="show-card row">
-		 
-		<div class="show-details large-7 columns">
+		<div class="show-details large-7 columns large-centered">
 
 			<% if $Artist %>
 				<h1><a href="$Link">$Artist</a></h1>
@@ -24,11 +32,5 @@
 					<h2>Share this event:</h2>
 		<%-- Social  --%>
 		<% include ShareButtons %>
-		</div>
-		<div class="lecture-image large-5 columns">
-			<% if $Picture %>
-				<a href="$Link"><img src="$Picture.CroppedFocusedImage(600,700).URL" alt="Image for $Title" /></a>
-			<% end_if %>
-				<% include ShowCountdown %>
 		</div>
 	</article>

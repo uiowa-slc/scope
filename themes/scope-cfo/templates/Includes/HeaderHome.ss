@@ -50,7 +50,7 @@
 					<% loop UpcomingShows.Limit(3) %>
 					<li>
 					<a href="$Link">
-								<img src="$Picture.CroppedFocusedImage(700,525).URL" alt="$Title">
+								<img src="$Picture.Pad(700,525).URL" alt="$Title">
 							</a>
 						<div class="orbit-caption countdown">
 							<% if $Date.isToday %>
