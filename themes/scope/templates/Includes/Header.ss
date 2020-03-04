@@ -1,7 +1,7 @@
 <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand " href="{$BaseUrl}" aria-label="{$SiteConfig.Title}">
-      {$SiteConfig.Title}
+      <img src="{$ThemeDir}/dist/images/logo-small.png" alt="Scope Productions" style="width: 50px;" />
   </a>
 
   <div class="navbar-nav-scroll">
