@@ -24,25 +24,9 @@ class HomePage extends Page {
 		$f->removeByName("SidebarLabel");
 		$f->removeByName("SidebarItem");
 
-		$gridFieldConfig = GridFieldConfig_RecordEditor::create();
-		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-
-		$homePageAnnouncementGridFieldConfig = GridFieldConfig_RecordEditor::create();
-		$homePageAnnouncementGridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-
-		$homePageAnnouncementGridFieldConfig->addComponent(new GridFieldAddNewMultiClass());
-		$homePageAnnouncementGridFieldConfig->removeComponentsByType(GridFieldAddNewButton::class);
-
-		$homePageAnnouncementGridField = new GridField("HomePageAnnouncement", "Announcements that come before the latest articles", HomePageAnnouncement::get(), $gridFieldConfig);
-		$f->addFieldToTab("Root.Main", $homePageAnnouncementGridField);
 
 		return $f;
 	}
-	public function HomePageAnnouncements() {
-		$features = HomePageAnnouncement::get();
 
-		return $features;
-
-	}
 	
 }

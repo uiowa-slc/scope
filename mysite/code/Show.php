@@ -61,14 +61,13 @@ class Show extends Page {
         
         //$fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
         
-        $fields->addFieldToTab('Root.Main', $dateField = new DateField(DBDate::class)); 
-        $dateField->setConfig('showcalendar', true);
-        $dateField->setConfig('dateformat', 'MM/dd/YYYY');
+        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date')); 
+
         
         $fields->addFieldToTab('Root.Main', new TimeField('Time', 'Show start time (put door open time in the description)'));
-        $fields->addFieldToTab('Root.Main', new TextAreaField('Venue'));         
+        $fields->addFieldToTab('Root.Main', new TextField('Venue'));         
         
-        $fields->addFieldToTab('Root.Main', new TextField('SpotifyEmbed', 'Spotify embed code - See <a href="https://developer.spotify.com/technologies/widgets/spotify-play-button/">these instructions for creating a Spotify embed code.</a>')); 
+        $fields->addFieldToTab('Root.Main', new TextField('SpotifyEmbed', 'Spotify embed code')); 
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
         $fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
 

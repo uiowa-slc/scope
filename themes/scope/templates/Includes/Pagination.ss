@@ -1,6 +1,7 @@
 <%-- NOTE: Before including this, you will need to wrap the include in a with block  --%>
 
 <% if $MoreThanOnePage %>
+	<nav aria-label="Page navigation example">
 	<ul class="pagination">
 		<% if $NotFirstPage %>
 			<li class="page-item">
@@ -28,4 +29,5 @@
 			</li>
 		<% end_if %>
 	</ul>
+</nav>
 <% end_if %>

@@ -1,7 +1,7 @@
 <?php
 
 namespace {
-
+    use SilverStripe\ORM\PaginatedList;
     use SilverStripe\CMS\Controllers\ContentController;
 
     class PageController extends ContentController
@@ -33,6 +33,46 @@ namespace {
             return parent::Breadcrumbs(20, false, false, true);
         }
 
+        public function BlogPosts(){
+            $blog = Blog::get()->First();
+            return $blog->getBlogPosts();
+        }
 
+        public function UpcomingShows(){
+            $now = date('Y-m-d');
+            $shows = Show::get()->filter(array(
+                'Date:GreaterThanOrEqual' => $now
+                ))->sort('Date');
+
+            $paginatedShows =  new PaginatedList($shows, $this->getRequest());
+            $paginatedShows->setPageLength(10);
+
+            return $shows;
+
+        }
+
+        public function PreviousShows(){
+            //TODO: Make sure we only get previous shows 
+            $now = date('Y-m-d');
+            $shows = Show::get()->filter(array(
+                'Date:LessThan' => $now
+                ))->sort('Date DESC');
+
+            return $shows;
+        }
+
+        public function paginatedPreviousShows() {
+            $curDate = date("Y-m-d");
+            $previousShows = $this->PreviousShows();        
+            $paginatedItems = new PaginatedList($previousShows, $this->getRequest());
+            $paginatedItems->setPageLength(21);
+
+            return $paginatedItems;
+        }
+
+        public function getShows($number = 5){
+            $shows = Show::get()->sort("Date DESC")->limit($number);
+            return $shows;
+        }
     }
 }
