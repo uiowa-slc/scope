@@ -1,0 +1,6 @@
+.navbar-light .navbar-text a {
+	color: white;
+	&:focus, &:hover {
+		color: white;
+	}
+}
