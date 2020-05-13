@@ -1,15 +1,11 @@
 <% include Header %>
 
-
-<div class="container">
+<div class="container-xl my-5">
 	<div class="row">
-		<div class=" col-sm px-lg-0 content-container" role="main">
+		<div class="col">
 			<article>
 				<h1>$Title</h1>
 				<div class="content">$Content</div>
-				<%--<% include MagnificExample %> -- %>
-				<%-- <% include SlideshowExample %> --%>
-				<%-- <% include ContentExample %> --%>
 			</article>
 			$Form
 			$PageComments

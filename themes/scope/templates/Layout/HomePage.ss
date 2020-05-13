@@ -3,11 +3,11 @@
 
 <section class="my-3 my-lg-7">
 
-    <div class="container">
+    <div class="container-xl">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6">
                 <div class="text-uppercase">Upcoming Show</div>
-                <h1 class="display-1">Homecoming 2018: Lizzo</h1>
+                <h1 class="display-2">Homecoming 2018: Lizzo</h1>
                 <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, rem neque doloribus impedit explicabo minus laborum cupiditate atque esse consectetur.</p>
                  <a href="#" class="btn btn-primary btn-lg">Get Tickets</a> <a href="#" class="btn btn-lg btn-outline-primary">View Show Details</a>
             </div>
@@ -28,7 +28,7 @@
 </section>
 
 <section class="bg-primary text-white">
-    <div class="container">
+    <div class="container-xl">
         <div class="row d-flex align-items-center">
             <div class="col-sm-8 p-6">
                 <p class="lead">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -41,7 +41,7 @@
 </section>
 
 <section>
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
             <div class="col-sm-6 p-5">
                 asdfasdf

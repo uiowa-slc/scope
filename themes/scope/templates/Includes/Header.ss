@@ -1,9 +1,9 @@
 
-<header role="banner">
-    <div class="container">
+<header class="header">
+    <div class="container-xl">
         <div class="row">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
                     <a class="navbar-brand " href="{$BaseUrl}" aria-label="{$SiteConfig.Title}">
                         <img src="{$ThemeDir}/dist/images/logo.png" alt="Scope Productions" style="width: 300px;" />
                     </a>
@@ -20,7 +20,7 @@
                             <% end_loop %>
                         </ul>
                         <div class="navbar-text">
-                            &nbsp;<a href="#" class="btn btn-primary">Get Tickets</a>
+                            &nbsp;<a href="#" class="btn btn-sm btn-primary">Get Tickets</a>
                         </div>
                     </div>
                 </nav>

@@ -1,9 +1,9 @@
 <% include Header %>
 
 
-<div class="container">
+<div class="container-xl">
 	<div class="row">
-		<div class="col-lg">
+		<div class="col">
 
 			<% if $UpcomingShows %>
 				<h2 class="mt-5">Upcoming Shows</h2>
@@ -16,7 +16,13 @@
 				<hr />
 				<br />
 			<% end_if %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
 
+        </div>
+        <div class="col-md-8">
 			<h2>Previously presented:</h2>
 
 			<% loop $paginatedPreviousShows %>

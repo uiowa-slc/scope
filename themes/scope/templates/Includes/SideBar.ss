@@ -1,4 +1,4 @@
-<aside class="col-sm col-sm-3" role="complementary">
+<aside class="">
 	<% if $Menu(2) %>
 		<nav class="secondary card">
 			<% with $Level(1) %>
