@@ -7,16 +7,10 @@ $(document).ready(function() {
         contain: true,
         prevNextButtons: false,
         imagesLoaded: true,
-        autoPlay: true
-    });
-
-    $('.test').flickity({
-        // options
-        cellAlign: 'left',
-        contain: true,
-        prevNextButtons: false,
-        imagesLoaded: true,
-        autoPlay: false
+        autoPlay: true,
+        autoPlay: 6000,
+        wrapAround: true,
+        adaptiveHeight: true
     });
 
 });

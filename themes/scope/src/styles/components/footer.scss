@@ -11,8 +11,8 @@
 		font-size: $font-size-base;
 	}
 	&__buttons .btn {
-		font-size: $font-size-sm;
-	}
+		font-size: $font-size-base * .8;
+    }
 	&__socialmedia {
         & .fab {
             color: $highlight;
@@ -28,11 +28,15 @@
 			}
 		}
 	}
-    &__disclaimer {
-        font-size: $font-size-base * .775;
-    }
     &__md {
         max-width: 36px;
+    }
+    &__address a {
+        text-decoration: underline;
+    }
+    &__disclaimer a {
+        color: $gray-100;
+        text-decoration: underline;
     }
 }
 

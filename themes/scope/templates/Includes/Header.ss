@@ -1,11 +1,12 @@
-
-<header class="header">
+<header class="header border-bottom">
+    <a class="skip-link small" href="#content">Skip to main content</a>
     <div class="container-xl">
         <div class="row">
             <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fff;">
-                    <a class="navbar-brand " href="{$BaseUrl}" aria-label="{$SiteConfig.Title}">
-                        <img src="{$ThemeDir}/dist/images/logo.png" alt="Scope Productions" style="width: 300px;" />
+                <nav class="navbar navbar-expand-lg navbar-light px-0" aria-label="Site Navigation">
+                    <a class="navbar-brand" href="{$BaseUrl}" aria-label="{$SiteConfig.Title}">
+                        <span class="sr-only">$SiteConfig.Title</span>
+                        <img src="{$ThemeDir}/dist/images/logo.png" alt="Scope Productions" class="navbar-brand__logo" />
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,14 +15,25 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                         <ul class="navbar-nav">
                             <% loop $Menu(1) %>
-                                <li class="$LinkingMode nav-item<% if $isCurrent || $isSection %> active<% end_if %>">
-                                    <a class="nav-link" href="$Link" title="$Title.XML">$MenuTitle.XML</a>
+                                <li class="nav-item $LinkingMode nav-item<% if $isCurrent || $isSection %> active<% end_if %><% if Children && ClassName != 'ShowHolder' %> dropdown<% end_if %>">
+                                    <a class="nav-link<% if Children && ClassName != 'ShowHolder' %> dropdown-toggle<% end_if %>" href="$Link"  <% if Children && ClassName != 'ShowHolder' %> id="navbarDropdown$Pos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"<% end_if %> >$MenuTitle.XML</a>
+
+                                    <% if Children && ClassName != 'ShowHolder' %>
+                                        <div class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown$Pos">
+                                            <% loop Children %>
+                                                 <a class="dropdown-item" href="$Link">$MenuTitle</a>
+                                            <% end_loop %>
+                                        </div>
+                                    <% end_if %>
+
                                 </li>
                             <% end_loop %>
                         </ul>
-                        <div class="navbar-text">
-                            &nbsp;<a href="#" class="btn btn-sm btn-primary">Get Tickets</a>
-                        </div>
+                        <% if $SiteConfig.TicketsLink %>
+                            <div class="navbar-text">
+                                &nbsp;<a href="$SiteConfig.TicketsLink" class="btn btn-sm btn-primary">Get Tickets</a>
+                            </div>
+                        <% end_if %>
                     </div>
                 </nav>
             </div>

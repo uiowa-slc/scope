@@ -16,6 +16,7 @@ use MD\DiisionProject\SiteConfigExtensionPageController;
 class MySiteConfigExtension extends DataExtension {
 
 	private static $db = array(
+        'TicketsLink' => 'Text',
 		'TwitterLink' => 'Text',
 		'Address1' => 'Text',
 		'City' => 'Text',
@@ -77,6 +78,8 @@ class MySiteConfigExtension extends DataExtension {
 
 
 		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('GroupSummary', 'Group Summary')->addExtraClass('stacked'));
+
+        $fields->addFieldToTab('Root.Main', new TextField('TicketsLink', 'URL To Get Tickets'));
 
 		$fields->addFieldToTab("Root.Main", new HeaderField( 'Address', 'Address', true ) );
 		$fields->addFieldToTab('Root.Main', new TextField('Address1', 'Street Address'));

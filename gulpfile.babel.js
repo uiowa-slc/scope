@@ -120,7 +120,7 @@ function scripts(){
     //   './node_modules/tether/dist/js/tether.min.js',
     //   './node_modules/@fortawesome/fontawesome-free/js/regular.js',
     //   './node_modules/lazysizes/lazysizes.js',
-    //   './node_modules/flickity/dist/flickity.pkgd.js',
+      './node_modules/flickity/dist/flickity.pkgd.js',
       // './themes/scope/src/scripts/lib/util.js',
       // './themes/scope/src/scripts/lib/reveal.js',
       // './themes/scope/src/scripts/lib/bigfoot.js',

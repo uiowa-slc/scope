@@ -57,7 +57,7 @@
             </div><!-- end .col -->
             <div class="col-12 col-sm-6 col-lg-6">
                 <div class="footer__navigation pb-3 <% if $SiteConfig.ButtonUrlOne || $SiteConfig.ButtonUrlTwo || $SiteConfig.ButtonUrlThree %>footer__navigation--with-buttons <% end_if %>">
-                    <h3 class="footer__heading text-uppercase pb-1 mb-3 border-bottom border-secondary font-weight-normal">Quick Links</h3>
+                    <%-- <h3 class="footer__heading text-uppercase pb-1 mb-3 border-bottom border-secondary font-weight-normal">Quick Links</h3> --%>
                     <div class="row">
                         <div class="col">
                             <div class="footer__links">
@@ -71,16 +71,16 @@
                             </div>
                         </div>
                         <% if $SiteConfig.ButtonUrlOne || $SiteConfig.ButtonUrlTwo || $SiteConfig.ButtonUrlThree %>
-                            <div class="col-xl-6">
+                            <div class="col-xl-4">
                                 <div class="footer__buttons py-2">
                                     <% if $SiteConfig.ButtonUrlOne %>
-                                        <a href="$SiteConfig.ButtonUrlOne" class="btn btn-block btn-outline-light" target="_blank">$SiteConfig.ButtonTextOne</a>
+                                        <a href="$SiteConfig.ButtonUrlOne" class="btn d-block d-sm-inline-block d-xl-block btn-outline-light mr-1 mb-1" target="_blank">$SiteConfig.ButtonTextOne</a>
                                     <% end_if %>
                                     <% if $SiteConfig.ButtonUrlTwo %>
-                                        <a href="$SiteConfig.ButtonUrlTwo" class="btn btn-block btn-outline-light" target="_blank">$SiteConfig.ButtonTextTwo</a>
+                                        <a href="$SiteConfig.ButtonUrlTwo" class="btn d-block d-sm-inline-block d-xl-block btn-outline-light mr-1 mb-1" target="_blank">$SiteConfig.ButtonTextTwo</a>
                                     <% end_if %>
                                     <% if $SiteConfig.ButtonUrlThree %>
-                                        <a href="$SiteConfig.ButtonUrlThree" class="btn btn-block btn-outline-light" target="_blank">$SiteConfig.ButtonTextThree</a>
+                                        <a href="$SiteConfig.ButtonUrlThree" class="btn d-block d-sm-inline-block d-xl-block btn-outline-light mr-1 mb-1" target="_blank">$SiteConfig.ButtonTextThree</a>
                                     <% end_if %>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                     <% if $SiteConfig.Disclaimer %>
                         <div class="row">
                             <div class="col">
-                                <div class="footer__disclaimer pt-3 border-top border-secondary">
+                                <div class="footer__disclaimer small pt-3 border-top border-secondary">
                                     $SiteConfig.Disclaimer
                                 </div>
                             </div>
@@ -103,74 +103,74 @@
             <div class="col-12 col-lg-2">
                 <div class="footer__socialmedia" itemscope itemtype="http://schema.org/Organization">
                     <link itemprop="url" href="$AbsoluteBaseURL">
-                    <h3 class="footer__heading text-uppercase pb-1 mb-3 border-bottom border-secondary font-weight-normal">Social Media</h3>
+                    <%-- <h3 class="footer__heading text-uppercase pb-1 mb-3 border-bottom border-secondary font-weight-normal">Social Media</h3> --%>
                     <ul class="list-unstyled">
                         <% if $SiteConfig.FacebookLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.FacebookLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.FacebookLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-facebook-square fa-2x pr-2 align-middle"></i>Facebook
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.TwitterLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.TwitterLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.TwitterLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-twitter-square fa-2x pr-2 align-middle"></i>Twitter
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.VimeoLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.VimeoLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.VimeoLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-vimeo-square fa-2x pr-2 align-middle"></i>Vimeo
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.YouTubeLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.YouTubeLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.YouTubeLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-youtube-square fa-2x pr-2 align-middle"></i>YouTube
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.InstagramLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.InstagramLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.InstagramLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-instagram-square fa-2x pr-2 align-middle"></i>Instagram
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.LinkedInLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.LinkedInLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.LinkedInLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-linkedin fa-2x pr-2 align-middle"></i>LinkedIn
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.PinterestLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.PinterestLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.PinterestLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-pinterest-square fa-2x pr-2 align-middle"></i>Pinterest
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.FlickrLink %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.FlickrLink" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.FlickrLink" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-flickr fa-2x pr-2 align-middle"></i>Flickr
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.Github %>
-                            <li class="my-2">
-                                <a href="$SiteConfig.Github" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="$SiteConfig.Github" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-github-square fa-2x pr-2 align-middle"></i>Github
                                 </a>
                             </li>
                         <% end_if %>
                         <% if $SiteConfig.Snapchat %>
-                            <li class="my-2">
-                                <a href="https://www.snapchat.com/add/$SiteConfig.Snapchat" target="_blank" class="py-1" itemprop="sameAs">
+                            <li class="mb-2">
+                                <a href="https://www.snapchat.com/add/$SiteConfig.Snapchat" target="_blank" class="py-1" itemprop="sameAs" rel="noopener noreferrer">
                                     <i class="fab fa-snapchat-square fa-2x pr-2 align-middle"></i>Snapchat
                                 </a>
                             </li>

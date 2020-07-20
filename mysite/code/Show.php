@@ -57,7 +57,7 @@ class Show extends Page {
         $fields->removeByName("Content");
         $fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured image (4:3 or skinnier works)'));
 
-        $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "<strong>Is the show sold out? (hides buy ticket links and displays a sold out note on the show)</strong>"));
+        $fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "Is the show sold out? (hides buy ticket links and displays a sold out note on the show)"));
         
         //$fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
         
@@ -102,7 +102,6 @@ class Show extends Page {
             $dateTime->setValue($this->getTimestamp());
             return $dateTime;
         }
-
     }
 
 

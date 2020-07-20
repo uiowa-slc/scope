@@ -65,7 +65,7 @@ namespace {
             $curDate = date("Y-m-d");
             $previousShows = $this->PreviousShows();        
             $paginatedItems = new PaginatedList($previousShows, $this->getRequest());
-            $paginatedItems->setPageLength(21);
+            $paginatedItems->setPageLength(10);
 
             return $paginatedItems;
         }

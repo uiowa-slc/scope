@@ -1,7 +1,8 @@
 <%-- Loop is all on one line to prevent whitespace bug in older versions of IE --%>
 <nav aria-label="breadcrumb">
 	<% if $Pages %>
-		<ol class="breadcrumb justify-content-end">
+		<ol class="breadcrumb justify-content-center">
+            <li class="breadcrumb-item"><a href="{$BaseUrl}">Home</a></li>
 			<% loop $Pages %>
 				<% if $Last %>
 					<li class="breadcrumb-item active">$MenuTitle.XML</li>
