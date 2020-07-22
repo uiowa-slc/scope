@@ -43,7 +43,7 @@ class ShowHolderController extends PageController {
 		//Todo something better than partial match, probably greater than/equal 1-1-$year and less than or equal to 12-31-$year
 
 
-		$shows = Show::get()->filter(array('Date:PartialMatch' => $year));
+		$shows = Show::get()->filter(array('Date:PartialMatch' => $year))->sort('Date DESC');
 
 		$data = new ArrayData(array(
 
