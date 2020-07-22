@@ -1,6 +1,8 @@
 <% include Header %>
 
 <main class="container-xl my-5" id="content">
+	<%--only show upcoming shows on index page (not archival "year/xxx" urls etc) --%>
+	<% if $Action == "index" %>
 	<div class="row">
 		<div class="col">
 			<% if $UpcomingShows %>
@@ -16,6 +18,7 @@
 			<% end_if %>
         </div>
     </div>
+    <% end_if %>
     <div class="row">
         <div class="col">
             <h2 class="my-3 my-md-4">Previously Presented:</h2>
@@ -24,12 +27,9 @@
     <div class="row">
         <div class="col-md-3">
             <nav class="nav nav-pills flex-column sticky-top">
-                <a class="nav-item nav-link active" href="#">All</a>
-                <a class="nav-item nav-link " href="#">2020</a>
-                <a class="nav-item nav-link" href="#">2019</a>
-                <a class="nav-item nav-link" href="#">2018</a>
-                <a class="nav-item nav-link" href="#">2017</a>
-                <a class="nav-item nav-link" href="#">2016</a>
+            	<% loop $Years.Sort('Year DESC') %>
+            		<a class="nav-item nav-link <% if $Active %>active<% end_if %>" href="$Link">$Year</a>
+            	<% end_loop %>
             </nav>
         </div>
         <div class="col-md-9">
