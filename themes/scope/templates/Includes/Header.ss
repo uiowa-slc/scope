@@ -20,8 +20,9 @@
 
                                     <% if Children && ClassName != 'ShowHolder' %>
                                         <div class="dropdown-menu shadow-sm" aria-labelledby="navbarDropdown$Pos">
+                                            <a class="dropdown-item" href="$Link">$MenuTitle</a>
                                             <% loop Children %>
-                                                 <a class="dropdown-item" href="$Link">$MenuTitle</a>
+                                                <a class="dropdown-item" href="$Link">$MenuTitle</a>
                                             <% end_loop %>
                                         </div>
                                     <% end_if %>
