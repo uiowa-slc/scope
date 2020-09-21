@@ -14,10 +14,13 @@ VersionTruncator:
 SilverStripe\View\SSViewer:
   themes:
     - $public
-    - scope
+    - bootstrap
     - $default
 SilverStripe\Assets\Flysystem\AssetAdapter:
   file_permissions:
     file:
       public: '0644'
       private: '0600'
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  editor_css:
+    - 'themes/bootstrap/dist/styles/editor.css'
