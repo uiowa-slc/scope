@@ -46,6 +46,8 @@ class Show extends Page {
 
 	//static $defaults = array ('ProvideComments' => '1',
 	//);
+	private static $show_in_sitetree = false;
+	private static $allowed_children = [];
 
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();

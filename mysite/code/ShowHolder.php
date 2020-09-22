@@ -1,5 +1,7 @@
 <?php
 use SilverStripe\Control\Controller;
+use SilverStripe\Forms\GridField\GridFieldDataColumns;
+use SilverStripe\Lumberjack\Model\Lumberjack;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 
@@ -11,7 +13,41 @@ class ShowHolder extends Page {
 	private static $has_one = array(
 	);
 
+	private static $extensions = [
+		Lumberjack::class,
+	];
+
+	private static $icon_class = 'font-icon-calendar';
+
 	private static $allowed_children = array('Show');
+
+	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		$grid = $fields->dataFieldByName('ChildPages');
+		$config = $grid->getConfig();
+		$dataColumns = $config->getComponentByType(GridFieldDataColumns::class);
+
+		$dataColumns->setDisplayFields([
+			'Title' => 'Title',
+			'Created' => 'Created',
+		]);
+
+		$list = $grid->getList();
+
+		$sortedList = $list->sort('Created DESC');
+
+		$grid->setList($sortedList);
+		$grid->setTitle('Shows');
+		$grid->setName('Shows');
+
+		$fields->addFieldToTab('Root.Main', $grid);
+
+		$fields->removeByName("ChildPages");
+		$fields->removeByName("Content");
+
+		return $fields;
+	}
 
 	public function Years() {
 
