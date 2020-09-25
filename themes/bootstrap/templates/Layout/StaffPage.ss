@@ -30,3 +30,4 @@
 	</div>
 </main>
 
+<% include InstaFeed %>
