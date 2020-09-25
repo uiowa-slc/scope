@@ -43,7 +43,10 @@
 /* Plugins
 -------------------------------------------*/
 @import "flickity/css/flickity";
-
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
 
 /* Division Top Bar
 --------------------------------------------*/
@@ -63,6 +66,7 @@
 -------------------------------------------*/
 @import "components/header";
 @import "components/sidebar";
+@import "components/buttons";
 @import "components/text-divider";
 @import "components/link-highlight";
 

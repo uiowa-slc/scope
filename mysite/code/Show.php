@@ -27,6 +27,8 @@ class Show extends Page {
 		'PinterestLink' => 'Text',
 		'TwitterText' => 'Text',
 		"SoldOut" => "Boolean",
+		"StreamLink" => "Text",
+		// "StreamButtonTitle" => "Text",
 
 	);
 
@@ -53,22 +55,25 @@ class Show extends Page {
 		$fields = parent::getCMSFields();
 
 		$fields->removeByName("Content");
-		$fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured image (4:3 or skinnier works)'));
+		$fields->removeByName("Metadata");
+		$fields->addFieldToTab('Root.Main', new UploadField('Picture', 'Featured image (4:3 or skinnier works best)'));
 
-		$fields->addFieldToTab('Root.Main', new CheckboxField('SoldOut', "Is the show sold out? (hides buy ticket links and displays a sold out note on the show)"));
+		$fields->addFieldToTab('Root.Main', CheckboxField::create('SoldOut', "Is the show sold out?")->setDescription('This option hides "buy ticket links" and displays a sold out note on the show'));
 
 		//$fields->addFieldToTab('Root.Main', new TextField('Artist(s)', 'Artist (if applicable)'));
 
 		$fields->addFieldToTab('Root.Main', $dateField = new DateField('Date'));
 
-		$fields->addFieldToTab('Root.Main', new TimeField('Time', 'Show start time (put door open time in the description)'));
-		$fields->addFieldToTab('Root.Main', new TextField('Venue'));
+		$fields->addFieldToTab('Root.Main', TimeField::create('Time', 'Show start time')->setDescription('Doors open time should be in the longer "Content" field below'));
+		$fields->addFieldToTab('Root.Main', TextField::create('Venue', 'Location')->setDescription('Only fill out if the event has an in-person venue.'));
+
+		$fields->addFieldToTab('Root.Main', TextField::create('StreamLink', 'Streaming link')->setDescription('Please include the full URL including https://'));
 
 		$fields->addFieldToTab('Root.Main', new TextField('SpotifyEmbed', 'Spotify embed code'));
 		$fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
 		$fields->addFieldToTab('Root.Main', new TextField('BuyTicketsInPersonLink'));
 
-		$fields->addFieldToTab('Root.Main', new HTMLEditorField('Content'));
+		$fields->addFieldToTab('Root.Main', HTMLEditorField::create('Content')->addExtraClass('stacked'));
 		//$fields->addFieldToTab('Root.Main', new TextField('FacebookLink'));
 		//$fields->addFieldToTab('Root.Main', new TextField('TwitterLink'));
 		//$fields->addFieldToTab('Root.Main', new TextField('TumblrLink'));
@@ -101,4 +106,73 @@ class Show extends Page {
 		}
 	}
 
+	public function StreamButtonText() {
+		$text = 'View Stream';
+
+		if ($this->StreamType() == 'Twitch') {
+			$text = "View on Twitch";
+		}
+
+		return $text;
+
+	}
+	public function StreamType() {
+		$url = $this->StreamLink;
+		$locationType = 'Other';
+		if ($url) {
+			$domain = $this->parseDomain($url);
+
+			if ($domain) {
+
+				if (strpos($domain, 'twitch.tv') !== FALSE) {
+
+					$locationType = 'Twitch';
+				}
+
+			}
+		}
+
+		return $locationType;
+	}
+
+	private function parseDomain($url) {
+		$parsedUrl = parse_url($url);
+		if (isset($parsedUrl["host"])) {
+			$host = $parsedUrl["host"];
+			return $host;
+		}
+	}
+
+	public function isFuture() {
+		//echo strtotime($this->Date).' '.time();
+
+		if (!$this->Date) {
+			return false;
+		}
+
+		$midnight = new \DateTime();
+		$midnight->setTimestamp(strtotime($this->Date))->modify('tomorrow')->setTime(0, 0);
+
+		if ($midnight->getTimestamp() > time()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function isPast() {
+
+		if (!$this->Date) {
+			return false;
+		}
+
+		$midnight = new \DateTime();
+		$midnight->setTimestamp(strtotime($this->Date))->modify('tomorrow')->setTime(0, 0);
+
+		if ($midnight->getTimestamp() < time()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

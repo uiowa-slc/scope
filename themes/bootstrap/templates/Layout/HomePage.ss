@@ -21,6 +21,9 @@
                                 <!-- Content -->
                                 <p class="lead">$Content.FirstParagraph.LimitCharacters(180)</p>
 
+                                <% if $StreamLink %>
+                                        <p><% include StreamButton %></p>
+                                <% end_if %>
                                 <a href="$Link" class="btn  btn-primary mb-3">View Show Details</a>
 
                                 <!-- Ticket buttons -->

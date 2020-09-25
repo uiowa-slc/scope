@@ -37,10 +37,11 @@ namespace {
 		}
 
 		public function UpcomingShows() {
-			$now = date('Y-m-d');
+			$now = date("Y-m-d", time() - 86400);
+
 			$shows = Show::get()->filter(array(
-				'Date:GreaterThanOrEqual' => $now,
-			))->sort('Date');
+				'Date:GreaterThan' => $now,
+			))->sort('Date ASC');
 
 			$paginatedShows = new PaginatedList($shows, $this->getRequest());
 			$paginatedShows->setPageLength(10);
