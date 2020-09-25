@@ -67,7 +67,7 @@ class Show extends Page {
 		$fields->addFieldToTab('Root.Main', TimeField::create('Time', 'Show start time')->setDescription('Doors open time should be in the longer "Content" field below'));
 		$fields->addFieldToTab('Root.Main', TextField::create('Venue', 'Location')->setDescription('Only fill out if the event has an in-person venue.'));
 
-		$fields->addFieldToTab('Root.Main', TextField::create('StreamLink', 'Streaming link')->setDescription('Please include the full URL including https://'));
+		$fields->addFieldToTab('Root.Main', TextField::create('StreamLink', 'Streaming link')->setDescription('Please include the full URL including https://, example: https://www.twitch.tv/scope_productions'));
 
 		$fields->addFieldToTab('Root.Main', new TextField('SpotifyEmbed', 'Spotify embed code'));
 		$fields->addFieldToTab('Root.Main', new TextField('BuyTicketsOnlineLink'));
