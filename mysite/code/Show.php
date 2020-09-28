@@ -46,6 +46,10 @@ class Show extends Page {
 
 	);
 
+	private static $owns = array(
+		'Picture',
+	);
+
 	//static $defaults = array ('ProvideComments' => '1',
 	//);
 	private static $show_in_sitetree = false;
