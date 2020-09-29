@@ -1,6 +1,7 @@
 <?php
 
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\Control\Director;
 
 class Page extends SiteTree {
 
@@ -28,4 +29,23 @@ class Page extends SiteTree {
 		return $page;
 	}
 
+	public function urlsToCache() {
+		$disallowedClasses = array(
+			'SilverStripe\CMS\Model\RedirectorPage',
+			'SilverStripe\UserForms\Model\UserDefinedForm',
+		);
+
+		if ($this->ClassName == 'Show') {
+			if ($this->IsPast()) {
+				return [];
+			}
+		}
+
+		if (!array_search($this->ClassName, $disallowedClasses)) {
+			return [Director::absoluteURL($this->getOwner()->Link()) => 0];
+		} else {
+			return [];
+		}
+
+	}
 }
