@@ -5,7 +5,8 @@
     "require":
     {
         "php": ">=7.2.0",
-        "md/bootstrap-project": "dev-main"
+        "md/bootstrap-project": "dev-main",
+        "silverstripe/staticpublishqueue": "*"
     },
     "require-dev":
     {

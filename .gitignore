@@ -18,3 +18,4 @@ smtp.yml
 .phpintel/
 public/_resources/
 /.tmp
+public/cache/
