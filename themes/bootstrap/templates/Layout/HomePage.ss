@@ -116,9 +116,6 @@
 
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <a href="$Link" class=" text-light d-block">
-                        <% if $FeaturedImage %>
-                           <img src="$FeaturedImage.ScaleWidth(300).URL" class="d-block mb-2 w-100" alt="" role="presentation" />
-                        <% end_if %>
                            <h2>$Title</h2>
                            <% if $PublishDate %>
                             <p class="text-light">
