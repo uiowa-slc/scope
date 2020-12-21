@@ -1,6 +1,7 @@
 <?php
 
 namespace {
+	use SilverStripe\Blog\Model\Blog;
 	use SilverStripe\CMS\Controllers\ContentController;
 	use SilverStripe\ORM\PaginatedList;
 
