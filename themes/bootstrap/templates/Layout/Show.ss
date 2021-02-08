@@ -38,6 +38,7 @@
                         </div>
                     <% else %>
                         <% if $Date.inFuture || $Date.isToday %>
+                        <% if $BuyTicketsOnlineLink || $BuyTicketsInPersonLink %>
                             <div class="card-body text-center">
                                 <% if $BuyTicketsOnlineLink %>
                                 <a href="$BuyTicketsOnlineLink" class="btn btn-primary card-link mb-2" target="_blank" rel="noopener noreferrer"> Buy Tickets Online</a>
@@ -46,6 +47,7 @@
                                 <a href="$BuyTicketsInPersonLink" class="btn btn-primary card-link mb-2" target="_blank" rel="noopener noreferrer"> Buy Tickets In Person</a>
                                 <% end_if %>
                             </div>
+                        <% end_if %>
                         <% end_if %>
                     <% end_if %>
                 </div>
