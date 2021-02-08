@@ -19,7 +19,7 @@
                                 </h1>
 
                                 <!-- Content -->
-                                <p class="lead">$Content.FirstParagraph.LimitCharacters(180)</p>
+                                <p class="lead">$Content.FirstParagraph.LimitCharacters(400)</p>
 
                                 <% if $StreamLink %>
                                         <p><% include StreamButton %></p>
