@@ -115,7 +115,8 @@
             <% loop $BlogPosts.Limit(3) %>
 
                 <div class="col-lg-4 mb-3 mb-lg-0">
-                    <a href="$Link" class=" text-light d-block">
+                    <a href="$Link" class="text-light d-block">
+                           <img src="$FeaturedImage.URL" class="d-block w-100 mb-2" alt="" role="presentation" />
                            <h2>$Title</h2>
                            <% if $PublishDate %>
                             <p class="text-light">
