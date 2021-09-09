@@ -134,7 +134,7 @@
                 </div>
             <% end_loop %>
         </div>
-        <div class="row d-flex align-items-center">
+        <div class="row mt-3 d-flex align-items-center">
             <div class="col">
                 <p class="text-center"><a href="blog/" class="btn btn-outline-light">More Posts</a></p>
             </div>
