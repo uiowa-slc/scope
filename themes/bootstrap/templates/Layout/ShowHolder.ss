@@ -25,13 +25,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-3">
-            <nav class="nav nav-pills flex-column sticky-top">
-            	<% loop $Years.Sort('Year DESC') %>
-            		<a class="nav-item nav-link <% if $Active %>active<% end_if %>" href="$Link">$Year</a>
-            	<% end_loop %>
-            </nav>
-        </div>
+
         <div class="col-md-9">
 			<% loop $paginatedPreviousShows %>
 				<div class="previous-shows">
@@ -43,6 +37,13 @@
 				<% include Pagination %>
 			<% end_with %>
 		</div>
+        <div class="col-md-3">
+            <nav class="nav nav-pills flex-column sticky-top">
+            	<% loop $Years.Sort('Year DESC') %>
+            		<a class="nav-item nav-link <% if $Active %>active<% end_if %>" href="$Link">$Year</a>
+            	<% end_loop %>
+            </nav>
+        </div>
 	</div>
 </main>
 
