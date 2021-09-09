@@ -134,6 +134,11 @@
                 </div>
             <% end_loop %>
         </div>
+        <div class="row d-flex align-items-center">
+            <div class="col">
+                <p class="text-center"><a href="blog/" class="btn btn-outline-light">More Posts</a></p>
+            </div>
+        </div>
     </div>
 </section>
 <section class="py-3 py-sm-6 my-5">
