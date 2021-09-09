@@ -89,7 +89,7 @@
 </main>
 
 <!-- Tickets link -->
-<section class="bg-primary text-white py-3 py-sm-6 tickets">
+<%-- <section class="bg-primary text-white py-3 py-sm-6 tickets">
     <div class="container-xl">
         <div class="row d-flex align-items-center">
             <div class="col-sm-8 col-md-7">
@@ -102,7 +102,7 @@
             <% end_if %>
         </div>
     </div>
-</section>
+</section> --%>
 <section class="py-3 py-sm-6 bg-dark">
     <div class="container-xl">
         <div class="row">
