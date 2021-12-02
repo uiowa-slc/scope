@@ -30,4 +30,8 @@
     @include media-breakpoint-up(sm) {
         max-width: 280px;
     }
-}   
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu{
+    z-index: 9999;
+
+}
