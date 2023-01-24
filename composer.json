@@ -5,7 +5,8 @@
     "require": {
         "php": ">=7.2.0",
         "md/bootstrap-project": "dev-main",
-        "silverstripe/staticpublishqueue": "dev-master"
+        "silverstripe/staticpublishqueue": "dev-master",
+	"md/silverstripe-migration-tools": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
@@ -40,6 +41,11 @@
         {
             "type": "vcs",
             "url": "https://github.com/uiowa-slc/bootstrap-project"
+        },
+        {
+            "type": "vcs",
+            "url": 
+"https://github.com/uiowa-slc/silverstripe-migration-tools"
         },
         {
             "type": "vcs",
