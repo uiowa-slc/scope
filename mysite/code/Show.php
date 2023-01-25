@@ -49,6 +49,8 @@ class Show extends Page {
 	private static $owns = array(
 		'Picture',
 	);
+	
+	private static $default_sort = 'Date DESC';
 
 	//static $defaults = array ('ProvideComments' => '1',
 	//);

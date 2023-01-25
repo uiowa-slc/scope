@@ -86,7 +86,7 @@ class ShowHolder extends Page {
 	}
 	public function PreviousShows() {
 		$curDate = date("Y-m-d");
-		$shows = Show::get()->filter(array('Date:LessThan' => $curDate, 'Cancelled' => 0))->sort('Date DESC');
+		$shows = Show::get()->filter(array('Date:LessThan' => $curDate))->sort('Date DESC');
 		return $shows;
 	}
 }
