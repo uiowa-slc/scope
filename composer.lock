@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "157e96790b9359e634c09398b3310ddd",
+    "content-hash": "d01f8c5d9a6a0dd70b8e67c9cd8f3a25",
     "packages": [
         {
             "name": "asyncphp/doorman",
@@ -1694,16 +1694,16 @@
         },
         {
             "name": "md/silverstripe-migration-tools",
-            "version": "dev-main",
+            "version": "dev-scope",
             "source": {
                 "type": "git",
                 "url": "https://github.com/uiowa-slc/silverstripe-migration-tools.git",
-                "reference": "f1d76af0995df609851ac198a68cd426089b9774"
+                "reference": "b2a3efbfc077558c22242d861a4d9b3c48616907"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/uiowa-slc/silverstripe-migration-tools/zipball/f1d76af0995df609851ac198a68cd426089b9774",
-                "reference": "f1d76af0995df609851ac198a68cd426089b9774",
+                "url": "https://api.github.com/repos/uiowa-slc/silverstripe-migration-tools/zipball/b2a3efbfc077558c22242d861a4d9b3c48616907",
+                "reference": "b2a3efbfc077558c22242d861a4d9b3c48616907",
                 "shasum": ""
             },
             "require": {
@@ -1712,14 +1712,13 @@
                 "silverstripe/framework": "4.*",
                 "thunderer/shortcode": "^0.7"
             },
-            "default-branch": true,
             "type": "silverstripe-vendormodule",
             "description": "Exports SilverStripe content to WordPress eXtended RSS",
             "support": {
-                "source": "https://github.com/uiowa-slc/silverstripe-migration-tools/tree/main",
+                "source": "https://github.com/uiowa-slc/silverstripe-migration-tools/tree/scope",
                 "issues": "https://github.com/uiowa-slc/silverstripe-migration-tools/issues"
             },
-            "time": "2022-08-12T13:10:22+00:00"
+            "time": "2023-01-25T19:23:38+00:00"
         },
         {
             "name": "md/uiowa-bar",

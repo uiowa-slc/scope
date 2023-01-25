@@ -74,6 +74,7 @@ class ShowHolder extends Page {
 					'Year' => $showYear,
 					'Link' => Controller::join_links($this->Link('year'), $showYear),
 					'Active' => $active,
+					'Shows' => $this->PreviousShows()->filter(array('Date:PartialMatch' => $showYear))->sort('Date DESC')
 				));
 				$years->push($year);
 			}
@@ -83,5 +84,9 @@ class ShowHolder extends Page {
 		return $years;
 
 	}
-
+	public function PreviousShows() {
+		$curDate = date("Y-m-d");
+		$shows = Show::get()->filter(array('Date:LessThan' => $curDate, 'Cancelled' => 0))->sort('Date DESC');
+		return $shows;
+	}
 }
